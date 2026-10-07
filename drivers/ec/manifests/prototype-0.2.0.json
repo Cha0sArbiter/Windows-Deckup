@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "project": "Deck EC",
+  "prototype_version": "0.2.0",
+  "windows_driver_version": "0.2.0.0",
+  "publication": {
+    "scope": "Documentation, pinned build inputs and redacted hardware evidence",
+    "implementation_imported": false,
+    "binaries_published": false,
+    "hosted_ec_build_workflow": false
+  },
+  "architecture": {
+    "model": "UMDF 2.33 x64",
+    "inbox_reflector": "WUDFRd",
+    "minimum_windows_build": 26100,
+    "hardware_id": "ACPI\\VLV0100",
+    "namespace": "\\_SB.PCI0.LPC0.EC0.VFCD",
+    "firmware_guard": "B030",
+    "accepted_boards": [
+      "06",
+      "0A"
+    ],
+    "tested_boards": [
+      "06"
+    ]
+  },
+  "implemented": {
+    "telemetry_fields": 12,
+    "legacy_telemetry_fields": 10,
+    "manual_fan_rpm": [
+      2500,
+      7300
+    ],
+    "fan_lease_ms": [
+      1000,
+      5000
+    ],
+    "charge_led_percent": [
+      0,
+      100
+    ],
+    "charge_rate_raw": [
+      250,
+      2500
+    ],
+    "charge_level_percent": [
+      50,
+      100
+    ],
+    "charge_level_boards": [
+      "0A"
+    ],
+    "windows_notification_bridge": false,
+    "panel_commands": false,
+    "scbp": false
+  },
+  "hardware_validation": {
+    "scope": "Single-device installation, twelve-field telemetry and brief fan boost with explicit automatic recovery",
+    "full_feature_set_validated": false,
+    "capability_validation_mask": 0,
+    "date": "2026-10-05",
+    "report": "../docs/results.md",
+    "evidence": "../evidence/2026-10-05/index.json",
+    "signed_dll_sha256": "9A2F6E4F7F8E6CBE0CCC03CDFB5DF9AC3B92F07004DA9D3381E263E9D3AE1EE5"
+  },
+  "build_inputs": "toolchain-lock.json",
+  "limitations": [
+    "Board 0A, OLED and other firmware combinations untested",
+    "Charge-rate units/enforcement and LED behavior untested",
+    "Charge-level setter disabled on tested board 06",
+    "Fan lease, cleanup, recovery faults, power transitions and longer operation untested",
+    "0.2.0 normal-boot, Secure Boot and Memory Integrity compatibility unproven"
+  ]
+}

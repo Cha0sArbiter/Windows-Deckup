@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "scope": "Redacted evidence for historical local EC tests",
+  "test_date": "2026-10-05",
+  "summary": "summary.json",
+  "report": "../../docs/results.md",
+  "originals_retained_locally": [
+    {
+      "logical_name": "read-only-0.1.1-state.json",
+      "sha256": "A55EE0FBBE71789442DA7F1FFF0E100E64F3E205FC8A73436530D0EE5DE1BF39",
+      "published": false
+    },
+    {
+      "logical_name": "control-0.2.0-state.json",
+      "sha256": "4EC289E4A41B908151FA37B183F907D382FB996BDEBA2016D62F37DB1E8D34FB",
+      "published": false
+    },
+    {
+      "logical_name": "fan-boost-0.2.0-journal.json",
+      "sha256": "E0F05A647D2FB07AE0E5D5D8F74D014EC4F454E90C0D825132FDD4B264797645",
+      "published": false
+    }
+  ],
+  "publication_method": "Selected fields transcribed from original journals; complete originals remain local",
+  "excluded": [
+    "Per-machine ACPI instance suffixes",
+    "Published oemNN.inf names",
+    "Local user-profile and DriverStore paths",
+    "Full device/process inventories",
+    "Raw event/setup transcripts and raw ACPI table dumps",
+    "Certificates, signing passwords and private keys"
+  ],
+  "interpretation": [
+    "Summary is not byte-for-byte raw evidence",
+    "Raw zero charging registers have unverified meaning",
+    "BATT is battery temperature; PD values describe a contract",
+    "Predecessor boot result does not establish 0.2.0 normal-boot support",
+    "APU sleep/boot tests do not establish EC lifecycle validation"
+  ]
+}

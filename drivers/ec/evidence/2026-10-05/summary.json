@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "record_type": "Redacted summary of historical local EC tests",
+  "test_date": "2026-10-05",
+  "hardware": {
+    "manufacturer": "Valve",
+    "model": "Jupiter LCD",
+    "bios": "F7A0133",
+    "ec_firmware": "B030",
+    "board": "06",
+    "windows_build": 26200,
+    "hardware_id": "ACPI\\VLV0100"
+  },
+  "predecessor": {
+    "prototype_version": "0.1.1",
+    "windows_driver_version": "0.1.0.1",
+    "result": "PASS",
+    "signed_dll_sha256": "59D98A9EB9144AF063938DE1525199CFDA410210F9FB34F93F56D5975735A5D8",
+    "successful_snapshots": 4,
+    "fields_per_snapshot": 10,
+    "fan_rpm": [
+      4578,
+      4578,
+      4578,
+      4549
+    ],
+    "battery_temperature_c": 32,
+    "fan_target_rpm": 0,
+    "fan_health": 1,
+    "non_admin_client": "Denied, Win32 5",
+    "test_signing_recorded": "disabled",
+    "boot_state_changed_during_test": false
+  },
+  "prototype": {
+    "prototype_version": "0.2.0",
+    "windows_driver_version": "0.2.0.0",
+    "result": "PASS",
+    "started_utc": "2026-10-05T20:08:52.2632885Z",
+    "completed_utc": "2026-10-05T20:09:23.6965775Z",
+    "signed_dll_sha256": "9A2F6E4F7F8E6CBE0CCC03CDFB5DF9AC3B92F07004DA9D3381E263E9D3AE1EE5",
+    "installed_dll_matched_package": true,
+    "published_inf_matched_package": true,
+    "device_problem_code": 0,
+    "successful_pretest_snapshots": 4,
+    "fields_per_snapshot": 12,
+    "new_problem_devices": 0,
+    "charge_rate_configuration_raw": 0,
+    "panel_id_raw": 1,
+    "battery_temperature_c": 30,
+    "pd_contract": {
+      "voltage_mv": 15000,
+      "current_ma": 3000,
+      "connection_state_raw": 43
+    },
+    "test_signing_recorded": "enabled",
+    "code_integrity_flags": "0x00280203",
+    "boot_state_changed_during_test": false,
+    "full_feature_set_validated": false,
+    "capability_validation_mask": 0
+  },
+  "fan_test": {
+    "result": "PASS",
+    "started_utc": "2026-10-05T20:09:08.2593431Z",
+    "completed_utc": "2026-10-05T20:09:16.6928814Z",
+    "baseline_rpm": 4607,
+    "requested_rpm": 6000,
+    "peak_rpm": 6023,
+    "required_rise_rpm": 200,
+    "observed_rise_rpm": 1416,
+    "recovery": "CONFIRMED",
+    "samples": [
+      {
+        "phase": "BASELINE",
+        "rpm": 4607,
+        "target_rpm": 0,
+        "fan_health": 1
+      },
+      {
+        "phase": "BOOST",
+        "rpm": 4802,
+        "target_rpm": 6000,
+        "fan_health": 1
+      },
+      {
+        "phase": "BOOST",
+        "rpm": 5233,
+        "target_rpm": 6000,
+        "fan_health": 1
+      },
+      {
+        "phase": "BOOST",
+        "rpm": 5629,
+        "target_rpm": 6000,
+        "fan_health": 1
+      },
+      {
+        "phase": "BOOST",
+        "rpm": 6023,
+        "target_rpm": 6000,
+        "fan_health": 1
+      },
+      {
+        "phase": "BOOST",
+        "rpm": 6023,
+        "target_rpm": 6000,
+        "fan_health": 1
+      },
+      {
+        "phase": "RECOVERY",
+        "rpm": 5875,
+        "target_rpm": 0,
+        "fan_health": 1
+      },
+      {
+        "phase": "RECOVERY",
+        "rpm": 5543,
+        "target_rpm": 0,
+        "fan_health": 1
+      },
+      {
+        "phase": "POST_TEST",
+        "rpm": 4867,
+        "target_rpm": 0,
+        "fan_health": 1
+      },
+      {
+        "phase": "POST_TEST",
+        "rpm": 4578,
+        "target_rpm": 0,
+        "fan_health": 1
+      }
+    ],
+    "post_recovery_owner_state": "Unowned",
+    "last_restore_status": "0x00000000"
+  },
+  "not_tested": [
+    "Longer read-only stability",
+    "Lease expiry with handle open",
+    "Owner cleanup/client termination",
+    "Multiple-client ownership",
+    "Failed recovery/retries on hardware",
+    "Sleep/resume, reboot and disable/enable",
+    "UMDF-host failure",
+    "Operation under sustained load",
+    "Physical charging and LED behavior",
+    "Board 0A and other firmware/model combinations",
+    "0.2.0 operation with Test Mode off"
+  ]
+}

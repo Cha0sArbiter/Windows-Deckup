@@ -5,7 +5,7 @@ Windows driver work for the **LCD Steam Deck (Valve Jupiter)**. This repository 
 | Project | Status | Scope |
 | --- | --- | --- |
 | [APU](drivers/apu/README.md) | Configuration-only ASUS adaptation verified on one Deck | Modern AMD graphics, normal Windows boot, sleep/resume |
-| [Embedded controller](drivers/ec/README.md) | Planned | Investigate the Deck EC and Windows integration |
+| [Embedded controller](drivers/ec/README.md) | 0.2.0 prototype; telemetry and brief fan test passed | Twelve-field EC telemetry and experimental controls; documentation and redacted evidence |
 | [Ambient light sensor](drivers/light-sensor/README.md) | Planned | Identify the sensor/ACPI interface and expose Windows sensor functionality |
 | [Native controller](drivers/controller/README.md) | Planned | Research a native Windows controller driver and input integration |
 
@@ -30,7 +30,7 @@ Artifacts are retained for **90 days**. Source, manifests, documentation and red
 - `docs/`: architecture, research conventions and local data retention.
 - `.github/workflows/`: separate workflows per driver project and source validation.
 
-[Architecture and contribution conventions](docs/architecture.md) describe how new driver work fits into the repository. No EC, sensor or controller driver is implemented yet.
+[Architecture and contribution conventions](docs/architecture.md) describe how new driver work fits into the repository. The EC project's locally built prototype and partial hardware validation are documented under `drivers/ec/`; its implementation and build workflow have not yet been imported. Sensor and controller projects remain planned.
 
 ## Licensing
 

@@ -1,0 +1,49 @@
+{
+  "Inputs": [
+    {
+      "Name": "microsoft.windows.wdk.x64",
+      "Version": "10.0.26100.6584",
+      "Bytes": 110872506,
+      "Sha256": "C393D03DFB640B5C92F546B32F6770EF68CD3AAF691956E7D66D8E2C28A1B55E",
+      "Url": "https://api.nuget.org/v3-flatcontainer/microsoft.windows.wdk.x64/10.0.26100.6584/microsoft.windows.wdk.x64.10.0.26100.6584.nupkg"
+    },
+    {
+      "Name": "microsoft.windows.sdk.cpp",
+      "Version": "10.0.26100.6584",
+      "Bytes": 160036542,
+      "Sha256": "5D31B38205BDD9AC761B4CB39FBBC6B7209B01C11194324AFC674D7D119483A0",
+      "Url": "https://api.nuget.org/v3-flatcontainer/microsoft.windows.sdk.cpp/10.0.26100.6584/microsoft.windows.sdk.cpp.10.0.26100.6584.nupkg"
+    },
+    {
+      "Name": "microsoft.windows.sdk.cpp.x64",
+      "Version": "10.0.26100.6584",
+      "Bytes": 52245405,
+      "Sha256": "C29CE7A4641CB37EE32EBB8078CC65CFBABC7025076BCFBA869039204B1E960D",
+      "Url": "https://api.nuget.org/v3-flatcontainer/microsoft.windows.sdk.cpp.x64/10.0.26100.6584/microsoft.windows.sdk.cpp.x64.10.0.26100.6584.nupkg"
+    },
+    {
+      "Name": "LLVM Windows MSVC",
+      "Version": "20.1.8",
+      "Bytes": 939541912,
+      "Sha256": "F229769F11D6A6EDC8ADA599C0CDA964B7DEE6AB1A08C6CF9DD7F513E85B107F",
+      "Url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.8/clang%2Bllvm-20.1.8-x86_64-pc-windows-msvc.tar.xz",
+      "Verification": "SHA256 matched the official GitHub release asset digest before extraction."
+    },
+    {
+      "Name": "Microsoft.VC.14.44.17.14.CRT.Headers.base",
+      "Version": "14.44.35220",
+      "Bytes": 2116223,
+      "Sha256": "852382A9AA73502B7849C1BCADFB603BA7175C4E8B60E6ABA03C7DE711D4ECE5",
+      "Url": "https://download.visualstudio.microsoft.com/download/pr/c610cd8c-801b-44b8-a80a-82cc382aeb43/852382a9aa73502b7849c1bcadfb603ba7175c4e8b60e6aba03c7de711d4ece5/Microsoft.VC.14.44.17.14.CRT.Headers.base.vsix",
+      "Verification": "SHA256 matched official VS channel manifest."
+    },
+    {
+      "Name": "Microsoft.VC.14.44.17.14.CRT.x64.Desktop.base",
+      "Version": "14.44.35226",
+      "Bytes": 50776097,
+      "Sha256": "F01F701A7BCD9587A340898C851424F6A52BB913A70C185FF0D5BF0288C5831A",
+      "Url": "https://download.visualstudio.microsoft.com/download/pr/67cf767c-5e71-47c2-a54a-cd5631e28942/f01f701a7bcd9587a340898c851424f6a52bb913a70c185ff0d5bf0288c5831a/Microsoft.VC.14.44.17.14.CRT.x64.Desktop.base.vsix",
+      "Verification": "SHA256 matched official VS channel manifest."
+    }
+  ]
+}
