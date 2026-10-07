@@ -1,0 +1,30 @@
+[
+  {
+    "TimeCreated": "2026-10-05T13:12:44.3199405-05:00",
+    "Provider": "amduw23g",
+    "EventId": 3085,
+    "DecodedData": "StartDevice Failed: Create SOC Service Manager failed",
+    "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='amduw23g'/><EventID Qualifiers='0'>3085</EventID><Version>0</Version><Level>2</Level><Task>3</Task><Opcode>0</Opcode><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='2026-10-05T18:12:44.3199405Z'/><EventRecordID>5445</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='7016'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data></Data><Binary>00003A0001000000030000000D0C0000000000000000000000000000000000000000000000000000360000005374617274446576696365204661696C65643A2043726561746520534F432053657276696365204D616E61676572206661696C656400</Binary></EventData></Event>"
+  },
+  {
+    "TimeCreated": "2026-10-05T13:12:14.9495315-05:00",
+    "Provider": "amduw23g-202038-1ed56446",
+    "EventId": 3085,
+    "DecodedData": "StartDevice Failed: Create SOC Service Manager failed",
+    "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='amduw23g-202038-1ed56446'/><EventID Qualifiers='0'>3085</EventID><Version>0</Version><Level>2</Level><Task>3</Task><Opcode>0</Opcode><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='2026-10-05T18:12:14.9495315Z'/><EventRecordID>5441</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='13000'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data></Data><Binary>00003A0001000000030000000D0C0000000000000000000000000000000000000000000000000000360000005374617274446576696365204661696C65643A2043726561746520534F432053657276696365204D616E61676572206661696C656400</Binary></EventData></Event>"
+  },
+  {
+    "TimeCreated": "2026-10-05T13:12:14.9495315-05:00",
+    "Provider": "amduw23g-202038-1ed56446",
+    "EventId": 1035,
+    "DecodedData": "Failed to release hardware access during uninitialization",
+    "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='amduw23g-202038-1ed56446'/><EventID Qualifiers='1'>1035</EventID><Version>0</Version><Level>2</Level><Task>65</Task><Opcode>0</Opcode><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='2026-10-05T18:12:14.9495315Z'/><EventRecordID>5440</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='13000'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data></Data><Binary>00003E0001000000410000000B0401000000000000000000000000000000000000000000000000003A0000004661696C656420746F2072656C656173652068617264776172652061636365737320647572696E6720756E696E697469616C697A6174696F6E00</Binary></EventData></Event>"
+  },
+  {
+    "TimeCreated": "2026-10-05T13:12:04.2717055-05:00",
+    "Provider": "amduw23g",
+    "EventId": 1035,
+    "DecodedData": "Failed to release hardware access during uninitialization",
+    "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='amduw23g'/><EventID Qualifiers='1'>1035</EventID><Version>0</Version><Level>2</Level><Task>65</Task><Opcode>0</Opcode><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='2026-10-05T18:12:04.2717055Z'/><EventRecordID>5438</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='2504'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data></Data><Binary>00003E0001000000410000000B0401000000000000000000000000000000000000000000000000003A0000004661696C656420746F2072656C656173652068617264776172652061636365737320647572696E6720756E696E697469616C697A6174696F6E00</Binary></EventData></Event>"
+  }
+]

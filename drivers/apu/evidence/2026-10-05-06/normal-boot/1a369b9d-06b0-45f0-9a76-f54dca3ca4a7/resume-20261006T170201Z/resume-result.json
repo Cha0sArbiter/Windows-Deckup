@@ -1,0 +1,73 @@
+{
+  "Status": "SecondNormalModeS3ResumeVerified",
+  "CapturedUtc": "2026-10-06T17:02:52.2836376Z",
+  "UserReport": "User reported completing a longer sleep and returned to request log verification.",
+  "WindowsSleepState": "S3",
+  "SleepUtc": "2026-10-06T16:40:52.4489858Z",
+  "WakeUtc": "2026-10-06T17:01:17.6013814Z",
+  "SleepToWakeSeconds": 1225.152396,
+  "WakeSource": "Power Button",
+  "AcPower": true,
+  "BootUnchanged": true,
+  "GpuAfterResume": {
+    "InstanceId": "PCI\\VEN_1002&DEV_163F&SUBSYS_01231002&REV_AE\\[device-instance]",
+    "ProblemCode": 0,
+    "Inf": "oem56.inf",
+    "Version": "32.0.21043.21001",
+    "Service": "amduw23g-202038-1ed56446"
+  },
+  "CodeIntegrityAfterResume": {
+    "Options": 1,
+    "TestSigningActive": false
+  },
+  "KernelAndConfigurationHashesUnchanged": true,
+  "HardwareRenderingAfterResume": {
+    "passed": true,
+    "driver_type": "HARDWARE",
+    "software_fallback": false,
+    "adapter": {
+      "description": "AMD Radeon(TM) Graphics",
+      "vendor_id": "0x1002",
+      "device_id": "0x163F",
+      "subsystem_id": "0x01231002",
+      "revision": "0xAE",
+      "luid": "00000000:0000AA1A"
+    },
+    "feature_level": "11_1",
+    "texture_size": [
+      32,
+      32
+    ],
+    "cases": [
+      {
+        "color": "red",
+        "pixels_verified": 1024,
+        "passed": true
+      },
+      {
+        "color": "green",
+        "pixels_verified": 1024,
+        "passed": true
+      },
+      {
+        "color": "blue",
+        "pixels_verified": 1024,
+        "passed": true
+      }
+    ],
+    "limitation": "Covers basic GPU clear/copy/readback only; this probe does not assess game stability, video, or sleep/wake.",
+    "captured_at": "2026-10-06T12:02:47.545944-05:00"
+  },
+  "SystemWarningsAndErrorsDuringCycle": [],
+  "CodeIntegrityWarningsAndErrorsDuringCycle": [],
+  "AmdCodeIntegrityWarningsAndErrorsSinceBoot": [],
+  "SeparateUsbPowerEvents": [
+    {
+      "Id": 40,
+      "Level": 4,
+      "TimeUtc": "2026-10-06T16:40:52.9519209Z",
+      "Message": "The driver \\Driver\\rtu53cx22x64 for device USB\\VID_0BDA&PID_8153\\111000001 stopped the power transition."
+    }
+  ],
+  "Limitation": "Second positive S3 cycle, approximately 20m25s on AC. Battery sleep, idle display recovery and anti-cheat untested; earlier candidate black-screen resume remains unexplained."
+}

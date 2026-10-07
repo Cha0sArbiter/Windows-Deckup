@@ -1,0 +1,12 @@
+{
+  "Status": "Activated",
+  "DriverVersion": "32.0.21043.21001",
+  "InstalledDriverVersion": "32.0.21043.21001",
+  "SafetyTestsPassed": 6,
+  "MachineCodeTestsPassed": 6,
+  "Inf2CatErrors": 0,
+  "Inf2CatWarnings": 0,
+  "BlockReason": null,
+  "ChangesToWindowsPerformed": true,
+  "CapturedAt": "2026-10-05T14:28:24.6845997-05:00"
+}

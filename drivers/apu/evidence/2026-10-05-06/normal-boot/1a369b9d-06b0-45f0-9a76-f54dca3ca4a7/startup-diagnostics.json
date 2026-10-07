@@ -1,0 +1,44 @@
+{
+  "CapturedAt": "2026-10-06T11:24:48.1498341-05:00",
+  "BootTimeUTC": "2026-10-06T16:13:53.5000000Z",
+  "SystemQueryProviders": "amdkmdag|Display|amdwddmg|Kernel-PnP",
+  "SystemWarningAndErrorEvents": [
+    {
+      "TimeCreated": "2026-10-06T11:13:56.1007565-05:00",
+      "Id": 219,
+      "LevelDisplayName": "Warning",
+      "ProviderName": "Microsoft-Windows-Kernel-PnP",
+      "Message": "The driver \\Driver\\WUDFRd failed to load.\r\nDevice: ACPI\\VLV0100\\5&15d725f4&0\r\nStatus: 0xC0000365"
+    }
+  ],
+  "CodeIntegrityWarningAndErrorEvents": [
+    {
+      "TimeCreated": "2026-10-06T11:14:27.0717671-05:00",
+      "Id": 3004,
+      "LevelDisplayName": "Error",
+      "ProviderName": "Microsoft-Windows-CodeIntegrity",
+      "Message": "Windows is unable to verify the image integrity of the file \\Device\\HarddiskVolume4\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26080.4-0\\DefenderSessionHelper.exe because file hash could not be found on the system. A recent hardware or software change might have installed a file that is signed incorrectly or damaged, or that might be malicious software from an unknown source."
+    }
+  ],
+  "AmdCodeIntegrityWarningAndErrorEvents": [],
+  "PowercfgAvailableStates": [
+    "The following sleep states are available on this system:",
+    "    Standby (S3)",
+    "    Hibernate",
+    "    Hybrid Sleep",
+    "    Fast Startup",
+    "",
+    "The following sleep states are not available on this system:",
+    "    Standby (S1)",
+    "\tThe system firmware does not support this standby state.",
+    "",
+    "    Standby (S2)",
+    "\tThe system firmware does not support this standby state.",
+    "",
+    "    Standby (S0 Low Power Idle)",
+    "\tThe system firmware does not support this standby state.",
+    ""
+  ],
+  "RecoveryTaskFileAbsent": true,
+  "RecoveryWatcherPid2868Absent": true
+}

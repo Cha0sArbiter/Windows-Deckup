@@ -1,0 +1,133 @@
+Normal-mode configuration-only boot trial
+=========================================
+
+Verified result, 2026-10-06:
+The corrected preparation completed and Windows booted at 11:13:53 local
+time into oem56.inf, driver 32.0.21043.21001, Code 0. Live Code Integrity
+options are 1: enforcement enabled and Test Mode OFF. The selected kernel
+hash matches the unchanged ASUS executable and the configuration hash
+matches the AE candidate. The hardware-only D3D11 clear/copy/readback
+probe passed three colors, 1024 pixels each, and identified the actual
+AMD 1002:163F / subsystem 01231002 / REV_AE rendering adapter through DXGI.
+No software fallback was used. The requested 11_1/11_0 feature levels do
+not test the adapter's maximum Direct3D capability.
+At the user's request, recovery was acknowledged as Keep at 11:16:19.
+The SYSTEM task file is absent and its watcher process has exited. No
+normal-boot recovery guard is active. Two normal-mode S3 cycles passed:
+11:28:54-11:29:36 CDT (about 42 seconds) and 11:40:52-12:01:17 CDT
+(20 minutes 25 seconds), both on AC with power-button wake. The user
+confirmed first-cycle display restoration and returned after the second
+cycle. After both, Code 0, Test Mode OFF, exact kernel/configuration hashes
+and actual AMD hardware rendering passed. No new System warnings/errors
+or signing errors were found during either. Informational event 40 names
+the Realtek USB GbE controller before both sleeps; both cycles completed.
+Battery sleep, inactivity recovery, broader repeated-sleep reliability and
+anti-cheat compatibility remain untested. Startup diagnostic
+queries found no AMD/display errors or AMD Code Integrity warnings/errors;
+separate ACPI/WUDFRd and Defender events are recorded without attribution
+to the GPU. Earlier candidate display-resume failure remains unresolved.
+Evidence: normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/.
+
+Preparation history and protocol
+-------------------------------
+Installer update, 2026-10-06:
+The user resumed the trial. The helper now resolves each published INF to
+its actual DriverStore INF, verifies all 132 main-package files for each
+variant, and verifies all 56 shared system destinations against identical
+candidate/prototype source bytes. These read-only checks passed on this
+Deck. Selection then sets DI_NOFILECOPY, along with the existing deferred
+restart flags, so Windows uses the verified files already in place.
+Candidate/fallback selection runs in separate hidden children with a
+45-second timeout and native DIF progress logs. Twenty-four protocol,
+state, and file-integrity checks passed. The subsequent normal-mode boot
+passed as recorded above. The following canceled trial remains historical evidence.
+
+The first corrected attempt (1ae76c89-214b-4728-ba2c-cc6ee53a8cb8) completed
+all native DIF calls for both candidate and fallback with NOFILECOPY and
+reboot flags set. Its parent wrapper reported failure despite successful
+child result files and no stderr. The fallback left the patched oem50.inf
+healthy at Code 0 with Test Mode still ON; TESTSIGNING OFF was never reached.
+The wrapper now owns and retains the actual process handle through exit.
+Windows PowerShell 5 checks verify exit codes 0 and 7 and timeout termination.
+The next Prepare run retires only that inactive failed guard after verifying
+the healthy prototype and next-boot Test Mode ON, then creates a new trial.
+
+Previous result: preparation canceled, 2026-10-05 18:26 local time.
+Windows could not copy ativvaxy_vcn3.dat even though both staged/source
+copies existed and had identical SHA-256 hashes. Selection did not finish
+and next-boot TESTSIGNING OFF was not reached. The blocked installer and
+one-time recovery task were stopped. Administrator before/after checks
+verified patched oem50.inf, Code 0, the expected patched kernel hash, live
+Test Mode ON, and next-boot TESTSIGNING ON. No restart was requested.
+The user ended testing for the day. The copying correction described
+above was prepared after the user explicitly resumed on 2026-10-06.
+normal-boot/b0aefb26-c5cd-46aa-82d2-ee29f426b1ea/cancelled-copy-failure.json
+records the cleanup. At that point normal-mode loading was unverified;
+anti-cheat compatibility remains unverified. The following describes the
+trial protocol used for the successful boot.
+
+The user requested this boot trial on 2026-10-05 after the reload/resume
+investigation. It tests whether the unchanged ASUS kernel can actually
+load with TESTSIGNING disabled. The prior configuration-only sleep/resume
+failure is unresolved. A successful boot does not establish anti-cheat
+compatibility, game stability, or reliable sleep.
+
+Prepare-Normal-Mode-Boot.cmd requests the ordinary Windows administrator
+prompt. The helper verifies the LCD Deck identity, working prototype,
+both complete package manifests, both already-staged INF hashes, and
+Microsoft kernel signing policy for every candidate .sys file. It backs
+up BCD and records the state before changing the driver selection.
+
+A single SYSTEM task first performs a read-only self-test, then guards
+preparation. After verifying staged/shared files, the helper uses
+SetupAPI's DI_NOFILECOPY, DI_DONOTCALLCONFIGMG, and
+DI_NEEDREBOOT flags to request installation without live removal or
+reenumeration of the display device. The selected registered INF and
+service kernel/configuration hashes must match the candidate before
+TESTSIGNING is set OFF for the next boot. This does not itself restart
+Windows, prove that the resident kernel changed, or prove normal boot.
+The successful selection and normal boot above verify this path on this
+Deck and exact package; other devices/builds are untested.
+
+Wait for ReadyForNormalModeRestart in normal-boot/<trial>/prepared.json
+and status.json. Then restart Windows manually. The startup SYSTEM task
+opens a 180-second acknowledgment window after it begins running. Once
+the display works, report that result promptly; the agent verifies the
+new boot, live Code Integrity, candidate INF, Code 0, version, and exact
+kernel/configuration hashes before running Mode Keep. You can also run
+Keep-Normal-Mode-Driver.cmd within the window. A successful acknowledgment
+causes the SYSTEM watcher to remove its one-time recovery task.
+
+Without acknowledgment, the watcher restores TESTSIGNING ON BEFORE
+selecting the patched oem50.inf fallback for a deferred restart. It checks
+the selection and requests a recovery restart. After the next boot it
+waits briefly for GPU initialization, records the recovery result, and
+removes its task. No recurring app automation is created.
+
+Recovery depends on Windows, Task Scheduler, and SetupAPI remaining
+responsive. It cannot recover a complete kernel hang. If needed after
+Windows becomes usable, Restore-Test-Mode-Prototype.cmd requests admin
+rights and invokes this trial's recovery path; it enables Test Mode,
+selects the prototype for reboot, and requests restart. Keep all local
+packages, trust certificates, registered vendor catalogs, and scripts in
+place throughout the trial. Do not use the older Test-Mode-only helper
+while the live kernel is in normal mode.
+
+All native constants and structures were checked against Microsoft's
+SetupAPI.h. Windows PowerShell 5 compiled the corrected helper and
+resolved both published INFs to their actual DriverStore packages.
+Twenty-four protocol, state, file-integrity, and child-process checks passed without
+driver/task/BCD changes. They verify
+deadline ownership, atomic keep/rollback decisions, and refusal to
+acknowledge a stale boot, Test Mode, Code 43, wrong INF, or wrong hashes,
+and refuse changed/missing staged bytes or package path traversal.
+These offline/process checks are separate from the actual normal-mode
+hardware boot and rendering result recorded above.
+
+Sources
+-------
+https://learn.microsoft.com/en-us/windows/win32/api/setupapi/ns-setupapi-sp_devinstall_params_w
+https://learn.microsoft.com/en-us/windows/win32/api/setupapi/nf-setupapi-setupgetinfdriverstorelocationw
+https://learn.microsoft.com/en-us/previous-versions/windows/drivers/install/dif-installdevice
+https://learn.microsoft.com/en-us/windows/win32/api/setupapi/nf-setupapi-setupdicallclassinstaller
+https://learn.microsoft.com/en-us/windows-hardware/drivers/install/the-testsigning-boot-configuration-option

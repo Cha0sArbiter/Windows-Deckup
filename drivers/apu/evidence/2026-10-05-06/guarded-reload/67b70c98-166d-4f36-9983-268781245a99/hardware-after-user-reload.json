@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "driver_type": "HARDWARE",
+  "software_fallback": false,
+  "feature_level": "11_1",
+  "texture_size": [
+    32,
+    32
+  ],
+  "cases": [
+    {
+      "color": "red",
+      "pixels_verified": 1024,
+      "passed": true
+    },
+    {
+      "color": "green",
+      "pixels_verified": 1024,
+      "passed": true
+    },
+    {
+      "color": "blue",
+      "pixels_verified": 1024,
+      "passed": true
+    }
+  ],
+  "limitation": "Covers basic GPU clear/copy/readback only; this probe does not assess game stability, video, or sleep/wake.",
+  "captured_at": "2026-10-05T17:19:28.863003-05:00"
+}

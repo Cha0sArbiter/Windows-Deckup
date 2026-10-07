@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "driver_type": "HARDWARE",
+  "software_fallback": false,
+  "adapter": {
+    "description": "AMD Radeon(TM) Graphics",
+    "vendor_id": "0x1002",
+    "device_id": "0x163F",
+    "subsystem_id": "0x01231002",
+    "revision": "0xAE",
+    "luid": "00000000:0000AA1A"
+  },
+  "feature_level": "11_1",
+  "texture_size": [
+    32,
+    32
+  ],
+  "cases": [
+    {
+      "color": "red",
+      "pixels_verified": 1024,
+      "passed": true
+    },
+    {
+      "color": "green",
+      "pixels_verified": 1024,
+      "passed": true
+    },
+    {
+      "color": "blue",
+      "pixels_verified": 1024,
+      "passed": true
+    }
+  ],
+  "limitation": "Covers basic GPU clear/copy/readback only; this probe does not assess game stability, video, or sleep/wake.",
+  "captured_at": "2026-10-06T11:21:46.869646-05:00"
+}

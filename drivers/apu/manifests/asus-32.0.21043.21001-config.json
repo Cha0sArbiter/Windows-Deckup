@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "driver_version": "32.0.21043.21001",
+  "package_sha256": "63310301b46426c4c6200219d0f30e598a711e91b087303d1557d4148ca09df8",
+  "hardware_id": "PCI\\VEN_1002&DEV_163F&SUBSYS_01231002&REV_AE",
+  "kernel": "B026204/amdkmdag.sys",
+  "kernel_sha256": "ae975bbb56282be1471b9a91407f0155c087b619f99d2731d4e7989720522152",
+  "infs": [
+    {
+      "path": "u0202038.inf",
+      "sha256": "d92a955552f63d6eb38090a0cbed958fc9da0c3087ea247c881a40e4bbba3b16",
+      "model_section": "ATI.Mfg.NTamd64.10.0.1..19044"
+    },
+    {
+      "path": "amduw23e.inf",
+      "sha256": "50d5a123939495171d13a318cb3e6d0ba19dbdcbb10bef3f12a2e154c5f745d2",
+      "model_section": "ATI.Mfg.NTamd64.10.0"
+    }
+  ],
+  "donor_url": "https://dlcdnets.asus.com/pub/ASUS/IOTHMD/Image/Driver/Graphics/50567/AMD_Graphic_DriverOnly_ROG_AMD_B_V32.0.21043.21001_50567.exe?model=RC73YA",
+  "donor_release": "2026-07-20",
+  "inf_driver_date": "2026-06-29",
+  "source_subdirectory": "Packages/Drivers/Display/WT6A_INF",
+  "configuration_sha256": "7ee54354831bbf267c590636ffffd95fca91ff5455578151fa657bd5f9162717",
+  "variant": "configuration-only"
+}

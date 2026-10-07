@@ -1,0 +1,239 @@
+Configuration-only driver investigation, 2026-10-05
+=================================================
+
+Verified normal-mode result, 2026-10-06
+-------------------------------------
+The configuration-only candidate successfully booted on this LCD Deck
+with Test Mode OFF and Code Integrity enabled (live options 1). Windows
+booted at 11:13:53 local time. The GPU reports oem56.inf, driver
+32.0.21043.21001 and Code 0; the selected kernel/configuration hashes match
+the unchanged ASUS executable and the AE candidate. Hardware-only D3D11
+clear/copy/readback passed red, green and blue, 1024 pixels each. DXGI
+identified the rendering device as AMD 1002:163F, subsystem 01231002,
+revision AE. No software fallback was used. Recovery was kept/stopped at
+the user's request; the SYSTEM task file is absent and watcher exited.
+One normal-mode S3 cycle then passed from 11:28:54 to 11:29:36 CDT (about
+42 seconds, on AC), with a recorded power-button wake and user-confirmed
+display restoration. Post-resume Code 0, Test Mode OFF, exact selected
+kernel/configuration hashes and actual AMD hardware rendering passed.
+No new System warnings/errors or AMD signing errors were found during it.
+Kernel-Power event 40 names the Realtek USB GbE controller; sleep completed
+and that device reports Code 0 afterward. This establishes one short S3
+resume alongside actual normal-mode loading and basic hardware rendering
+on this exact Windows installation. Repeated/long sleep, game/anti-cheat
+compatibility and a Microsoft-certified Deck package are not established.
+The earlier candidate black-screen resume remains unexplained.
+A second normal-mode S3 cycle passed at 11:40:52-12:01:17 CDT, lasting
+20 minutes 25 seconds on AC with power-button wake. Post-resume Code 0,
+Test Mode OFF, unchanged kernel/configuration hashes and actual AMD
+hardware rendering passed again, with no new System warnings/errors or
+Code Integrity errors during the cycle. The same information-level USB
+Ethernet event 40 preceded sleep, which nevertheless completed. Thus
+two cycles are verified, including this longer one; battery sleep,
+inactivity recovery and broad sleep reliability remain untested.
+Startup queries found no AMD/display errors or AMD Code Integrity
+warnings/errors; separate ACPI/WUDFRd and Defender events are retained.
+Evidence: normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/.
+config-trial-state.json records the current outcome. Frozen package
+manifests retain the historical pre-boot values used for trial integrity.
+
+The sections below retain the sequence of earlier research and testing.
+
+Subsequent installation at 15:23 local time
+------------------------------------------
+The user authorized installing the candidate and its first Test Mode reboot.
+A separate package was built with decklcd-config.inf and
+decklcd-config-extension.inf and corresponding catalog names. This makes
+its package identity distinct from the preserved patched prototype.
+Only its two adapted catalogs were locally test-signed. Auxiliary catalogs
+were restored from ASUS originals, and no executable was re-signed or edited.
+The new certificate is CN=Steam Deck LCD Configuration Trial, thumbprint
+A1FE4F2E1EE372DE643A1CE45591A8681BCF0BBD. Its local PFX and password files
+were removed after signing; its public certificate was trusted for setup.
+Windows installed oem56.inf and oem57.inf. The GPU was selected to oem56.inf,
+and the installed kernel and configuration hashes match the unchanged
+kernel and emulated AE configuration below. Automatic kernel verification
+still passes after staging and for the selected DriverStore kernel file.
+The live switch reported Code 43. At that point the candidate was selected
+for a fresh Test Mode boot, with first-boot initialization still unverified.
+TESTSIGNING remained ON. No restart or automatic activation was initiated.
+The working prototype, stock backup, and prototype certificate are retained.
+The state then was CandidateSelectedNeedsRestart.
+Candidate files: private-config-install/WT6A_INF/.
+The original unsigned research package below remains a historical artifact.
+
+Finding
+-------
+The previous conclusion that modifying any catalog-covered file necessarily
+forces the executable driver to require Test Mode was too broad. Package
+installation validation and executable signature validation are separate
+checks. Modifying a configuration file still invalidates the original
+package's signature for that file, but the unchanged kernel still has its
+original hash covered by the unchanged Microsoft-signed vendor catalog.
+Whether Windows accepts the complete arrangement at installation and on
+an actual normal boot must be tested; it is not proven by SignTool alone.
+
+Offline candidate
+-----------------
+Donor: ASUS 32.0.21043.21001, released 2026-07-20.
+Kernel SHA-256, unchanged:
+ae975bbb56282be1471b9a91407f0155c087b619f99d2731d4e7989720522152
+ReleaseVersion: 25.10.43.21-260623a-202038C-Asus
+Original 15-byte amdgcf.dat: 010000007ba5870fde8ec6144b16af
+AE candidate:              01000000b55ba498aabfd8674b16ae
+Candidate SHA-256:
+7ee54354831bbf267c590636ffffd95fca91ff5455578151fa657bd5f9162717
+
+The checksum covers the device record plus the ASCII ReleaseVersion value.
+The actual unchanged hash instructions reproduce the original checksum.
+Recomputing the checksum for the AE record makes the unchanged comparison
+code accept AE while retaining its device-ID, revision, and checksum checks.
+Seven isolated emulator cases passed: original AF acceptance, original AE
+rejection, configuration-only AE acceptance, AF rejection, wrong-device
+rejection, corrupt-checksum rejection, and wrong-ReleaseVersion rejection.
+File/registry IO and full hardware initialization were not emulated.
+
+A separate 151-file package was prepared. Before catalog regeneration,
+only u0202038.inf, amduw23e.inf, and B026204/amdgcf.dat differed from ASUS.
+Every executable was identical. The INFs add only the exact LCD Deck ID:
+PCI\VEN_1002&DEV_163F&SUBSYS_01231002&REV_AE
+Microsoft Inf2Cat generated catalogs with no errors or warnings. These
+new catalogs are UNSIGNED; this package is not yet ready for installation.
+Original signed catalogs were preserved separately.
+
+Signature evidence on this Windows installation
+-----------------------------------------------
+1. The original kernel passed SignTool verify /kp /c with the original
+   u0202038.cat. The modified configuration failed verification against
+   that original catalog, as expected.
+2. Automatic kernel verification initially failed: the original catalog
+   had not been registered in Windows' catalog database.
+3. All six original ASUS catalogs passed Microsoft's kernel-policy
+   signature check and were registered with SignTool catdb /u. No new
+   certificate was trusted. No original catalog bytes were changed.
+4. SignTool verify /kp /a /hash SHA256 then PASSED for the unchanged kernel,
+   with no explicit /c catalog argument. It still passes on a follow-up
+   check. This verifies catalog database discovery and signing policy,
+   not an actual kernel load with Test Mode disabled.
+5. The active GPU stayed at oem50.inf, version 32.0.21043.21001, Code 0.
+At that research step the working patched kernel remained selected. Boot
+settings were unchanged. The subsequent selection is recorded above.
+
+Local evidence
+--------------
+private-config-trial/candidate-report.json
+private-config-package/package-report.json
+private-config-package/catalog-validation.json
+private-config-package/catalog-validation.log
+private-config-package/WT6A_INF/ (unsigned candidate, do not install yet)
+private-config-package/original-catalogs/ (unchanged vendor catalogs)
+
+Hardware identity investigation
+-------------------------------
+In this startup path, the revision argument originates in a parser at RVA
+0xE0880. It calls ntoskrnl!IoGetDeviceProperty with property number 1
+(hardware IDs), parses the DEV_ and REV_ text, and returns those values to
+the caller at RVA 0x53098. Thus this particular check uses the Windows
+hardware-ID property; it is not a direct PCI configuration read here.
+That observation does not establish that changing a registry string would
+persist, alter all other checks, or constitute a supported device identity
+override. Windows documents hardware-ID properties as read-only, and the
+PCI revision register is read-only through standard PCI access. No hardware
+identity, registry hardware ID, PCI register, or firmware was changed.
+The configuration-only candidate avoids needing to spoof that identity.
+
+First configuration-only boot result
+------------------------------------
+The live switch reported Code 43 and the user reported loss of display.
+Windows then booted at 2026-10-05 15:33 local time. On inspection at 15:48,
+the candidate is selected as oem56.inf, version 32.0.21043.21001, Code 0.
+The user confirms that Windows restarted and the display works. The actual
+selected service kernel SHA-256 matches the unchanged ASUS executable;
+the selected amdgcf.dat matches the AE candidate. Automatic Microsoft
+kernel-policy signature verification passed again. Live Code Integrity
+flags 2621955 confirm Test Mode is active. The offscreen hardware-only
+D3D11 clear/copy/readback test passed 1024 pixels for each of three colors,
+without software fallback. These are basic initialization/rendering results.
+Candidate display resume subsequently FAILED by user observation. Windows
+recorded sleep at 15:50 local time and a power-button wake at 16:19.
+The GPU still reported Code 0 and the post-resume hardware rendering check
+passed, but the display remained black. Win+Ctrl+Shift+B did not recover
+it; the user reports that restarting restored the display. No graphics
+error events from the selected providers were found in that interval.
+Offscreen rendering success does not establish panel/display functionality.
+The cause is not established. The working prototype was then reselected as
+oem50.inf with its verified patched kernel hash; the live switch reported
+Code 43. After the 16:40 local boot, the prototype reports Code 0 and S3
+sleep is available again. Live Code Integrity confirms Test Mode remains
+on. The user confirms the Sleep option returned. Games and a Test
+Mode OFF boot were unverified then, and the normal-mode trial was on hold.
+Evidence: config-trial-state.json and
+private-config-install/d3d11-after-test-boot.json,
+private-config-install/d3d11-after-test-sleep.json, and
+private-config-install/resume-failure-report.json.
+
+Historical trial planning
+-------------------------
+2026-10-06 update: the user resumed testing. The installer now hash-checks
+both staged main packages and all shared system destinations, resolves
+the exact DriverStore INF, and suppresses unnecessary copying through
+DI_NOFILECOPY. Native selection runs in a bounded child process with DIF
+progress logs. The read-only file audit and 24 safety/process checks passed.
+NORMAL-MODE-BOOT.txt describes the corrected guarded trial. Its subsequent
+normal-mode boot/rendering passed; anti-cheat compatibility is unverified.
+
+Final update for 2026-10-05: normal-mode preparation stopped at a file-copy
+prompt, before candidate selection completed or TESTSIGNING OFF. The
+operator's retry could not resolve it. At 18:26 local time, administrator
+cleanup canceled the preparation and removed its SYSTEM recovery task;
+before/after GPU and boot checks verified the unchanged patched oem50.inf
+with Code 0 and Test Mode ON for the running and next boot. No reboot was
+requested. The user ended testing and chose to keep that prototype. A
+future trial requires correction of the staged-file copying, followed by
+new user authorization to resume. Normal-mode hardware loading remains
+unverified. See NORMAL-MODE-BOOT.txt and the retired trial's cleanup record.
+
+Earlier update: the user explicitly requested proceeding with the configuration
+candidate and a TESTSIGNING OFF reboot. That instruction supersedes the
+earlier sequencing recommendation in the following paragraph. A separate
+deferred-selection helper and one-time SYSTEM recovery task are prepared;
+NORMAL-MODE-BOOT.txt documents this trial. Sleep/resume remained
+unresolved, and normal-mode boot had not yet been measured at that point.
+
+Earlier sequencing recommendation, superseded by the user's boot request:
+The restored prototype has started successfully. Investigate the failed
+candidate display resume before proceeding with a normal-mode trial.
+Local installation signing, selection, first Test Mode boot, selected
+INF/Code 0, kernel/configuration hashes, and basic rendering checks passed.
+Preserve the working prototype and stock-driver backups. Verify sleep/wake
+with the configuration-only candidate while Test Mode is still on.
+Only after that succeeds should the trial disable TESTSIGNING and reboot.
+Verify actual Code Integrity state, driver startup, hardware rendering,
+sleep/wake, and signature/event logs after that normal boot.
+Recover using the existing prototype or stock driver if the trial fails.
+If the patched fallback is selected again, do not disable Test Mode:
+that kernel depends on the local test signature.
+
+Limits
+------
+Normal-mode boot and basic hardware rendering are now verified on this
+Deck. Anti-cheat compatibility remains untested. The adapted package is not an
+unchanged vendor package and does not gain a Microsoft production signature
+for its changed INFs/configuration. A public supported release still needs
+appropriate vendor rights and a suitable signing/distribution process.
+This approach does not patch Windows, hide Test Mode, use a vulnerable
+driver, or disable kernel signature enforcement. No firmware was flashed.
+The six vendor catalogs added to the database are recorded with hashes and
+Windows-assigned names. They can be removed later with SignTool catdb /r
+using their recorded database names, after confirming no active normal-mode
+driver depends on them and verifying the exact catalog hashes first.
+
+Sources
+-------
+https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/signtool
+https://learn.microsoft.com/en-us/windows-hardware/drivers/install/signature-categories-and-driver-installation
+https://learn.microsoft.com/en-us/windows-hardware/drivers/install/authenticode
+https://learn.microsoft.com/en-us/windows-hardware/drivers/install/troubleshooting-driver-signing-installation
+https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/wdm/nf-wdm-iogetdeviceproperty
+https://learn.microsoft.com/en-us/windows-hardware/drivers/install/modifying-device-properties
+https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/wdm/ns-wdm-_pci_common_config

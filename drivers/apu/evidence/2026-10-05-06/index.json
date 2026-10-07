@@ -1,0 +1,579 @@
+{
+  "schema": 1,
+  "redactions": [
+    "local workspace/user-profile paths",
+    "GPU per-machine device instance suffix",
+    "user SID",
+    "computer identifiers in event XML and structured fields"
+  ],
+  "excluded": [
+    "driver binaries",
+    "private keys/passwords",
+    "BCD binary/text exports",
+    "DxDiag machine inventory",
+    "transcripts",
+    "synthetic protocol-test output"
+  ],
+  "records": [
+    {
+      "source": "build-status.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/build-status.json",
+      "original_sha256": "a048fd4e0c163b10b7093247d5bff7db6ceeebddfad1daf0a5ada6f9aa879b95"
+    },
+    {
+      "source": "config-runtime-report.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/config-runtime-report.json",
+      "original_sha256": "9cd8a836596eb97f59063eab0d4571386e55762513adbf531625a7b309dbf84d"
+    },
+    {
+      "source": "config-trial-state.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/config-trial-state.json",
+      "original_sha256": "6749ec99a9f2d6c10185d8850d3659cb35e9e9f7f30a10595a2fadca28b974eb"
+    },
+    {
+      "source": "guarded-reload/67b70c98-166d-4f36-9983-268781245a99/control.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/guarded-reload/67b70c98-166d-4f36-9983-268781245a99/control.json",
+      "original_sha256": "79ce3dcc81bba9b7c7e104123a017a2b16074e0ce9af90b615f228369a45f9f5"
+    },
+    {
+      "source": "guarded-reload/67b70c98-166d-4f36-9983-268781245a99/decision.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/guarded-reload/67b70c98-166d-4f36-9983-268781245a99/decision.json",
+      "original_sha256": "8a1f86ece6aa118f089eb51a2fcc49a8cc59644fc77f94054becb7e730747598"
+    },
+    {
+      "source": "guarded-reload/67b70c98-166d-4f36-9983-268781245a99/decoded-live-switch-errors.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/guarded-reload/67b70c98-166d-4f36-9983-268781245a99/decoded-live-switch-errors.json",
+      "original_sha256": "6a1125f4cca631e706f45038153d702504a002cdea4fde809f2e86dc00adcacf"
+    },
+    {
+      "source": "guarded-reload/67b70c98-166d-4f36-9983-268781245a99/hardware-after-config-switch.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/guarded-reload/67b70c98-166d-4f36-9983-268781245a99/hardware-after-config-switch.json",
+      "original_sha256": "e5096c76653cf75697b0110308ec11ebc5b3f6fa32d4e83592b914d4c4ee402e"
+    },
+    {
+      "source": "guarded-reload/67b70c98-166d-4f36-9983-268781245a99/hardware-after-user-reload.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/guarded-reload/67b70c98-166d-4f36-9983-268781245a99/hardware-after-user-reload.json",
+      "original_sha256": "b9352b6091ef90ead5c8802c61977068c556180eacb241b0356e71c35995cf26"
+    },
+    {
+      "source": "guarded-reload/67b70c98-166d-4f36-9983-268781245a99/live-switch-report.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/guarded-reload/67b70c98-166d-4f36-9983-268781245a99/live-switch-report.json",
+      "original_sha256": "555da8b704e42470f0d2db9ae7d8b858ac9f7926d5624e3c132b6596025ce82b"
+    },
+    {
+      "source": "guarded-reload/67b70c98-166d-4f36-9983-268781245a99/plan.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/guarded-reload/67b70c98-166d-4f36-9983-268781245a99/plan.json",
+      "original_sha256": "b8e62219b2ccb2db4c751dbde42fac28d18aa967af6a7bc4f696ced95dde1568"
+    },
+    {
+      "source": "guarded-reload/67b70c98-166d-4f36-9983-268781245a99/recovery-after-restart.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/guarded-reload/67b70c98-166d-4f36-9983-268781245a99/recovery-after-restart.json",
+      "original_sha256": "fdb78195beb4b13f714f7bcd8c4de4d53c3d76154c50f4211c1f275fa6a70c98"
+    },
+    {
+      "source": "guarded-reload/67b70c98-166d-4f36-9983-268781245a99/reload-start.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/guarded-reload/67b70c98-166d-4f36-9983-268781245a99/reload-start.json",
+      "original_sha256": "7d09acd8fa8d889c96ff35b55728f36344af280e8f6211cda6684cea582800bd"
+    },
+    {
+      "source": "guarded-reload/67b70c98-166d-4f36-9983-268781245a99/self-test.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/guarded-reload/67b70c98-166d-4f36-9983-268781245a99/self-test.json",
+      "original_sha256": "59638efb59c9a22d6dc7768489b893f310d31cc9b94fd74b486e58f46ab7ed38"
+    },
+    {
+      "source": "guarded-reload/67b70c98-166d-4f36-9983-268781245a99/state-before-test.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/guarded-reload/67b70c98-166d-4f36-9983-268781245a99/state-before-test.json",
+      "original_sha256": "d820bfd26417415a8b5f4d23d7406b2ff86d1a30bd799bc7c6f1b09336a61ff1"
+    },
+    {
+      "source": "guarded-reload/67b70c98-166d-4f36-9983-268781245a99/user-reported-reload-verification.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/guarded-reload/67b70c98-166d-4f36-9983-268781245a99/user-reported-reload-verification.json",
+      "original_sha256": "d907b7098dc162ad8fa151538fff8f06ffc6d5321eecae467940fffa87e08be5"
+    },
+    {
+      "source": "guarded-reload/67b70c98-166d-4f36-9983-268781245a99/watchdog-status.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/guarded-reload/67b70c98-166d-4f36-9983-268781245a99/watchdog-status.json",
+      "original_sha256": "54bba2b1fd0f27ca52b1380ddd429f7b3269960dda182690556c1c32b2fd66b2"
+    },
+    {
+      "source": "guarded-reload/active.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/guarded-reload/active.json",
+      "original_sha256": "07de8c477d1437e7a3b36582008d5648180b141b3b3af3975e367fd87dd1376f"
+    },
+    {
+      "source": "installation-state.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/installation-state.json",
+      "original_sha256": "b8b9f70278289fd1184d6b93532d85ef6467f3bf1b8a91f195956b31e11aded8"
+    },
+    {
+      "source": "launcher-state.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/launcher-state.json",
+      "original_sha256": "a7a24cff196a6e939b1e048c0b9f7b8358ea6431fe990df16620f40884239e32"
+    },
+    {
+      "source": "logs/d3d11-after-wake.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/logs/d3d11-after-wake.json",
+      "original_sha256": "05c08819290d99d62ebfc1e28dc840e2113ab75488b8b1501250862810e5ef0c"
+    },
+    {
+      "source": "logs/d3d11-fresh-boot.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/logs/d3d11-fresh-boot.json",
+      "original_sha256": "96c684f67fb9f88ae0e012a76060869bcea03362a661a468bcae25f816aadd92"
+    },
+    {
+      "source": "logs/emulation-results.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/logs/emulation-results.json",
+      "original_sha256": "bf7afa567dbc6053dc7f4df25b59d28df19e9ba05fe9696cae44e138915fe330"
+    },
+    {
+      "source": "logs/first-activation-graphics-events.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/logs/first-activation-graphics-events.json",
+      "original_sha256": "9fc758fe9ade9cc48f102997c4ddf2e3b17a1e9c264f380b911e96b8cecae86a"
+    },
+    {
+      "source": "logs/kernel-analysis.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/logs/kernel-analysis.json",
+      "original_sha256": "71ac18a2aacc3ea60183f073bb933f577fbaa0a3ea94c29de040f5e821ddd9b1"
+    },
+    {
+      "source": "logs/sleep-wake-events.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/logs/sleep-wake-events.json",
+      "original_sha256": "3e4dcb21afc8e0e6bd2979fac77871b2aee3aeeb844a04bafccc7f188e1d7840"
+    },
+    {
+      "source": "manifests/asus-32.0.21043.21001.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/manifests/asus-32.0.21043.21001.json",
+      "original_sha256": "98e17c0140d6b708c11438333a967b70c0e16e1e615057aac1cc8dd73da591e1"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/boot-start.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/boot-start.json",
+      "original_sha256": "092a618814b209a85acce6148e363b37d67183f25a03165136f8594490ff6a21"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/config-trial-state-before-normal-boot.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/config-trial-state-before-normal-boot.json",
+      "original_sha256": "eaec912b7ce9ad4e598a5c3495bbc9571aaa59a986c1d7060be9014a85f311a7"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/control.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/control.json",
+      "original_sha256": "f4b1875635b47b08840a661100a48149fa769666c6486f706c89508b43a37db1"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/d3d11-normal-boot.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/d3d11-normal-boot.json",
+      "original_sha256": "6516a4d74a05c1fac58940cde49ca0696a01d5f46b26b5816677eb2164c4fecc"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/decision.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/decision.json",
+      "original_sha256": "6f8563af16a859159be68046d938486630372e6c81bbc85d6f7e81f20b36403e"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/kernel-signature-verification.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/kernel-signature-verification.json",
+      "original_sha256": "f41172943740345d92cd4e745dccb4091353dfa50b4746a92f359834f159e0f9"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/normal-boot-verification.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/normal-boot-verification.json",
+      "original_sha256": "6180166dcfd145153fd8ca02bb9e1fbd700914625877eb2709e8b0c755836201"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/plan.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/plan.json",
+      "original_sha256": "94a3cf3a268b61a8d6e7ba7a2a859bdf956c75eadd96c44da7b0800d8de2dd14"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/prepared.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/prepared.json",
+      "original_sha256": "6bbdc0a583f4d62ddd199a183bf369ad0409829a708af183fa06be031a5a51df"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/previous-config-trial-state.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/previous-config-trial-state.json",
+      "original_sha256": "eaec912b7ce9ad4e598a5c3495bbc9571aaa59a986c1d7060be9014a85f311a7"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T163023Z/before-resume-verification.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T163023Z/before-resume-verification.json",
+      "original_sha256": "c97230e2f34bcfb9952ead87d330cd56ba54c23be9e3386300a876291d08e290"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T163023Z/config-trial-state-before-resume.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T163023Z/config-trial-state-before-resume.json",
+      "original_sha256": "f7c539f86a5b819ec1aca23f793edd585c3b28774350218167fd5a5ad7109db4"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T163023Z/d3d11-post-resume.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T163023Z/d3d11-post-resume.json",
+      "original_sha256": "1e9bf31c436bbd267b390317ab10d4f2fe9e4e04bced283f6c851ef8660ec38e"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T163023Z/post-resume-verification.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T163023Z/post-resume-verification.json",
+      "original_sha256": "be478adece0f14db36f5ca90b3f380b01bfbaa7a9e3016ac8e4b751d62812ef3"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T163023Z/resume-result.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T163023Z/resume-result.json",
+      "original_sha256": "e898e97d0a939acef6301477e1684f8228c925bf429b708c933acdbff65eb670"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T163023Z/sleep-resume-events.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T163023Z/sleep-resume-events.json",
+      "original_sha256": "5b0f86a38578c7a9f6b4985d38813f6a2e0367aa0c027bea485f711a17f3e5f6"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T163023Z/usb-and-system-check.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T163023Z/usb-and-system-check.json",
+      "original_sha256": "c9bf262761a0d9c79a6676c0925c3e9096c387e50d28caa07e065b14e18eb651"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T170201Z/before-resume-verification.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T170201Z/before-resume-verification.json",
+      "original_sha256": "be478adece0f14db36f5ca90b3f380b01bfbaa7a9e3016ac8e4b751d62812ef3"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T170201Z/config-trial-state-before-resume.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T170201Z/config-trial-state-before-resume.json",
+      "original_sha256": "1c86ad413804c909c30387f47f70d81ca78902e8081f0c42bcb04a58d28f5b13"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T170201Z/d3d11-post-resume.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T170201Z/d3d11-post-resume.json",
+      "original_sha256": "1fb77750593db1d5882baca48ba8d3b78c137464f2e57d70f1b7bf4471b5a680"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T170201Z/post-resume-verification.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T170201Z/post-resume-verification.json",
+      "original_sha256": "6180166dcfd145153fd8ca02bb9e1fbd700914625877eb2709e8b0c755836201"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T170201Z/resume-result.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T170201Z/resume-result.json",
+      "original_sha256": "93adda376a2d8cd49df26ce9eb83a638ac399addc29990e07ad8441fd76c868b"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T170201Z/sleep-resume-events.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/resume-20261006T170201Z/sleep-resume-events.json",
+      "original_sha256": "585700590ff00e0ebc938b84414a9e143d0c7ad2c97d0c903de4cc2ccaf4b579"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/selection-Candidate-process.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/selection-Candidate-process.json",
+      "original_sha256": "d48d1df57a4246154a1f1b85c7c000c0e702217681152133c6900ba3f09659b9"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/selection-Candidate-progress.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/selection-Candidate-progress.json",
+      "original_sha256": "16894ffd2b3ab8bfb72210c1cef32d0cadb75f046d727405f28f5283e16a1696"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/selection-Candidate.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/selection-Candidate.json",
+      "original_sha256": "85908ca1f69b8132b75d96df65035c755920b782320ace1c39d92c5517894bf9"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/self-test.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/self-test.json",
+      "original_sha256": "8c329a624f1bde1fb507c490d6b62981074727ee8c5f321304113c8a9948cec3"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/staged-file-verification.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/staged-file-verification.json",
+      "original_sha256": "312f8fc0e5861d17f00c874809acc53120e364c0386e84bbc6a9641b760c9ea5"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/startup-diagnostics.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/startup-diagnostics.json",
+      "original_sha256": "b28b6df08866c6603df61205dd7ba50e18dd492d3f7e680a852790b42e47322d"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/startup-snapshot.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/startup-snapshot.json",
+      "original_sha256": "14d38fd5f4b5125ed9cb609794e2c731fe7a836c4150c29226312fb68d804258"
+    },
+    {
+      "source": "normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/status.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/status.json",
+      "original_sha256": "c72ec0712602b4da48dc03a55aea2baa00b67a4c619c15625338dbbf454ee688"
+    },
+    {
+      "source": "normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/control.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/control.json",
+      "original_sha256": "7f05b036e765b1b7194568662b6d10368ff797a45d1543db00fc0b627f11be16"
+    },
+    {
+      "source": "normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/kernel-signature-verification.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/kernel-signature-verification.json",
+      "original_sha256": "f41172943740345d92cd4e745dccb4091353dfa50b4746a92f359834f159e0f9"
+    },
+    {
+      "source": "normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/plan.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/plan.json",
+      "original_sha256": "96a266307430cc93468afea4c93f12fd543e1ce956a01861a82e6688244d2515"
+    },
+    {
+      "source": "normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/preparation-error.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/preparation-error.json",
+      "original_sha256": "beea5c55d177343a6f290cadc2d3e94fd028cf7438346fc86fbe0467b9ea3ebb"
+    },
+    {
+      "source": "normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/previous-config-trial-state.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/previous-config-trial-state.json",
+      "original_sha256": "eaec912b7ce9ad4e598a5c3495bbc9571aaa59a986c1d7060be9014a85f311a7"
+    },
+    {
+      "source": "normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/retired-wrapper-error.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/retired-wrapper-error.json",
+      "original_sha256": "6f641d0121f48c97d6182e4d8c6462b83184c5f8e8ab42989b2d1b8fd932bc2b"
+    },
+    {
+      "source": "normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/selection-Candidate-process.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/selection-Candidate-process.json",
+      "original_sha256": "b0a6b9e3aa53c3438fea3341f880bc8f83dc05037db191de0184d34ac3707311"
+    },
+    {
+      "source": "normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/selection-Candidate-progress.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/selection-Candidate-progress.json",
+      "original_sha256": "fd3d9987d7b4d688ae74bfdb90212456276b47b55e588ed88c8cb3e538c18666"
+    },
+    {
+      "source": "normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/selection-Candidate.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/selection-Candidate.json",
+      "original_sha256": "894f17300b1f719c345a51375c42e0677f586f9ef4087ccd8535258117359b19"
+    },
+    {
+      "source": "normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/selection-Prototype-process.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/selection-Prototype-process.json",
+      "original_sha256": "fa5057f9ffe6b1a9a08c21141415c9eeb1ba137ad8bc0ac852a9ba42969ca9fd"
+    },
+    {
+      "source": "normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/selection-Prototype-progress.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/selection-Prototype-progress.json",
+      "original_sha256": "e82372ceb571300d3e5d5b4983882eb91b98a50b0975702f479995700bb575d3"
+    },
+    {
+      "source": "normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/selection-Prototype.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/selection-Prototype.json",
+      "original_sha256": "e783d28e8d581a57a43591fdd13676efeb603030fd9ea0a157ae0d35d496a1a9"
+    },
+    {
+      "source": "normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/self-test.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/self-test.json",
+      "original_sha256": "2e3acbb7a0125bc3671e29598082704bdaae4427935461cb4dcea3237141a6a2"
+    },
+    {
+      "source": "normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/staged-file-verification.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/staged-file-verification.json",
+      "original_sha256": "430ec0c6fc41dc12c76f88ae329bf16bc6255e3776999be623d931688a2006f6"
+    },
+    {
+      "source": "normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/status.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/1ae76c89-214b-4728-ba2c-cc6ee53a8cb8/status.json",
+      "original_sha256": "b6d4ad3183a58665cd63cfbab27d923a2b0214e82c2be7bd4cdfd226234dc50d"
+    },
+    {
+      "source": "normal-boot/active.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/active.json",
+      "original_sha256": "0417e47e4e405e4120b13428ed966adac7468fdec58aff289549582cd22cde19"
+    },
+    {
+      "source": "normal-boot/b0aefb26-c5cd-46aa-82d2-ee29f426b1ea/cancelled-copy-failure.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/b0aefb26-c5cd-46aa-82d2-ee29f426b1ea/cancelled-copy-failure.json",
+      "original_sha256": "9b9944588fc8631610c7456b81fc7d3541596f49ff61afb2991216df002607e2"
+    },
+    {
+      "source": "normal-boot/b0aefb26-c5cd-46aa-82d2-ee29f426b1ea/control.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/b0aefb26-c5cd-46aa-82d2-ee29f426b1ea/control.json",
+      "original_sha256": "98f0a4492130497ffd2b7c30957007550b30e60f8ceb956ce604c0b8b19a6233"
+    },
+    {
+      "source": "normal-boot/b0aefb26-c5cd-46aa-82d2-ee29f426b1ea/kernel-signature-verification.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/b0aefb26-c5cd-46aa-82d2-ee29f426b1ea/kernel-signature-verification.json",
+      "original_sha256": "f41172943740345d92cd4e745dccb4091353dfa50b4746a92f359834f159e0f9"
+    },
+    {
+      "source": "normal-boot/b0aefb26-c5cd-46aa-82d2-ee29f426b1ea/plan.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/b0aefb26-c5cd-46aa-82d2-ee29f426b1ea/plan.json",
+      "original_sha256": "d693391e88d365fb070a79efee1d99e8e3d669ada46f3cbb7cf98cac446e6b01"
+    },
+    {
+      "source": "normal-boot/b0aefb26-c5cd-46aa-82d2-ee29f426b1ea/previous-config-trial-state.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/b0aefb26-c5cd-46aa-82d2-ee29f426b1ea/previous-config-trial-state.json",
+      "original_sha256": "eaec912b7ce9ad4e598a5c3495bbc9571aaa59a986c1d7060be9014a85f311a7"
+    },
+    {
+      "source": "normal-boot/b0aefb26-c5cd-46aa-82d2-ee29f426b1ea/self-test.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/b0aefb26-c5cd-46aa-82d2-ee29f426b1ea/self-test.json",
+      "original_sha256": "36f9e3e62912c7bef614a554ed3b1396bfb9be29f9b99912c50dbfa139668ea1"
+    },
+    {
+      "source": "normal-boot/b0aefb26-c5cd-46aa-82d2-ee29f426b1ea/status.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/b0aefb26-c5cd-46aa-82d2-ee29f426b1ea/status.json",
+      "original_sha256": "738ed6a2a9134c2cc7097a5793b7be846b27801526be6dc7e0838a128059ada1"
+    },
+    {
+      "source": "normal-boot/preflight-2026-10-06.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/normal-boot/preflight-2026-10-06.json",
+      "original_sha256": "7a8a36fdd4133b7304d43db172db0e70f61023c3bf580d87f0d0fdbe52dd015c"
+    },
+    {
+      "source": "private-config-install/candidate-report.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/private-config-install/candidate-report.json",
+      "original_sha256": "9076a4fdf4be85ea67426d3a85b887d8ee9cd5c583b695753fcdb9ff9b0c9b17"
+    },
+    {
+      "source": "private-config-install/d3d11-after-test-boot.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/private-config-install/d3d11-after-test-boot.json",
+      "original_sha256": "b0e06cbeea9d936c464df4829e36ceed87238e828cbcdb34a42188e758f8036f"
+    },
+    {
+      "source": "private-config-install/d3d11-after-test-sleep.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/private-config-install/d3d11-after-test-sleep.json",
+      "original_sha256": "cf5ed00f06b35799967c8f0dc352ae0ddb93523555454afdbfafcb95e9318d7b"
+    },
+    {
+      "source": "private-config-install/package-report.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/private-config-install/package-report.json",
+      "original_sha256": "268c17bb835797b28d7bab9af5498fc2271d629bb6db5fa1f0fb00e431c38802"
+    },
+    {
+      "source": "private-config-install/pre-reboot-verification.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/private-config-install/pre-reboot-verification.json",
+      "original_sha256": "822a2d3a91631e26be72fda93d5c2eda2691d955c943340cd730078651273ccf"
+    },
+    {
+      "source": "private-config-install/reload-error-binary-analysis.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/private-config-install/reload-error-binary-analysis.json",
+      "original_sha256": "f1597972429dce384c28690dfe22becba09c82649f338974e88f0d4fd07b6d0a"
+    },
+    {
+      "source": "private-config-install/reload-variant-comparison.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/private-config-install/reload-variant-comparison.json",
+      "original_sha256": "1c1cf466fadd3d2031eb1ca38a36c53c74de7eaecab03d5f499c1fcb610e95d3"
+    },
+    {
+      "source": "private-config-install/resume-failure-report.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/private-config-install/resume-failure-report.json",
+      "original_sha256": "4f51c915f1aab2496c2c79960e520ac0fc748f904dac9a20519cd986aed4ba38"
+    },
+    {
+      "source": "private-config-install/setupapi-reload-evidence.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/private-config-install/setupapi-reload-evidence.json",
+      "original_sha256": "da7da7d6f9e9f38f0c0353866f24473007758d498f90864e8a8b18e5cee6c72d"
+    },
+    {
+      "source": "private-config-install/signed-config-package.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/private-config-install/signed-config-package.json",
+      "original_sha256": "4e0672845790d6f5258ea8ee20b0534dc3e0dc261d7d2b4c16d3260470dd1e60"
+    },
+    {
+      "source": "private-config-install/system-reload-evidence.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/private-config-install/system-reload-evidence.json",
+      "original_sha256": "daa8f9281d77ffde6e28880066d914e8f63c6303b72666aa26424b62ee7ce6bc"
+    },
+    {
+      "source": "private-config-package/candidate-report.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/private-config-package/candidate-report.json",
+      "original_sha256": "9076a4fdf4be85ea67426d3a85b887d8ee9cd5c583b695753fcdb9ff9b0c9b17"
+    },
+    {
+      "source": "private-config-package/catalog-validation.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/private-config-package/catalog-validation.json",
+      "original_sha256": "373354186d1a96cbe6165c210083f97610d2d19b1aa7035046e45aa284a7f18c"
+    },
+    {
+      "source": "private-config-package/package-report.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/private-config-package/package-report.json",
+      "original_sha256": "df6d75ff131b3ebe102290b01ef739a8d6794c9d83f86577522f786791ecfae5"
+    },
+    {
+      "source": "private-config-trial/candidate-report.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/private-config-trial/candidate-report.json",
+      "original_sha256": "9076a4fdf4be85ea67426d3a85b887d8ee9cd5c583b695753fcdb9ff9b0c9b17"
+    },
+    {
+      "source": "private-driver/build-report.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/private-driver/build-report.json",
+      "original_sha256": "f90e64976df79a168fbcdf2fced013ec184083d2e1c6b8d15e567ef2050b62a7"
+    },
+    {
+      "source": "private-driver/signed-package.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/private-driver/signed-package.json",
+      "original_sha256": "70499513d7e1ed3895b08daf78f5b8ac7043f421469689aeb50b1f18adc7762e"
+    },
+    {
+      "source": "runtime-report.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/runtime-report.json",
+      "original_sha256": "2345c8a2c140e239b8a1e4e79a2d12a8fa2449c95b9b6e379098226859db90d9"
+    },
+    {
+      "source": "work/driver-audit/emulation-results.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/research/emulation-results.json",
+      "original_sha256": "bf7afa567dbc6053dc7f4df25b59d28df19e9ba05fe9696cae44e138915fe330"
+    },
+    {
+      "source": "work/driver-audit/package-verification.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/research/package-verification.json",
+      "original_sha256": "366f3679b99d4d23d078049dcdb01a90112d646657e4594f5ae8fe493b47c9ac"
+    },
+    {
+      "source": "work/driver-audit/kernel-analysis.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/research/kernel-analysis.json",
+      "original_sha256": "71ac18a2aacc3ea60183f073bb933f577fbaa0a3ea94c29de040f5e821ddd9b1"
+    },
+    {
+      "source": "work/driver-audit/signed-route-inspection.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/research/signed-route-inspection.json",
+      "original_sha256": "4b260f8a11c2a5f69609b6efe4d4b2df300e4e99d467ba5238644caf5701d038"
+    },
+    {
+      "source": "work/driver-audit/reload-path-trace.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/research/reload-path-trace.json",
+      "original_sha256": "2cec8ad49c0740e3dabd79221586f2e9142186fa08804e76419cafe4efc778d5"
+    },
+    {
+      "source": "work/driver-audit/reload-path-trace-2.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/research/reload-path-trace-2.json",
+      "original_sha256": "3ad3852a286a1902cfab6c9318171cd14325573394d43b81bc52a92d0dbc623a"
+    },
+    {
+      "source": "work/driver-audit/reload-path-trace-3.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/research/reload-path-trace-3.json",
+      "original_sha256": "aa1db32f842cafecc6950becb9ff5bfdeb8872e9a58d53f328d08e9cfb91a74e"
+    },
+    {
+      "source": "work/driver-audit/reload-path-trace-4.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/research/reload-path-trace-4.json",
+      "original_sha256": "d31b3588e534c748d5f4ba515b8762c933e3db5692854bf4e75ccd4bbf4482d6"
+    },
+    {
+      "source": "work/driver-audit/reload-path-trace-5.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/research/reload-path-trace-5.json",
+      "original_sha256": "a15f06358ed6412de55fb6e5ce9e8b69b9103e7fc133ae3fd4ba0d1b829daa20"
+    },
+    {
+      "source": "work/driver-audit/reload-path-trace-6.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/research/reload-path-trace-6.json",
+      "original_sha256": "6ea1df8035aa01de0b78f989b724d417110c3e5340992475e572658d89cf03b1"
+    },
+    {
+      "source": "work/driver-audit/reload-path-trace-7.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/research/reload-path-trace-7.json",
+      "original_sha256": "6b8033e5a3f9caca0891f9a671c9df7cf837b8d77a3c21809141d94f1e2c279a"
+    },
+    {
+      "source": "work/driver-audit/reload-path-trace-8.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/research/reload-path-trace-8.json",
+      "original_sha256": "83748870d04af40cbbe4e84cdae7bcae29821bd6007c4283103d06b67940cdce"
+    },
+    {
+      "source": "work/driver-audit/reload-path-trace-9.json",
+      "published": "drivers/apu/evidence/2026-10-05-06/research/reload-path-trace-9.json",
+      "original_sha256": "b52683c01c4947ce739a54122c0f0a9689aeaba9717d3995a391de5a77a25c12"
+    }
+  ]
+}

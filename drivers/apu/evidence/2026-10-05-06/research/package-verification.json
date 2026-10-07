@@ -1,0 +1,6 @@
+{
+  "Path": "[workspace]\\work\\driver-audit\\AMD_Graphic_DriverOnly_ROG_AMD_B_V32.0.21043.21001_50567.exe",
+  "SHA256": "63310301B46426C4C6200219D0F30E598A711E91B087303D1557D4148CA09DF8",
+  "SignatureStatus": "Valid",
+  "Signer": "CN=ASUSTeK COMPUTER INC., O=ASUSTeK COMPUTER INC., L=Beitou District, S=Taipei City, C=TW, SERIALNUMBER=23638777, OID.2.5.4.15=Private Organization, OID.1.3.6.1.4.1.311.60.2.1.3=TW"
+}

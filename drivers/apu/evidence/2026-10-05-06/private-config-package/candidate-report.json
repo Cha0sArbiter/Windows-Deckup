@@ -1,0 +1,50 @@
+{
+  "status": "OfflineCandidateVerified",
+  "kernel_sha256": "ae975bbb56282be1471b9a91407f0155c087b619f99d2731d4e7989720522152",
+  "kernel_modified": false,
+  "release_version": "25.10.43.21-260623a-202038C-Asus",
+  "original_configuration_hex": "010000007ba5870fde8ec6144b16af",
+  "candidate_configuration_hex": "01000000b55ba498aabfd8674b16ae",
+  "candidate_sha256": "7ee54354831bbf267c590636ffffd95fca91ff5455578151fa657bd5f9162717",
+  "checks": [
+    {
+      "case": "Original AF accepted",
+      "result": "0x0",
+      "status": "pass"
+    },
+    {
+      "case": "Original AE rejected",
+      "result": "0xc0000001",
+      "status": "pass"
+    },
+    {
+      "case": "Configuration-only AE accepted",
+      "result": "0x0",
+      "status": "pass"
+    },
+    {
+      "case": "Configuration-only AF rejected",
+      "result": "0xc0000001",
+      "status": "pass"
+    },
+    {
+      "case": "Different device rejected",
+      "result": "0xc0000001",
+      "status": "pass"
+    },
+    {
+      "case": "Corrupt checksum rejected",
+      "result": "0xc0000001",
+      "status": "pass"
+    },
+    {
+      "case": "Different ReleaseVersion rejected",
+      "result": "0xc0000001",
+      "status": "pass"
+    }
+  ],
+  "live_driver_changed": false,
+  "normal_boot_verified": false,
+  "installation_catalog_still_valid_for_modified_configuration": false,
+  "limitation": "A configuration candidate is not a signed replacement package. Normal Windows loading and hardware operation require a separate controlled trial."
+}

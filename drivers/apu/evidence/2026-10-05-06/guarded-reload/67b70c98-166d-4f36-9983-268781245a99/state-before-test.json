@@ -1,0 +1,87 @@
+{
+  "Status": "PrototypeRestored",
+  "StartedAt": "2026-10-05T15:22:43.8306258-05:00",
+  "GpuBefore": {
+    "InstanceId": "PCI\\VEN_1002&DEV_163F&SUBSYS_01231002&REV_AE\\[device-instance]",
+    "Name": "AMD Radeon(TM) Graphics",
+    "ProblemCode": 0,
+    "Version": "32.0.21043.21001",
+    "Inf": "oem50.inf",
+    "Service": "amduw23g-202038-1ed56446"
+  },
+  "CodeIntegrityBefore": {
+    "Options": 2621955,
+    "TestSigningActive": true
+  },
+  "BcdTestSigningBefore": "Yes",
+  "BootSettingChanged": false,
+  "BootBeforeSelection": "2026-10-05T13:44:49.5-05:00",
+  "CertificateThumbprint": "A1FE4F2E1EE372DE643A1CE45591A8681BCF0BBD",
+  "RootCertificatePreviouslyPresent": false,
+  "PublisherCertificatePreviouslyPresent": false,
+  "StagedMainInf": "oem56.inf",
+  "StagedExtensionInf": "oem57.inf",
+  "StagedInfs": [
+    "oem56.inf",
+    "oem57.inf"
+  ],
+  "SelectedGpu": {
+    "InstanceId": "PCI\\VEN_1002&DEV_163F&SUBSYS_01231002&REV_AE\\[device-instance]",
+    "Name": "AMD Radeon(TM) Graphics",
+    "ProblemCode": 43,
+    "Version": "32.0.21043.21001",
+    "Inf": "oem56.inf",
+    "Service": "amduw23g-202038-1ed56446"
+  },
+  "SelectedFiles": {
+    "KernelPath": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\decklcd-config.inf_amd64_bdc26e0731decc8b\\B026204\\amdkmdag.sys",
+    "KernelSHA256": "AE975BBB56282BE1471B9A91407F0155C087B619F99D2731D4E7989720522152",
+    "ConfigurationPath": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\decklcd-config.inf_amd64_bdc26e0731decc8b\\B026204\\amdgcf.dat",
+    "ConfigurationSHA256": "7EE54354831BBF267C590636FFFFD95FCA91FF5455578151FA657BD5F9162717"
+  },
+  "SelectedAt": "2026-10-05T15:23:11.6521848-05:00",
+  "CodeIntegrityAfterSelection": {
+    "Options": 2621955,
+    "TestSigningActive": true
+  },
+  "RestoredGpu": {
+    "InstanceId": "PCI\\VEN_1002&DEV_163F&SUBSYS_01231002&REV_AE\\[device-instance]",
+    "Name": "AMD Radeon(TM) Graphics",
+    "ProblemCode": 0,
+    "Version": "32.0.21043.21001",
+    "Inf": "oem50.inf",
+    "Service": "amduw23g-202038-1ed56446"
+  },
+  "RestoredFiles": {
+    "KernelPath": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\u0202038.inf_amd64_bcbc9b7de0ca5d7e\\B026204\\amdkmdag.sys",
+    "KernelSHA256": "E1B4DBFB807A59971BFC90E8139E35F96B4ADEDFD773695DBDCA5568B83D1ADF",
+    "ConfigurationPath": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\u0202038.inf_amd64_bcbc9b7de0ca5d7e\\B026204\\amdgcf.dat",
+    "ConfigurationSHA256": "71AA9220ADB150BE58EBAF8AE71513FEF218FFC2338FA2263A23DF844AECDC09"
+  },
+  "WindowsRequestedRestart": false,
+  "RebootRequired": false,
+  "LastError": "Display resume failed by user observation despite Code 0 and a successful offscreen GPU test; cause not established.",
+  "NormalBootVerified": false,
+  "GpuAfterBoot": {
+    "InstanceId": "PCI\\VEN_1002&DEV_163F&SUBSYS_01231002&REV_AE\\[device-instance]",
+    "Name": "AMD Radeon(TM) Graphics",
+    "ProblemCode": 0,
+    "Version": "32.0.21043.21001",
+    "Inf": "oem56.inf",
+    "Service": "amduw23g-202038-1ed56446"
+  },
+  "VerifiedBoot": "2026-10-05T15:33:38.5-05:00",
+  "VerifiedCodeIntegrity": {
+    "Options": 2621955,
+    "TestSigningActive": true
+  },
+  "HardwareRenderingVerified": true,
+  "SleepWakeVerified": false,
+  "SleepResumeObserved": true,
+  "RecoveryVerifiedBoot": "2026-10-05T16:40:13.5000000-05:00",
+  "RecoveryCodeIntegrity": {
+    "Options": 2621955,
+    "TestSigningActive": true
+  },
+  "RecoveryS3Available": true
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "TimeCreated": "2026-10-05T14:26:52.8559368-05:00",
+    "EventId": 42,
+    "Provider": "Microsoft-Windows-Kernel-Power",
+    "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>42</EventID><Version>3</Version><Level>4</Level><Task>64</Task><Opcode>0</Opcode><Keywords>0x8000000000000404</Keywords><TimeCreated SystemTime='2026-10-05T19:26:52.8559368Z'/><EventRecordID>5587</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='576'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data Name='TargetState'>4</Data><Data Name='EffectiveState'>4</Data><Data Name='Reason'>4</Data><Data Name='Flags'>0</Data><Data Name='TransitionsToOn'>1</Data></EventData></Event>"
+  },
+  {
+    "TimeCreated": "2026-10-05T14:26:53.8934574-05:00",
+    "EventId": 107,
+    "Provider": "Microsoft-Windows-Kernel-Power",
+    "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>107</EventID><Version>1</Version><Level>4</Level><Task>102</Task><Opcode>0</Opcode><Keywords>0x8000000000000444</Keywords><TimeCreated SystemTime='2026-10-05T19:26:53.8934574Z'/><EventRecordID>5588</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='576'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data Name='TargetState'>4</Data><Data Name='EffectiveState'>4</Data><Data Name='WakeFromState'>4</Data><Data Name='ProgrammedWakeTimeAc'>1601-01-01T00:00:00.0000000Z</Data><Data Name='ProgrammedWakeTimeDc'>1601-01-01T00:00:00.0000000Z</Data><Data Name='WakeRequesterTypeAc'>0</Data><Data Name='WakeRequesterTypeDc'>0</Data></EventData></Event>"
+  },
+  {
+    "TimeCreated": "2026-10-05T14:27:16.6808605-05:00",
+    "EventId": 1,
+    "Provider": "Microsoft-Windows-Power-Troubleshooter",
+    "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Power-Troubleshooter' Guid='{cdc05e28-c449-49c6-b9d2-88cf761644df}'/><EventID>1</EventID><Version>3</Version><Level>4</Level><Task>0</Task><Opcode>0</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='2026-10-05T19:27:16.6808605Z'/><EventRecordID>5595</EventRecordID><Correlation ActivityID='{d8646bcf-8735-4277-a990-cf9d08776cad}'/><Execution ProcessID='4420' ThreadID='4680'/><Channel>System</Channel><Computer>[computer]</Computer><Security UserID='S-1-5-19'/></System><EventData><Data Name='SleepTime'>2026-10-05T19:26:52.3234014Z</Data><Data Name='WakeTime'>2026-10-05T19:27:15.5485768Z</Data><Data Name='SleepDuration'>534</Data><Data Name='WakeDuration'>1047</Data><Data Name='DriverInitDuration'>1025</Data><Data Name='BiosInitDuration'>4166688</Data><Data Name='HiberWriteDuration'>0</Data><Data Name='HiberReadDuration'>0</Data><Data Name='HiberPagesWritten'>0</Data><Data Name='Attributes'>1912621324</Data><Data Name='TargetState'>4</Data><Data Name='EffectiveState'>4</Data><Data Name='WakeSourceType'>1</Data><Data Name='WakeSourceTextLength'>0</Data><Data Name='WakeSourceText'></Data><Data Name='WakeTimerOwnerLength'>0</Data><Data Name='WakeTimerContextLength'>0</Data><Data Name='NoMultiStageResumeReason'>0</Data><Data Name='WakeTimerOwner'></Data><Data Name='WakeTimerContext'></Data><Data Name='CheckpointDuration'>33</Data></EventData></Event>"
+  }
+]

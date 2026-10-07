@@ -1,0 +1,32 @@
+[
+  {
+    "test": "Original ASUS AF accepted",
+    "status": "pass",
+    "returned_status": "0x0"
+  },
+  {
+    "test": "Original Deck AE rejected",
+    "status": "pass",
+    "returned_status": "0xc0000001"
+  },
+  {
+    "test": "Patched Deck AE accepted",
+    "status": "pass",
+    "returned_status": "0x0"
+  },
+  {
+    "test": "Patched ASUS AF still accepted",
+    "status": "pass",
+    "returned_status": "0x0"
+  },
+  {
+    "test": "Patched lower mismatched device rejected",
+    "status": "pass",
+    "returned_status": "0xc0000001"
+  },
+  {
+    "test": "Patched higher mismatched device rejected",
+    "status": "pass",
+    "returned_status": "0xc0000001"
+  }
+]

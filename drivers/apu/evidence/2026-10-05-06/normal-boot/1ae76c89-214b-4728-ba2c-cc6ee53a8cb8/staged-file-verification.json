@@ -1,0 +1,300 @@
+{
+  "Candidate": {
+    "PublishedInf": "oem56.inf",
+    "DriverStoreInf": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\decklcd-config.inf_amd64_bdc26e0731decc8b\\decklcd-config.inf",
+    "VerifiedFiles": 132,
+    "VerifiedUtc": "2026-10-06T16:02:03.5885132Z"
+  },
+  "Prototype": {
+    "PublishedInf": "oem50.inf",
+    "DriverStoreInf": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\u0202038.inf_amd64_bcbc9b7de0ca5d7e\\u0202038.inf",
+    "VerifiedFiles": 132,
+    "VerifiedUtc": "2026-10-06T16:02:06.2572408Z"
+  },
+  "SharedSystem": {
+    "VerifiedFiles": 56,
+    "Files": [
+      {
+        "Path": "C:\\WINDOWS\\System32\\atisamu64.dll",
+        "SHA256": "F79759C4CF228DDD12F0C31B3DDED72E1FB3CC713663AA23E57BD3A2F2DDC96E",
+        "Source": "B026204\\atisamu64.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\ativvsva.dat",
+        "SHA256": "E698410E1B8E5B2875AA8B4D01FE6E4F0BF354F40D92925C4E3503D7FD1EC208",
+        "Source": "B026204\\ativvsva.dat"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\ativvsvl.dat",
+        "SHA256": "F35A4644D926183D38815207E338E7919CBDD2B1BDB8164074E47B74EA1CF150",
+        "Source": "B026204\\ativvsvl.dat"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\atimpc64.dll",
+        "SHA256": "F850BC8C16E679F402B0AB31FCEEF0ECF666E530F16D85FBC88404BE920D0029",
+        "Source": "B026204\\atimpc64.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\atimuixx.dll",
+        "SHA256": "47A95211A950F3E6DEB50139F4A5704EEB9C3F6B1DC8B54DE832BB40636171B8",
+        "Source": "B026204\\atimuixx.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\EEURestart.exe",
+        "SHA256": "EB1570F7D136C917139DFC2A4B24365F7E0D32ADE0A54A3666EE3158F0D6F35E",
+        "Source": "B026204\\EEURestart.exe"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\atiadlxx.dll",
+        "SHA256": "5E3ED2F68B5650E3055F53A6F73EDECF00EB83FCFC88C6E8F0C41D88826858DF",
+        "Source": "B026204\\atiadlxx.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\amdadlx64.dll",
+        "SHA256": "47D601B6C49B0A7D88D1DD4FE30C15D12A45EF99A163F163FDFB53452DF3B380",
+        "Source": "B026204\\amdadlx64.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\amdave64.dll",
+        "SHA256": "5348278E40F09AA2FD79327914961734C8B7EBBDCFB118A67E2548AF5686FF80",
+        "Source": "B026204\\amdave64.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\amdpcom64.dll",
+        "SHA256": "823BE5E9F1CD94CD1B864795385DE99834525A7276B996DC6F8EB7D14B60E591",
+        "Source": "B026204\\amdpcom64.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\amfrt64.dll",
+        "SHA256": "32ADB035B323455F97FFB42AE8A6ADB4DA0DB8E749456E4FF3F945D008FC3DAE",
+        "Source": "B026204\\amfrt64.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\AMDKernelEvents.man",
+        "SHA256": "D93EADCEAA84AF4265B61DFD6A37F3DA5294433F5B418F17BD6C136CD5ABE841",
+        "Source": "B026204\\AMDKernelEvents.mc"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\vulkan-1.dll",
+        "SHA256": "FD6251B19FF4FE686C8072AEC95F616B1D0A86086561DD1372EA25BFD8A97BA3",
+        "Source": "B026204\\vulkan64.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\vulkan-1-999-0-0-0.dll",
+        "SHA256": "FD6251B19FF4FE686C8072AEC95F616B1D0A86086561DD1372EA25BFD8A97BA3",
+        "Source": "B026204\\vulkan64.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\vulkaninfo.exe",
+        "SHA256": "02D9AD8D9E0C02031EE0B9376CF705D18FB58BD984FE997CF6CD5643F4E2A1EC",
+        "Source": "B026204\\vulkaninfo64.exe"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\vulkaninfo-1-999-0-0-0.exe",
+        "SHA256": "02D9AD8D9E0C02031EE0B9376CF705D18FB58BD984FE997CF6CD5643F4E2A1EC",
+        "Source": "B026204\\vulkaninfo64.exe"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\GameManager64.dll",
+        "SHA256": "6D627B86E0EE4733A0379FE0F7D04BF1080905706C3CA2409EA5B1F631380480",
+        "Source": "B026204\\GameManager64.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\amdmiracast.dll",
+        "SHA256": "66B9E08ADA5679FAEDA3D373D254605735C992D5F736578BF35CD7A21DA096E7",
+        "Source": "B026204\\amdmiracast.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\amdlvr64.dll",
+        "SHA256": "1E85A5EA9D738D3E7B7E1B91464C203B094693095DADD90028C370883558704F",
+        "Source": "B026204\\amdlvr64.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\amdxc64.dll",
+        "SHA256": "5BFB6B1CA4B21820C7A0896AB029916690DCFE8AB131DA198A000071E4F78F37",
+        "Source": "B026204\\amdxcstub64.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\amf-mft-mjpeg-decoder64.dll",
+        "SHA256": "78308E7C9EF683266C56A320DE50F46C923A1FBF23C2575A4333D04192129C42",
+        "Source": "B026204\\amf-mft-mjpeg-decoder64.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\detoured.dll",
+        "SHA256": "89068C48C2C56EB857F23EC2A1E3A7F44FF539C4CFAFF7C34D824219ECADFA3E",
+        "Source": "B026204\\detoured64.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\amdgfxinfo64.dll",
+        "SHA256": "266399D5CBE229171F91CF2ED81779D919647684540044A3A7050F3A97D85D56",
+        "Source": "B026204\\amdgfxinfo64.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\atieah64.exe",
+        "SHA256": "1C89C13CF47E0303028A722341A761CD7CBE2A07D40263A2032D4FB6B48BD222",
+        "Source": "B026204\\atieah64.exe"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\atieclxx.exe",
+        "SHA256": "4FC4292228B5D5B24E85D529A291D4F39D1F79B2D15DBE18CD7AB83F1441DCA4",
+        "Source": "B026204\\atieclxx.exe"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\atiapfxx.blb",
+        "SHA256": "72FFA32A98F670BEA8DAB7597BD9226F18DB0BC90DC7F67C944DD092CD45EB8F",
+        "Source": "B026204\\atiapfxx.blb"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\atidxx64.dll",
+        "SHA256": "CE94B49307A9CD580061C855CE7FAFE49F772F841B45A7DE689B429F5A5D6729",
+        "Source": "B026204\\atidxxstub64.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\atidemgy.dll",
+        "SHA256": "988F0CFA8A9C3FDB5AE86D09317EC72AC629E3D1EAFDA5BE74AD90F5A4BB913A",
+        "Source": "B026204\\atidemgy.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\amdxc64.so",
+        "SHA256": "4726CD531DE9653A88CB22CC41C95750C525839357F8B3C7EDE70C0CB0D16C0F",
+        "Source": "B026204\\amdxc64.so"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\amd-smi.exe",
+        "SHA256": "BC05BC51BF5E05B663AB0508E69D32F9C2FFF7249DC5BEDD1FAB5D5226B6D01B",
+        "Source": "B026204\\amd-smi.exe"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\amdsasrv64.dll",
+        "SHA256": "26C11DD0BB801A49FEFD893D7EDCE605624AA0A314EE52BB33346193DEEE3E13",
+        "Source": "B026204\\amdsasrv64.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\System32\\amdsacli64.dll",
+        "SHA256": "17D6990EBCFBACFC5F9932D8B8DA25FB0B64C02625B19239FACB266C63CAB5AB",
+        "Source": "B026204\\amdsacli64.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\atisamu32.dll",
+        "SHA256": "B3DF172BD687CD9FBAD36080DCD256EEE57FBB4751C7799D37B5A171F30F2952",
+        "Source": "B026204\\atisamu32.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\ativvsva.dat",
+        "SHA256": "E698410E1B8E5B2875AA8B4D01FE6E4F0BF354F40D92925C4E3503D7FD1EC208",
+        "Source": "B026204\\ativvsva.dat"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\ativvsvl.dat",
+        "SHA256": "F35A4644D926183D38815207E338E7919CBDD2B1BDB8164074E47B74EA1CF150",
+        "Source": "B026204\\ativvsvl.dat"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\atimpc32.dll",
+        "SHA256": "DB3622FEF8E1F96DF4F60CB70591CF9E04EDB90BB617F2185D38D97E794BAA78",
+        "Source": "B026204\\atimpc32.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\atiadlxx.dll",
+        "SHA256": "46EB41727EDEB62B24B69D3AB43EA73632B17AD1BC7E3CB6A169A4AE3F88361D",
+        "Source": "B026204\\atiadlxy.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\atiadlxy.dll",
+        "SHA256": "46EB41727EDEB62B24B69D3AB43EA73632B17AD1BC7E3CB6A169A4AE3F88361D",
+        "Source": "B026204\\atiadlxy.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\amdadlx32.dll",
+        "SHA256": "715F59CC81F1FBEC4B36FFA753A0119EF00504F04E2BB909C63C2A5EC9CE9627",
+        "Source": "B026204\\amdadlx32.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\amdave32.dll",
+        "SHA256": "BE58D8DBA315B80D5F09DAE245D4408A95188F974149909025BEA172C88F5590",
+        "Source": "B026204\\amdave32.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\amdpcom32.dll",
+        "SHA256": "A4F7B8145785162AD8B8B10DE42880536BA9D460C44D7EDE54456757CA88ECCC",
+        "Source": "B026204\\amdpcom32.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\amfrt32.dll",
+        "SHA256": "E6BD8E53EDDC6DF812338C9DF7516AB0F6EFCC84F630D0FCB848867EAB9E7293",
+        "Source": "B026204\\amfrt32.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\vulkan-1.dll",
+        "SHA256": "CFC41ADD3943E5B55C017E479C8788398CA223CDCB42312B45D769D84D806282",
+        "Source": "B026204\\vulkan32.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\vulkan-1-999-0-0-0.dll",
+        "SHA256": "CFC41ADD3943E5B55C017E479C8788398CA223CDCB42312B45D769D84D806282",
+        "Source": "B026204\\vulkan32.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\vulkaninfo.exe",
+        "SHA256": "818FA641533AB7DE9A7CD02CF25AF1A0ECA24B27342AD3C1D34313B814D5C8BD",
+        "Source": "B026204\\vulkaninfo32.exe"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\vulkaninfo-1-999-0-0-0.exe",
+        "SHA256": "818FA641533AB7DE9A7CD02CF25AF1A0ECA24B27342AD3C1D34313B814D5C8BD",
+        "Source": "B026204\\vulkaninfo32.exe"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\GameManager32.dll",
+        "SHA256": "94E7BA1CFBD9ACD25597E2DC1DC07133B4C31BDE8F4691F0449811954C61823D",
+        "Source": "B026204\\GameManager32.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\amdlvr32.dll",
+        "SHA256": "267F47EB87DB85504C8363F342524B359074198D212416BE5D5E4A583709E465",
+        "Source": "B026204\\amdlvr32.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\amdxc32.dll",
+        "SHA256": "102CFEFA883F83CDB2EB409BE4BB91297542DD199960517F6ADAE126184DDA5E",
+        "Source": "B026204\\amdxcstub32.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\amf-mft-mjpeg-decoder32.dll",
+        "SHA256": "75E8FFC92B4055B1C0C34F22703B8A0146019EDCADDC018521AEA94E8EC5FD05",
+        "Source": "B026204\\amf-mft-mjpeg-decoder32.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\detoured.dll",
+        "SHA256": "7EBFAF0EDCA3FA4A8A58277B867848BADF5B17FF490E5140BA1171EBB55E4CEA",
+        "Source": "B026204\\detoured32.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\amdgfxinfo32.dll",
+        "SHA256": "B11FEE7E8E176636CEB17F3C19ABCF6795EDFC2B8DE56E265E297A447131C9B3",
+        "Source": "B026204\\amdgfxinfo32.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\atieah32.exe",
+        "SHA256": "D46B0E98EC3A27E733DC6D5A93F27F0143E00967859B51C4BB25D1CFC184D118",
+        "Source": "B026204\\atieah32.exe"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\atiapfxx.blb",
+        "SHA256": "72FFA32A98F670BEA8DAB7597BD9226F18DB0BC90DC7F67C944DD092CD45EB8F",
+        "Source": "B026204\\atiapfxx.blb"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\atidxx32.dll",
+        "SHA256": "59A1A949FC3A8EAE4261584081CEB8A996959C8F8D972E9EF8B3030406AEB217",
+        "Source": "B026204\\atidxxstub32.dll"
+      },
+      {
+        "Path": "C:\\WINDOWS\\SysWOW64\\amdsacli32.dll",
+        "SHA256": "0D0FA56423347566D59C09184A201EE5792E098066DA9CB083347BB78AA6C277",
+        "Source": "B026204\\amdsacli32.dll"
+      }
+    ],
+    "VerifiedUtc": "2026-10-06T16:02:06.7800444Z"
+  }
+}

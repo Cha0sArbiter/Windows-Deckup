@@ -1,0 +1,59 @@
+{
+  "Status": "Activated",
+  "StartedAt": "2026-10-05T13:04:32.8701389-05:00",
+  "OriginalGpu": {
+    "DeviceId": "PCI\\VEN_1002&DEV_163F&SUBSYS_01231002&REV_AE\\[device-instance]",
+    "Name": "AMD Custom GPU 0405",
+    "ErrorCode": 0,
+    "DriverVersion": "32.0.11002.3007",
+    "InfName": "oem35.inf",
+    "Signer": "Microsoft Windows Hardware Compatibility Publisher"
+  },
+  "OriginalCodeIntegrity": {
+    "Options": 1,
+    "TestSigningActive": false
+  },
+  "OriginalBcdTestSigning": "Absent",
+  "BootSettingChanged": true,
+  "RootCertificatePreviouslyPresent": false,
+  "PublisherCertificatePreviouslyPresent": false,
+  "CertificateThumbprint": "0C3AD4990F8F0694219B6FA503FA073E49CE3C50",
+  "StagedInf": "oem50.inf",
+  "ActivationTask": null,
+  "LastError": null,
+  "ActivatedGpu": {
+    "DeviceId": "PCI\\VEN_1002&DEV_163F&SUBSYS_01231002&REV_AE\\[device-instance]",
+    "Name": "AMD Radeon(TM) Graphics",
+    "ErrorCode": 0,
+    "DriverVersion": "32.0.21043.21001",
+    "InfName": "oem50.inf",
+    "Signer": null
+  },
+  "RebootRequired": false,
+  "StagedInfs": [
+    "oem50.inf",
+    "oem53.inf",
+    "oem54.inf",
+    "oem52.inf",
+    "oem51.inf"
+  ],
+  "PreviousActivationError": "New GPU driver did not start cleanly. The original driver was rebound.",
+  "TrialBootBefore": "2026-10-05T13:10:44.5-05:00",
+  "PreviousSelectionValidationError": "Windows did not select the expected trial driver.",
+  "SelectedGpu": {
+    "DeviceId": "PCI\\VEN_1002&DEV_163F&SUBSYS_01231002&REV_AE\\[device-instance]",
+    "Name": "AMD Radeon(TM) Graphics",
+    "ErrorCode": 43,
+    "DriverVersion": "32.0.21043.21001",
+    "InfName": "oem50.inf",
+    "Signer": null
+  },
+  "SelectionVerifiedAt": "2026-10-05T13:42:19.3463035-05:00",
+  "VerifiedBoot": "2026-10-05T13:44:49.5-05:00",
+  "VerifiedCodeIntegrity": {
+    "Options": 2621955,
+    "TestSigningActive": true
+  },
+  "InstalledKernelSHA256": "E1B4DBFB807A59971BFC90E8139E35F96B4ADEDFD773695DBDCA5568B83D1ADF",
+  "SleepWakeVerifiedAt": "2026-10-05T14:30:51.0336546-05:00"
+}

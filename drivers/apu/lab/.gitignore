@@ -1,0 +1,15 @@
+backups/
+private-driver/
+private-config-trial/
+private-config-package/
+private-config-install/
+logs/
+__pycache__/
+*.pfx
+*.password
+*.sys
+*.dll
+*.cat
+*.exe
+guarded-reload/
+normal-boot/

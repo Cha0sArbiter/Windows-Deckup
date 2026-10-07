@@ -1,0 +1,43 @@
+name: Validate source and recorded evidence
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  source:
+    runs-on: windows-2022
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: '3.12'
+      - name: Validate source, manifests and publication hygiene
+        shell: pwsh
+        run: |
+          python tools/check_publication.py
+          if ($LASTEXITCODE -ne 0) { throw 'Publication check failed.' }
+          python -m unittest discover -s drivers/apu/lab/tests -v
+          if ($LASTEXITCODE -ne 0) { throw 'Python safety tests failed.' }
+          python -m unittest discover -s drivers/apu/tests -v
+          if ($LASTEXITCODE -ne 0) { throw 'Extension reference tests failed.' }
+      - name: Validate Windows PowerShell and protocol tests
+        shell: powershell
+        run: |
+          $files = Get-ChildItem -Recurse -Filter '*.ps1' -File | Where-Object { $_.FullName -notmatch '\\(\.git|build|\.cache)\\' }
+          foreach ($file in $files) {
+            $tokens = $null; $errors = $null
+            [void][Management.Automation.Language.Parser]::ParseFile($file.FullName, [ref]$tokens, [ref]$errors)
+            if ($errors.Count) { throw "PowerShell parse error: $($file.FullName)" }
+          }
+          & drivers/apu/lab/tests/test_normal_boot.ps1
+          & drivers/apu/lab/tests/test_guarded_reload.ps1
+          & drivers/apu/tests/test_staging.ps1

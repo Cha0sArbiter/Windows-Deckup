@@ -1,0 +1,97 @@
+{
+  "CapturedAt": "2026-10-05T14:30:51.0137494-05:00",
+  "BootTime": "2026-10-05T13:44:49.5-05:00",
+  "TrialDriverVersion": "32.0.21043.21001",
+  "Outcome": "Working local prototype: fresh boot, hardware graphics, and one S3 sleep/wake cycle passed",
+  "FailureCode": 0,
+  "OriginalDriverRecovery": "Original driver was rebound but also reports Code 43 in this session",
+  "Observation": "Old driver failed to release hardware during uninitialization; new and restored old drivers report StartDevice Failed: Create SOC Service Manager failed",
+  "Inference": "Live replacement may have left hardware initialization unusable; a fresh boot is required before judging startup compatibility",
+  "AvailableSleepStates": [
+    "Standby (S3)",
+    "Hibernate",
+    "Hybrid Sleep",
+    "Fast Startup"
+  ],
+  "StandbyBlocker": null,
+  "Reference": "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-0x1b0--video-miniport-failed-livedump",
+  "FreshBootPreparation": "Fresh boot completed with the expected patched signed kernel, GPU code zero, and active Test Mode",
+  "HardwareGraphicsProbe": {
+    "passed": true,
+    "driver_type": "HARDWARE",
+    "software_fallback": false,
+    "feature_level": "11_1",
+    "texture_size": [
+      32,
+      32
+    ],
+    "cases": [
+      {
+        "color": "red",
+        "pixels_verified": 1024,
+        "passed": true
+      },
+      {
+        "color": "green",
+        "pixels_verified": 1024,
+        "passed": true
+      },
+      {
+        "color": "blue",
+        "pixels_verified": 1024,
+        "passed": true
+      }
+    ],
+    "limitation": "Covers basic GPU clear/copy/readback only; this probe does not assess game stability, video, or sleep/wake.",
+    "captured_at": "2026-10-05T14:26:26.59164-05:00"
+  },
+  "DxDiag": {
+    "DisplayNotes": "No problems found",
+    "DriverModel": "WDDM 3.2",
+    "DdiVersion": 12,
+    "CurrentMode": "1280 x 800, 60Hz",
+    "HardwareScheduling": "AlwaysOff",
+    "SleepWakeCycle": "One S3 cycle passed; user reported normal wake; post-wake GPU code zero and hardware graphics probe passed",
+    "VideoDecodeEncode": "Not functionally tested",
+    "GameStability": "Not tested"
+  },
+  "SleepWakeValidation": {
+    "UserReport": "Wakes normally",
+    "ConfirmedState": "S3",
+    "ConfirmedCycles": 1,
+    "SleepEvent": "2026-10-05T14:26:52.8559368-05:00",
+    "ResumeEvent": "2026-10-05T14:26:53.8934574-05:00",
+    "PostWakeDeviceCode": 0,
+    "RecentGraphicsErrors": 0,
+    "PostWakeHardwareProbe": {
+      "passed": true,
+      "driver_type": "HARDWARE",
+      "software_fallback": false,
+      "feature_level": "11_1",
+      "texture_size": [
+        32,
+        32
+      ],
+      "cases": [
+        {
+          "color": "red",
+          "pixels_verified": 1024,
+          "passed": true
+        },
+        {
+          "color": "green",
+          "pixels_verified": 1024,
+          "passed": true
+        },
+        {
+          "color": "blue",
+          "pixels_verified": 1024,
+          "passed": true
+        }
+      ],
+      "limitation": "Covers basic GPU clear/copy/readback only; this probe does not assess game stability, video, or sleep/wake.",
+      "captured_at": "2026-10-05T14:29:27.058127-05:00"
+    },
+    "Limitations": "Repeated, long-duration, battery, and game-active suspend/resume scenarios have not been tested"
+  }
+}

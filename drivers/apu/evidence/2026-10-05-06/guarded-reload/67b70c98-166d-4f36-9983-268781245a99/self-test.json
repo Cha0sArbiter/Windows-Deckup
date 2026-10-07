@@ -1,0 +1,16 @@
+{
+  "Nonce": "67b70c98-166d-4f36-9983-268781245a99",
+  "Passed": true,
+  "Identity": "S-1-5-18",
+  "CheckedUtc": "2026-10-05T22:16:48.6046061Z",
+  "Gpu": {
+    "InstanceId": "PCI\\VEN_1002&DEV_163F&SUBSYS_01231002&REV_AE\\[device-instance]",
+    "ProblemCode": 0,
+    "Inf": "oem50.inf",
+    "Version": "32.0.21043.21001",
+    "Service": "amduw23g-202038-1ed56446"
+  },
+  "PrototypeKernelSHA256": "E1B4DBFB807A59971BFC90E8139E35F96B4ADEDFD773695DBDCA5568B83D1ADF",
+  "DriverChangePerformed": false,
+  "RestartRequested": false
+}

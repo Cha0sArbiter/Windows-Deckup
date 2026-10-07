@@ -1,0 +1,188 @@
+Steam Deck LCD ASUS-driver error investigation
+2026-10-05; donor 32.0.21043.21001
+
+Findings
+--------
+There are two observed problems with different evidence:
+
+1. Live package replacement at 17:21 failed with Code 43. The AMD event
+   pair is NOT unique to the configuration-only variant: it also appeared
+   during the patched prototype's first live installation at 13:12.
+   Fresh Windows restarts subsequently allowed both variants to start.
+
+2. Sleep/display restoration differed in the 2026-10-05 tests. The patched
+   prototype returned a working display after one S3 cycle. The original
+   ASUS kernel plus AE configuration returned to a black display; Windows
+   remained responsive, GPU problem code stayed zero, and the recorded
+   graphics-error list was empty. The offscreen D3D11 probe passed, but it
+   did not identify the DXGI adapter or resident kernel, and does not test
+   panel output. The two logged AMD startup errors therefore do not explain
+   that resume failure. A display restoration problem is an inference,
+   not an identified failed function.
+
+The patched driver's successful wake is a real positive result. Neither
+the shared live-install errors nor the offline acceptance-check comparison
+disproves a difference in sleep behavior. Reliable sleep has not yet been
+established by repeated matched trials. The user also reported sleep/display
+inactivity problems with the original Valve driver before these experiments.
+
+2026-10-06 normal-mode update
+----------------------------
+After a fresh normal-mode boot of the configuration-only candidate, one
+S3 sleep/resume completed from 11:28:54 to 11:29:36 CDT (about 42 seconds,
+on AC). Kernel-Power 42/107/131 and Power-Troubleshooter 1 record the cycle
+and power-button wake. The user reports successful display restoration.
+The boot stayed unchanged, GPU remained oem56.inf / 32.0.21043.21001 /
+Code 0, Code Integrity remained enabled with Test Mode OFF, and the exact
+unchanged ASUS kernel/AE configuration hashes matched. The post-resume
+hardware-only D3D11 check passed all three colors and independently
+identified the actual AMD 1002:163F / SUBSYS_01231002 / REV_AE adapter.
+No new System warnings/errors or AMD Code Integrity errors were found
+during the cycle. Kernel-Power event 40 names the Realtek USB GbE network
+controller, not the APU; it reports Code 0 afterward. Sleep still completed.
+This is a positive short-cycle result for the configuration-only variant.
+It does not explain the earlier 29-minute black-screen resume, isolate
+Test Mode as a cause, or establish repeated/long-sleep reliability.
+Evidence: normal-boot/1a369b9d-06b0-45f0-9a76-f54dca3ca4a7/
+resume-20261006T163023Z/.
+
+A second normal-mode S3 cycle completed at 11:40:52-12:01:17 CDT,
+lasting 20 minutes 25 seconds on AC with power-button wake. The same
+boot and original ASUS kernel/AE configuration remained selected. GPU
+Code 0, Test Mode OFF, exact hashes and actual AMD hardware rendering
+passed after wake. No new System warnings/errors or Code Integrity
+errors occurred in the queried cycle window. The Realtek USB Ethernet
+information-level event 40 appeared again before sleep, which completed.
+Evidence: the same normal-boot trial's resume-20261006T170201Z/ directory.
+This second positive result does not isolate the cause of the earlier
+black-screen resume or test battery-powered/idle display restoration.
+
+What the two AMD errors mean in this exact binary
+------------------------------------------------
+"Failed to release hardware access during uninitialization"
+String RVA 0x9FA9C0; reference 0x49530A; wrapper 0x4952DC.
+The wrapper logs this diagnostic if its context has no callback at offset
+0x560 OR that callback returns a nonzero result. Its default result is 1;
+zero suppresses the error. The message alone does not establish a hardware
+lock timeout, firmware failure, or the callback's actual return code.
+The wrapper is reached through 0x494D5C during BGM/TTL cleanup, including
+cleanup of failed initialization. Consequently a release error can be a
+secondary cleanup error rather than the original cause. Another release
+event occurred about 0.8 seconds earlier during the guarded switch.
+
+"StartDevice Failed: Create SOC Service Manager failed"
+String RVA 0x7A2FF8; reference 0x53820.
+At 0x53801, a virtual factory call returns NULL; the driver stores that
+result at adapter-context offset 0x78, sets error flag 0x80, logs this
+message, and takes its failure path. The constructor's vtable at 0x7A1678,
+slot 0x310, resolves to method 0x4A000, which calls factory 0x111D10.
+That factory can fail allocation or initialization. Its initialize method
+0x1120B0 can enter hardware-services initialization at 0x1126D0. This path
+contains TTL initialization, including failure cleanup, at 0x4663D4.
+No runtime status/callback address was captured to select the exact failing
+substep. "Service Manager" here names an internal driver object; this log
+is not evidence that an ASUS/AMD Windows service is missing.
+
+The AMDGCF check is earlier: caller 0x53098 invokes checker 0x56D40;
+a negative result logs a separate AMDGCF-verification diagnostic at
+0x530A4. Success proceeds into subsequent initialization. Neither captured
+live switch contains that verification error. This supports a later startup
+failure rather than this specific revision gate rejecting the Deck, but
+does not establish which kernel image was resident during live replacement.
+
+Exact package comparison
+------------------------
+Both private package trees contain 151 files; after mapping the four renamed
+main/extension INF/catalog filenames, 141 files are byte-identical.
+The ten differing files are the kernel, AMDGCF data, two INFs, and six
+catalogs. Main and extension INF content is identical after normalizing
+catalog filenames; their driver settings, service name, ReleaseVersion,
+Deck hardware ID, and installation sections are the same. This compares
+package instructions, not historical live registry snapshots.
+
+Every PE section except .text is identical, including other executable
+sections and .data/.rdata. The only executable-byte difference is RVA
+0x56FB1 / file offset 0x569B1: the prototype has EB (unconditional jump)
+and the original candidate has 74 (jump if equal). Certificate data and
+PE metadata also differ because the prototype kernel was re-signed.
+
+Prototype: patched comparison, original AF record/checksum.
+Candidate: original comparison, AE record with recomputed checksum.
+Actual checksum and comparison-loop instructions run in Unicorn return
+success for both Deck AE cases; the original kernel with original AF data
+rejects Deck AE as expected. The accepted branch produces status zero;
+this path subsequently frees its temporary configuration buffers and
+returns the status. It does not spoof the PCI revision or make the Deck
+report AF. These observations do not prove identical complete driver or
+sleep/resume behavior. Other consumers or runtime state are not excluded.
+
+Installation evidence
+---------------------
+Windows SetupAPI records that the kernel service image path changed and
+that device restart was required during both the 13:12 prototype selection
+and the 17:21 configuration-only selection. It records a successful
+installation API result despite the later AMD runtime startup failure.
+The 17:21 installation used main oem56.inf and retained prototype extension
+oem51.inf. The new oem57.inf extension was staged but not the recorded active
+extension at this switch. Its intended settings match oem51 after catalog
+normalization, so no different power settings were found in the two INFs.
+Selected INF/registry image path/file hashes do not prove which image was
+resident during the live switch.
+
+Microsoft documents that failure of WDDM's stop-and-release-POST-display
+callback can cause a black screen during installation on UEFI-only systems,
+with a reboot as a workaround. This is consistent with the symptom, but
+this investigation has NOT identified our AMD error as that callback or
+proved that callback failed. Do not promote this documentation match to
+a Deck root-cause diagnosis.
+
+Sleep comparison limitations and next discriminating tests
+----------------------------------------------------------
+Power-Troubleshooter SleepTime/WakeTime gives about 23 seconds for the
+captured successful prototype sleep and about 29 minutes for the captured
+candidate failure. Kernel-Power 107 event timestamps alone do not measure
+those elapsed sleep intervals reliably in these records.
+
+A useful next experiment is a matched sleep comparison after fresh Windows
+restarts, using the same sleep duration, AC/battery state, dock/monitor state,
+and applications. Capture DXGI adapter identity and display topology as
+well as PnP status; record DxgKrnl/AMD events around resume. This can first
+test whether the current prototype still wakes after a comparable long
+sleep. Existing evidence does not justify initiating another live swap.
+
+If the difference repeats, a third variant containing the patched kernel
+PLUS the AE config would isolate the config change while holding code
+constant. It would require its own catalog regeneration/signing and guarded
+hardware trial; it has NOT been built or installed. If patched+AE fails
+where patched+AF works under matched conditions, the config change becomes
+the stronger suspect. If patched+AE works while original+AE repeatedly
+fails, the code/signing/loading difference remains the stronger suspect.
+The existing live-reload watchdog holds the system awake; it cannot be
+reused unchanged to guard an S3 test. Sleep tests need separate recovery
+logic. No normal-mode/online-game compatibility is established here.
+
+Preserved state
+---------------
+Read-only device query at the end of this investigation confirmed oem50.inf,
+GPU Code 0, and service amduw23g-202038-1ed56446. No driver, firmware, device
+identity, boot settings, certificates, power state, or tasks were changed
+by this investigation. The prior recovery left the patched prototype in
+Test Mode. No new reload, reboot, or sleep test was initiated.
+
+Private evidence files (not part of the public source archive)
+-------------------------------------------------------------
+private-config-install/reload-error-binary-analysis.json
+private-config-install/reload-variant-comparison.json
+private-config-install/setupapi-reload-evidence.json
+private-config-install/system-reload-evidence.json
+private-config-install/resume-failure-report.json
+logs/first-activation-graphics-events.json
+logs/sleep-wake-events.json
+guarded-reload/67b70c98-166d-4f36-9983-268781245a99/live-switch-report.json
+
+Primary references
+-------------------
+https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/dispmprt/nc-dispmprt-dxgkddi_stop_device_and_release_post_display_ownership
+https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/dispmprt/nc-dispmprt-dxgkddi_start_device
+https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/dispmprt/nc-dispmprt-dxgkddi_set_power_state
+https://learn.microsoft.com/en-us/windows-hardware/drivers/install/cm-prob-failed-post-start

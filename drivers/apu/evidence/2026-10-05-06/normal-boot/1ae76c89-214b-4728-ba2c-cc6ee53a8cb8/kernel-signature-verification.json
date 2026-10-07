@@ -1,0 +1,17 @@
+[
+  {
+    "Path": "[workspace]\\outputs\\steamdeck-driver-lab\\private-config-install\\WT6A_INF\\amdfendr\\amdfendr.sys",
+    "ExitCode": 0,
+    "Output": "0      sha256     RFC3161      \nSuccessfully verified: [workspace]\\outputs\\steamdeck-driver-lab\\private-config-install\\WT6A_INF\\amdfendr\\amdfendr.sys\n"
+  },
+  {
+    "Path": "[workspace]\\outputs\\steamdeck-driver-lab\\private-config-install\\WT6A_INF\\amdfendr\\amdfendrmgr.sys",
+    "ExitCode": 0,
+    "Output": "0      sha256     RFC3161      \nSuccessfully verified: [workspace]\\outputs\\steamdeck-driver-lab\\private-config-install\\WT6A_INF\\amdfendr\\amdfendrmgr.sys\n"
+  },
+  {
+    "Path": "[workspace]\\outputs\\steamdeck-driver-lab\\private-config-install\\WT6A_INF\\B026204\\amdkmdag.sys",
+    "ExitCode": 0,
+    "Output": "0      sha256     RFC3161      \nSuccessfully verified: [workspace]\\outputs\\steamdeck-driver-lab\\private-config-install\\WT6A_INF\\B026204\\amdkmdag.sys\n\nSignTool Error: Signing Cert does not chain to a Microsoft Root Cert."
+  }
+]

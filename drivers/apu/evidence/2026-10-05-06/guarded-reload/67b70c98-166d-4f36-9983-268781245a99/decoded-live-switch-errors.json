@@ -1,0 +1,17 @@
+[
+  {
+    "Time": "2026-10-05T17:21:29.7107596-05:00",
+    "Id": 3085,
+    "Text": "StartDevice Failed: Create SOC Service Manager failed"
+  },
+  {
+    "Time": "2026-10-05T17:21:29.7107596-05:00",
+    "Id": 1035,
+    "Text": "Failed to release hardware access during uninitialization"
+  },
+  {
+    "Time": "2026-10-05T17:21:28.9196263-05:00",
+    "Id": 1035,
+    "Text": "Failed to release hardware access during uninitialization"
+  }
+]

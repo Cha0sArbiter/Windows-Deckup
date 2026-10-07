@@ -1,0 +1,18 @@
+{
+  "driver_version": "32.0.21043.21001",
+  "hardware_id": "PCI\\VEN_1002&DEV_163F&SUBSYS_01231002&REV_AE",
+  "original_kernel_sha256": "ae975bbb56282be1471b9a91407f0155c087b619f99d2731d4e7989720522152",
+  "patched_unsigned_kernel_sha256": "039cb63834051fe37251f7c942b3714e258e43d4347b2eac7f574543d01f7962",
+  "changed_kernel_offsets": [
+    354737
+  ],
+  "patch_purpose": "Allow a matching GPU device ID to pass the configuration revision check. Preserve configuration loading, checksum validation, device-ID checks, cleanup, and normal return handling. The installation INF is limited to Steam Deck LCD revision AE.",
+  "modified_infs": [
+    "u0202038.inf",
+    "amduw23e.inf"
+  ],
+  "source": "[workspace]\\work\\driver-audit\\asus-extracted\\Packages\\Drivers\\Display\\WT6A_INF",
+  "destination": "[workspace]\\outputs\\steamdeck-driver-lab\\private-driver\\WT6A_INF",
+  "signing_required": true,
+  "installed": false
+}

@@ -1,0 +1,70 @@
+One guarded live graphics-driver reload
+======================================
+
+The user reported that sleep/display-timeout wake problems predate this
+candidate and requested another test of the configuration-only ASUS driver.
+This test targets live driver replacement, with Test Mode remaining ON.
+
+Completed trial on 2026-10-05
+----------------------------
+Trial 67b70c98-166d-4f36-9983-268781245a99 passed the SYSTEM no-change
+self-test. The switch started at 17:21:24 local time. The candidate selected
+as oem56.inf reported Code 43; decoded events report failure to release
+hardware access during uninitialization and failure to create the SOC
+Service Manager. These messages support a handoff/initialization failure
+and do not establish a revision-gate rejection.
+No user acknowledgment arrived. The watchdog committed Rollback at
+17:24:24, verified the prototype selection, and requested restart at 17:24:34.
+After the 17:25 boot, the prototype oem50.inf was verified at Code 0 with its
+expected kernel hash and S3 sleep available. Test Mode remains on. The user
+reports successful recovery. The watchdog unregistered itself and its
+control is Idle. The minute-check app automation was also deleted.
+The offscreen HARDWARE-requested probe passed during the failed switch,
+but it did not record adapter identity or the resident driver image; it
+cannot establish successful candidate rendering while that candidate's
+device reports Code 43.
+This one-time launcher is now spent. Prepare again before another test.
+The watchdog requires Test Mode ON and cannot serve as recovery for a
+future Test Mode OFF trial without a different verified recovery design.
+
+Preparation verifies both complete package manifests, cached INF identities,
+the current healthy prototype, and the exact kernel/configuration hashes.
+A temporary Windows task runs as SYSTEM and performs a no-change self-test.
+The prototype stays selected until the user starts the launcher below.
+
+Start-Guarded-Config-Reload.cmd starts the administrator helper. It starts
+the recovery task, confirms its live heartbeat, and selects the existing
+configuration-only candidate through normal PnP installation. The driver
+switch is itself the live reload being tested. The 180-second reply deadline
+starts immediately before that switch, after package preparation is done.
+
+If the display remains usable, reply in the chat immediately. Codex can run
+src/Manage-GuardedReload.ps1 -Mode Keep to acknowledge the active trial.
+Keep-Config-Driver.cmd provides the same acknowledgment directly on Windows.
+An acknowledgment must arrive before the deadline; it retires recovery.
+
+Without acknowledgment, the local watchdog selects the previously verified
+patched ASUS prototype and verifies its selected INF/kernel hash. It then
+requests a Windows restart, needed to recover from the observed Code 43
+after live replacements. The restart request does not force applications
+closed. Unsaved-work prompts can delay it. No additional UAC is required
+for the SYSTEM recovery task. Test Mode and trusted certificates remain.
+
+The watchdog temporarily holds an execution-state request to keep Windows
+and the display awake during the test. It releases that request on exit.
+It is separate from the graphics-switching process and can still run if
+only the graphics/display path stalls. A full Windows/kernel hang or power
+loss can prevent any local watchdog from running on time.
+
+The recovery task also has a boot trigger so an interrupted unanswered
+trial can resume recovery after Windows starts again. It unregisters itself
+after acknowledgment or successful recovery. It refuses to start if the
+prepared scripts changed, the healthy prototype is absent, or Test Mode is
+off. The acknowledgment and timeout compete for one atomic decision file;
+neither can overwrite the decision that already won.
+
+Evidence is under guarded-reload/<trial UUID>/:
+plan.json, self-test.json, control.json, watchdog-status.json,
+reload-start.json, decision.json, and state-before-test.json.
+guarded-reload/active.json identifies the current one-time trial.
+The source archive excludes these local runtime files.

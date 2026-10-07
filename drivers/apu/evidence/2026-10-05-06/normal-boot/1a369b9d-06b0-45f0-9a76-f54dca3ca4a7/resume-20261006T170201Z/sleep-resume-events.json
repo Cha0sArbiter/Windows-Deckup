@@ -1,0 +1,780 @@
+{
+  "CapturedUtc": "2026-10-06T17:02:52.2836376Z",
+  "BootUtc": "2026-10-06T16:13:53.5000000Z",
+  "CycleWindowStartUtc": "2026-10-06T16:40:47.4489858Z",
+  "LatestWake": {
+    "TimeUtc": "2026-10-06T17:01:18.6332466Z",
+    "TimeCentral": "2026-10-06T12:01:18.6332466",
+    "RecordId": 6246,
+    "Provider": "Microsoft-Windows-Power-Troubleshooter",
+    "Id": 1,
+    "Level": 4,
+    "Message": "The system has returned from a low power state.\r\n\r\nSleep Time: \u200e2026\u200e-\u200e10\u200e-\u200e06T16:40:52.448985800Z\r\nWake Time: \u200e2026\u200e-\u200e10\u200e-\u200e06T17:01:17.601381400Z\r\n\r\nWake Source: Power Button",
+    "Data": {
+      "SleepTime": "2026-10-06T16:40:52.4489858Z",
+      "WakeTime": "2026-10-06T17:01:17.6013814Z",
+      "SleepDuration": "513",
+      "WakeDuration": "1100",
+      "DriverInitDuration": "1021",
+      "BiosInitDuration": "2613246",
+      "HiberWriteDuration": "0",
+      "HiberReadDuration": "0",
+      "HiberPagesWritten": "0",
+      "Attributes": "1912621324",
+      "TargetState": "4",
+      "EffectiveState": "4",
+      "WakeSourceType": "1",
+      "WakeSourceTextLength": "0",
+      "WakeSourceText": "",
+      "WakeTimerOwnerLength": "0",
+      "WakeTimerContextLength": "0",
+      "NoMultiStageResumeReason": "0",
+      "WakeTimerOwner": "",
+      "WakeTimerContext": "",
+      "CheckpointDuration": "27"
+    },
+    "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Power-Troubleshooter' Guid='{cdc05e28-c449-49c6-b9d2-88cf761644df}'/><EventID>1</EventID><Version>3</Version><Level>4</Level><Task>0</Task><Opcode>0</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='2026-10-06T17:01:18.6332466Z'/><EventRecordID>6246</EventRecordID><Correlation ActivityID='{537fedad-a0b8-44c5-bfdb-7c8513acfc5f}'/><Execution ProcessID='4360' ThreadID='4884'/><Channel>System</Channel><Computer>[computer]</Computer><Security UserID='S-1-5-19'/></System><EventData><Data Name='SleepTime'>2026-10-06T16:40:52.4489858Z</Data><Data Name='WakeTime'>2026-10-06T17:01:17.6013814Z</Data><Data Name='SleepDuration'>513</Data><Data Name='WakeDuration'>1100</Data><Data Name='DriverInitDuration'>1021</Data><Data Name='BiosInitDuration'>2613246</Data><Data Name='HiberWriteDuration'>0</Data><Data Name='HiberReadDuration'>0</Data><Data Name='HiberPagesWritten'>0</Data><Data Name='Attributes'>1912621324</Data><Data Name='TargetState'>4</Data><Data Name='EffectiveState'>4</Data><Data Name='WakeSourceType'>1</Data><Data Name='WakeSourceTextLength'>0</Data><Data Name='WakeSourceText'></Data><Data Name='WakeTimerOwnerLength'>0</Data><Data Name='WakeTimerContextLength'>0</Data><Data Name='NoMultiStageResumeReason'>0</Data><Data Name='WakeTimerOwner'></Data><Data Name='WakeTimerContext'></Data><Data Name='CheckpointDuration'>27</Data></EventData></Event>"
+  },
+  "PowerEvents": [
+    {
+      "TimeUtc": "2026-10-06T16:13:55.2727039Z",
+      "TimeCentral": "2026-10-06T11:13:55.2727039",
+      "RecordId": 6143,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 125,
+      "Level": 4,
+      "Message": "ACPI thermal zone \\_TZ.TZ01 has been enumerated.             \r\n_PSV = 373K             \r\n_TC1 = 1             \r\n_TC2 = 2             \r\n_TSP = 2000ms             \r\n_AC0 = 0K             \r\n_AC1 = 0K             \r\n_AC2 = 0K             \r\n_AC3 = 0K             \r\n_AC4 = 0K             \r\n_AC5 = 0K             \r\n_AC6 = 0K             \r\n_AC7 = 0K             \r\n_AC8 = 0K             \r\n_AC9 = 0K             \r\n_CRT = 378K             \r\n_HOT = 0K             \r\nminimum throttle = 0             \r\n_CR3 = 0K",
+      "Data": {
+        "ThermalZoneDeviceInstanceLength": "9",
+        "ThermalZoneDeviceInstance": "\\_TZ.TZ01",
+        "_PSV": "373",
+        "_TC1": "1",
+        "_TC2": "2",
+        "_TSP": "2000",
+        "_AC0": "0",
+        "_AC1": "0",
+        "_AC2": "0",
+        "_AC3": "0",
+        "_AC4": "0",
+        "_AC5": "0",
+        "_AC6": "0",
+        "_AC7": "0",
+        "_AC8": "0",
+        "_AC9": "0",
+        "_CRT": "378",
+        "_HOT": "0",
+        "MinimumThrottle": "0",
+        "_CR3": "0",
+        "OverThrottleThreshold": "0",
+        "DescriptionLength": "0",
+        "Description": "",
+        "_TZP": "0"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>125</EventID><Version>4</Version><Level>4</Level><Task>86</Task><Opcode>0</Opcode><Keywords>0x8000000000000020</Keywords><TimeCreated SystemTime='2026-10-06T16:13:55.2727039Z'/><EventRecordID>6143</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='8'/><Channel>System</Channel><Computer>[computer]</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='ThermalZoneDeviceInstanceLength'>9</Data><Data Name='ThermalZoneDeviceInstance'>\\_TZ.TZ01</Data><Data Name='_PSV'>373</Data><Data Name='_TC1'>1</Data><Data Name='_TC2'>2</Data><Data Name='_TSP'>2000</Data><Data Name='_AC0'>0</Data><Data Name='_AC1'>0</Data><Data Name='_AC2'>0</Data><Data Name='_AC3'>0</Data><Data Name='_AC4'>0</Data><Data Name='_AC5'>0</Data><Data Name='_AC6'>0</Data><Data Name='_AC7'>0</Data><Data Name='_AC8'>0</Data><Data Name='_AC9'>0</Data><Data Name='_CRT'>378</Data><Data Name='_HOT'>0</Data><Data Name='MinimumThrottle'>0</Data><Data Name='_CR3'>0</Data><Data Name='OverThrottleThreshold'>0</Data><Data Name='DescriptionLength'>0</Data><Data Name='Description'></Data><Data Name='_TZP'>0</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:13:55.2749749Z",
+      "TimeCentral": "2026-10-06T11:13:55.2749749",
+      "RecordId": 6144,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 172,
+      "Level": 4,
+      "Message": "Connectivity state in standby: Disconnected, Reason: NIC compliance",
+      "Data": {
+        "State": "2",
+        "Reason": "6"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>172</EventID><Version>0</Version><Level>4</Level><Task>203</Task><Opcode>0</Opcode><Keywords>0x8000000000000404</Keywords><TimeCreated SystemTime='2026-10-06T16:13:55.2749749Z'/><EventRecordID>6144</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='576'/><Channel>System</Channel><Computer>[computer]</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='State'>2</Data><Data Name='Reason'>6</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:13:56.3596880Z",
+      "TimeCentral": "2026-10-06T11:13:56.3596880",
+      "RecordId": 6158,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 521,
+      "Level": 4,
+      "Message": "Active battery count change.",
+      "Data": {
+        "ValidBatteryCount": "0",
+        "ErrorBatteryCount": "0",
+        "AbandonedBatteryCount": "0"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>521</EventID><Version>0</Version><Level>4</Level><Task>220</Task><Opcode>0</Opcode><Keywords>0x8000000000000404</Keywords><TimeCreated SystemTime='2026-10-06T16:13:56.3596880Z'/><EventRecordID>6158</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='312'/><Channel>System</Channel><Computer>[computer]</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='ValidBatteryCount'>0</Data><Data Name='ErrorBatteryCount'>0</Data><Data Name='AbandonedBatteryCount'>0</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:13:56.3811198Z",
+      "TimeCentral": "2026-10-06T11:13:56.3811198",
+      "RecordId": 6159,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 521,
+      "Level": 4,
+      "Message": "Active battery count change.",
+      "Data": {
+        "ValidBatteryCount": "1",
+        "ErrorBatteryCount": "0",
+        "AbandonedBatteryCount": "0"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>521</EventID><Version>0</Version><Level>4</Level><Task>220</Task><Opcode>0</Opcode><Keywords>0x8000000000000404</Keywords><TimeCreated SystemTime='2026-10-06T16:13:56.3811198Z'/><EventRecordID>6159</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='312'/><Channel>System</Channel><Computer>[computer]</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='ValidBatteryCount'>1</Data><Data Name='ErrorBatteryCount'>0</Data><Data Name='AbandonedBatteryCount'>0</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:28:54.3816736Z",
+      "TimeCentral": "2026-10-06T11:28:54.3816736",
+      "RecordId": 6218,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 187,
+      "Level": 4,
+      "Message": "User-mode process attempted to change the system state by calling SetSuspendState or SetSystemPowerState APIs.",
+      "Data": {
+        "ApiCallerNameLength": "126",
+        "ApiCallerName": "\\Device\\HarddiskVolume4\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe",
+        "SystemAction": "2",
+        "LightestSystemState": "2"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>187</EventID><Version>0</Version><Level>4</Level><Task>243</Task><Opcode>0</Opcode><Keywords>0x8000400000000404</Keywords><TimeCreated SystemTime='2026-10-06T16:28:54.3816736Z'/><EventRecordID>6218</EventRecordID><Correlation/><Execution ProcessID='7252' ThreadID='17260'/><Channel>System</Channel><Computer>[computer]</Computer><Security UserID='[user-sid]'/></System><EventData><Data Name='ApiCallerNameLength'>126</Data><Data Name='ApiCallerName'>\\Device\\HarddiskVolume4\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe</Data><Data Name='SystemAction'>2</Data><Data Name='LightestSystemState'>2</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:28:54.3827626Z",
+      "TimeCentral": "2026-10-06T11:28:54.3827626",
+      "RecordId": 6219,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 566,
+      "Level": 4,
+      "Message": "The system session has transitioned from 0 to 1.\r\n\r\nReason ScreenOffGracePeriod \r\n\r\nBootId: 32",
+      "Data": {
+        "BootId": "32",
+        "Reason": "17",
+        "PreviousSessionId": "0",
+        "PreviousSessionType": "0",
+        "PreviousSessionDurationInUs": "900882269",
+        "PreviousEnergyCapacityAtStart": "0",
+        "PreviousFullEnergyCapacityAtStart": "0",
+        "PreviousEnergyCapacityAtEnd": "39409",
+        "PreviousFullEnergyCapacityAtEnd": "39409",
+        "NextSessionId": "1",
+        "NextSessionType": "3",
+        "PowerStateAc": "true",
+        "MonitorReason": "17"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>566</EventID><Version>0</Version><Level>4</Level><Task>268</Task><Opcode>0</Opcode><Keywords>0x8000000000000604</Keywords><TimeCreated SystemTime='2026-10-06T16:28:54.3827626Z'/><EventRecordID>6219</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='320'/><Channel>System</Channel><Computer>[computer]</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='BootId'>32</Data><Data Name='Reason'>17</Data><Data Name='PreviousSessionId'>0</Data><Data Name='PreviousSessionType'>0</Data><Data Name='PreviousSessionDurationInUs'>900882269</Data><Data Name='PreviousEnergyCapacityAtStart'>0</Data><Data Name='PreviousFullEnergyCapacityAtStart'>0</Data><Data Name='PreviousEnergyCapacityAtEnd'>39409</Data><Data Name='PreviousFullEnergyCapacityAtEnd'>39409</Data><Data Name='NextSessionId'>1</Data><Data Name='NextSessionType'>3</Data><Data Name='PowerStateAc'>true</Data><Data Name='MonitorReason'>17</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:28:54.9374843Z",
+      "TimeCentral": "2026-10-06T11:28:54.9374843",
+      "RecordId": 6220,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 40,
+      "Level": 4,
+      "Message": "The driver \\Driver\\rtu53cx22x64 for device USB\\VID_0BDA&PID_8153\\111000001 stopped the power transition.",
+      "Data": {
+        "DriverNameLength": "20",
+        "DriverName": "\\Driver\\rtu53cx22x64",
+        "InstanceNameLength": "31",
+        "InstanceName": "USB\\VID_0BDA&PID_8153\\111000001"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>40</EventID><Version>0</Version><Level>4</Level><Task>36</Task><Opcode>35</Opcode><Keywords>0x8000000000002404</Keywords><TimeCreated SystemTime='2026-10-06T16:28:54.9374843Z'/><EventRecordID>6220</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='14196'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data Name='DriverNameLength'>20</Data><Data Name='DriverName'>\\Driver\\rtu53cx22x64</Data><Data Name='InstanceNameLength'>31</Data><Data Name='InstanceName'>USB\\VID_0BDA&amp;PID_8153\\111000001</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:28:54.9442742Z",
+      "TimeCentral": "2026-10-06T11:28:54.9442742",
+      "RecordId": 6221,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 42,
+      "Level": 4,
+      "Message": "The system is entering sleep.\r\n\r\nSleep Reason: Application API",
+      "Data": {
+        "TargetState": "4",
+        "EffectiveState": "4",
+        "Reason": "4",
+        "Flags": "0",
+        "TransitionsToOn": "1"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>42</EventID><Version>3</Version><Level>4</Level><Task>64</Task><Opcode>0</Opcode><Keywords>0x8000000000000404</Keywords><TimeCreated SystemTime='2026-10-06T16:28:54.9442742Z'/><EventRecordID>6221</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='8180'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data Name='TargetState'>4</Data><Data Name='EffectiveState'>4</Data><Data Name='Reason'>4</Data><Data Name='Flags'>0</Data><Data Name='TransitionsToOn'>1</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:28:55.7409838Z",
+      "TimeCentral": "2026-10-06T11:28:55.7409838",
+      "RecordId": 6222,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 107,
+      "Level": 4,
+      "Message": "The system has resumed from sleep.",
+      "Data": {
+        "TargetState": "4",
+        "EffectiveState": "4",
+        "WakeFromState": "4",
+        "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+        "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+        "WakeRequesterTypeAc": "0",
+        "WakeRequesterTypeDc": "0"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>107</EventID><Version>1</Version><Level>4</Level><Task>102</Task><Opcode>0</Opcode><Keywords>0x8000000000000444</Keywords><TimeCreated SystemTime='2026-10-06T16:28:55.7409838Z'/><EventRecordID>6222</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='8180'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data Name='TargetState'>4</Data><Data Name='EffectiveState'>4</Data><Data Name='WakeFromState'>4</Data><Data Name='ProgrammedWakeTimeAc'>1601-01-01T00:00:00.0000000Z</Data><Data Name='ProgrammedWakeTimeDc'>1601-01-01T00:00:00.0000000Z</Data><Data Name='WakeRequesterTypeAc'>0</Data><Data Name='WakeRequesterTypeDc'>0</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:29:35.5006053Z",
+      "TimeCentral": "2026-10-06T11:29:35.5006053",
+      "RecordId": 6224,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 131,
+      "Level": 4,
+      "Message": "Firmware S3 times. ResumeCount: 1, FullResume: 1494942, AverageResume: 1494942",
+      "Data": {
+        "ResumeCount": "1",
+        "FullResume": "1494942",
+        "AverageResume": "1494942"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>131</EventID><Version>0</Version><Level>4</Level><Task>33</Task><Opcode>0</Opcode><Keywords>0x8000000000000404</Keywords><TimeCreated SystemTime='2026-10-06T16:29:35.5006053Z'/><EventRecordID>6224</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='8180'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data Name='ResumeCount'>1</Data><Data Name='FullResume'>1494942</Data><Data Name='AverageResume'>1494942</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:29:35.5006064Z",
+      "TimeCentral": "2026-10-06T11:29:35.5006064",
+      "RecordId": 6225,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 130,
+      "Level": 4,
+      "Message": "Firmware S3 times. SuspendStart: 0, SuspendEnd: 0",
+      "Data": {
+        "SuspendStart": "0",
+        "SuspendEnd": "0"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>130</EventID><Version>0</Version><Level>4</Level><Task>33</Task><Opcode>0</Opcode><Keywords>0x8000000000000404</Keywords><TimeCreated SystemTime='2026-10-06T16:29:35.5006064Z'/><EventRecordID>6225</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='8180'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data Name='SuspendStart'>0</Data><Data Name='SuspendEnd'>0</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:29:36.5894880Z",
+      "TimeCentral": "2026-10-06T11:29:36.5894880",
+      "RecordId": 6227,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 566,
+      "Level": 4,
+      "Message": "The system session has transitioned from 1 to 2.\r\n\r\nReason SxTransition \r\n\r\nBootId: 32",
+      "Data": {
+        "BootId": "32",
+        "Reason": "20",
+        "PreviousSessionId": "1",
+        "PreviousSessionType": "3",
+        "PreviousSessionDurationInUs": "42207332",
+        "PreviousEnergyCapacityAtStart": "39409",
+        "PreviousFullEnergyCapacityAtStart": "39409",
+        "PreviousEnergyCapacityAtEnd": "39409",
+        "PreviousFullEnergyCapacityAtEnd": "39409",
+        "NextSessionId": "2",
+        "NextSessionType": "1",
+        "PowerStateAc": "true",
+        "MonitorReason": "20"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>566</EventID><Version>0</Version><Level>4</Level><Task>268</Task><Opcode>0</Opcode><Keywords>0x8000000000000604</Keywords><TimeCreated SystemTime='2026-10-06T16:29:36.5894880Z'/><EventRecordID>6227</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='324'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data Name='BootId'>32</Data><Data Name='Reason'>20</Data><Data Name='PreviousSessionId'>1</Data><Data Name='PreviousSessionType'>3</Data><Data Name='PreviousSessionDurationInUs'>42207332</Data><Data Name='PreviousEnergyCapacityAtStart'>39409</Data><Data Name='PreviousFullEnergyCapacityAtStart'>39409</Data><Data Name='PreviousEnergyCapacityAtEnd'>39409</Data><Data Name='PreviousFullEnergyCapacityAtEnd'>39409</Data><Data Name='NextSessionId'>2</Data><Data Name='NextSessionType'>1</Data><Data Name='PowerStateAc'>true</Data><Data Name='MonitorReason'>20</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:29:37.6072168Z",
+      "TimeCentral": "2026-10-06T11:29:37.6072168",
+      "RecordId": 6229,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 566,
+      "Level": 4,
+      "Message": "The system session has transitioned from 2 to 4.\r\n\r\nReason Unknown \r\n\r\nBootId: 32",
+      "Data": {
+        "BootId": "32",
+        "Reason": "1",
+        "PreviousSessionId": "2",
+        "PreviousSessionType": "1",
+        "PreviousSessionDurationInUs": "1017493",
+        "PreviousEnergyCapacityAtStart": "39409",
+        "PreviousFullEnergyCapacityAtStart": "39409",
+        "PreviousEnergyCapacityAtEnd": "39409",
+        "PreviousFullEnergyCapacityAtEnd": "39409",
+        "NextSessionId": "4",
+        "NextSessionType": "0",
+        "PowerStateAc": "true",
+        "MonitorReason": "1"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>566</EventID><Version>0</Version><Level>4</Level><Task>268</Task><Opcode>0</Opcode><Keywords>0x8000000000000604</Keywords><TimeCreated SystemTime='2026-10-06T16:29:37.6072168Z'/><EventRecordID>6229</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='4800'/><Channel>System</Channel><Computer>[computer]</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='BootId'>32</Data><Data Name='Reason'>1</Data><Data Name='PreviousSessionId'>2</Data><Data Name='PreviousSessionType'>1</Data><Data Name='PreviousSessionDurationInUs'>1017493</Data><Data Name='PreviousEnergyCapacityAtStart'>39409</Data><Data Name='PreviousFullEnergyCapacityAtStart'>39409</Data><Data Name='PreviousEnergyCapacityAtEnd'>39409</Data><Data Name='PreviousFullEnergyCapacityAtEnd'>39409</Data><Data Name='NextSessionId'>4</Data><Data Name='NextSessionType'>0</Data><Data Name='PowerStateAc'>true</Data><Data Name='MonitorReason'>1</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:29:37.7401384Z",
+      "TimeCentral": "2026-10-06T11:29:37.7401384",
+      "RecordId": 6230,
+      "Provider": "Microsoft-Windows-Power-Troubleshooter",
+      "Id": 1,
+      "Level": 4,
+      "Message": "The system has returned from a low power state.\r\n\r\nSleep Time: \u200e2026\u200e-\u200e10\u200e-\u200e06T16:28:54.381831000Z\r\nWake Time: \u200e2026\u200e-\u200e10\u200e-\u200e06T16:29:36.674012900Z\r\n\r\nWake Source: Power Button",
+      "Data": {
+        "SleepTime": "2026-10-06T16:28:54.3818310Z",
+        "WakeTime": "2026-10-06T16:29:36.6740129Z",
+        "SleepDuration": "564",
+        "WakeDuration": "1172",
+        "DriverInitDuration": "1087",
+        "BiosInitDuration": "1494942",
+        "HiberWriteDuration": "0",
+        "HiberReadDuration": "0",
+        "HiberPagesWritten": "0",
+        "Attributes": "1912621324",
+        "TargetState": "4",
+        "EffectiveState": "4",
+        "WakeSourceType": "1",
+        "WakeSourceTextLength": "0",
+        "WakeSourceText": "",
+        "WakeTimerOwnerLength": "0",
+        "WakeTimerContextLength": "0",
+        "NoMultiStageResumeReason": "0",
+        "WakeTimerOwner": "",
+        "WakeTimerContext": "",
+        "CheckpointDuration": "27"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Power-Troubleshooter' Guid='{cdc05e28-c449-49c6-b9d2-88cf761644df}'/><EventID>1</EventID><Version>3</Version><Level>4</Level><Task>0</Task><Opcode>0</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='2026-10-06T16:29:37.7401384Z'/><EventRecordID>6230</EventRecordID><Correlation ActivityID='{e2fcc67f-8969-4805-9a50-24f30b229cca}'/><Execution ProcessID='4360' ThreadID='4948'/><Channel>System</Channel><Computer>[computer]</Computer><Security UserID='S-1-5-19'/></System><EventData><Data Name='SleepTime'>2026-10-06T16:28:54.3818310Z</Data><Data Name='WakeTime'>2026-10-06T16:29:36.6740129Z</Data><Data Name='SleepDuration'>564</Data><Data Name='WakeDuration'>1172</Data><Data Name='DriverInitDuration'>1087</Data><Data Name='BiosInitDuration'>1494942</Data><Data Name='HiberWriteDuration'>0</Data><Data Name='HiberReadDuration'>0</Data><Data Name='HiberPagesWritten'>0</Data><Data Name='Attributes'>1912621324</Data><Data Name='TargetState'>4</Data><Data Name='EffectiveState'>4</Data><Data Name='WakeSourceType'>1</Data><Data Name='WakeSourceTextLength'>0</Data><Data Name='WakeSourceText'></Data><Data Name='WakeTimerOwnerLength'>0</Data><Data Name='WakeTimerContextLength'>0</Data><Data Name='NoMultiStageResumeReason'>0</Data><Data Name='WakeTimerOwner'></Data><Data Name='WakeTimerContext'></Data><Data Name='CheckpointDuration'>27</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:40:52.4517068Z",
+      "TimeCentral": "2026-10-06T11:40:52.4517068",
+      "RecordId": 6234,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 187,
+      "Level": 4,
+      "Message": "User-mode process attempted to change the system state by calling SetSuspendState or SetSystemPowerState APIs.",
+      "Data": {
+        "ApiCallerNameLength": "126",
+        "ApiCallerName": "\\Device\\HarddiskVolume4\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe",
+        "SystemAction": "2",
+        "LightestSystemState": "2"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>187</EventID><Version>0</Version><Level>4</Level><Task>243</Task><Opcode>0</Opcode><Keywords>0x8000400000000404</Keywords><TimeCreated SystemTime='2026-10-06T16:40:52.4517068Z'/><EventRecordID>6234</EventRecordID><Correlation/><Execution ProcessID='7252' ThreadID='11432'/><Channel>System</Channel><Computer>[computer]</Computer><Security UserID='[user-sid]'/></System><EventData><Data Name='ApiCallerNameLength'>126</Data><Data Name='ApiCallerName'>\\Device\\HarddiskVolume4\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe</Data><Data Name='SystemAction'>2</Data><Data Name='LightestSystemState'>2</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:40:52.4531408Z",
+      "TimeCentral": "2026-10-06T11:40:52.4531408",
+      "RecordId": 6235,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 566,
+      "Level": 4,
+      "Message": "The system session has transitioned from 4 to 5.\r\n\r\nReason Unknown \r\n\r\nBootId: 32",
+      "Data": {
+        "BootId": "32",
+        "Reason": "1",
+        "PreviousSessionId": "4",
+        "PreviousSessionType": "0",
+        "PreviousSessionDurationInUs": "674845420",
+        "PreviousEnergyCapacityAtStart": "39409",
+        "PreviousFullEnergyCapacityAtStart": "39409",
+        "PreviousEnergyCapacityAtEnd": "39409",
+        "PreviousFullEnergyCapacityAtEnd": "39409",
+        "NextSessionId": "5",
+        "NextSessionType": "3",
+        "PowerStateAc": "true",
+        "MonitorReason": "1"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>566</EventID><Version>0</Version><Level>4</Level><Task>268</Task><Opcode>0</Opcode><Keywords>0x8000000000000604</Keywords><TimeCreated SystemTime='2026-10-06T16:40:52.4531408Z'/><EventRecordID>6235</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='6328'/><Channel>System</Channel><Computer>[computer]</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='BootId'>32</Data><Data Name='Reason'>1</Data><Data Name='PreviousSessionId'>4</Data><Data Name='PreviousSessionType'>0</Data><Data Name='PreviousSessionDurationInUs'>674845420</Data><Data Name='PreviousEnergyCapacityAtStart'>39409</Data><Data Name='PreviousFullEnergyCapacityAtStart'>39409</Data><Data Name='PreviousEnergyCapacityAtEnd'>39409</Data><Data Name='PreviousFullEnergyCapacityAtEnd'>39409</Data><Data Name='NextSessionId'>5</Data><Data Name='NextSessionType'>3</Data><Data Name='PowerStateAc'>true</Data><Data Name='MonitorReason'>1</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:40:52.9519209Z",
+      "TimeCentral": "2026-10-06T11:40:52.9519209",
+      "RecordId": 6236,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 40,
+      "Level": 4,
+      "Message": "The driver \\Driver\\rtu53cx22x64 for device USB\\VID_0BDA&PID_8153\\111000001 stopped the power transition.",
+      "Data": {
+        "DriverNameLength": "20",
+        "DriverName": "\\Driver\\rtu53cx22x64",
+        "InstanceNameLength": "31",
+        "InstanceName": "USB\\VID_0BDA&PID_8153\\111000001"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>40</EventID><Version>0</Version><Level>4</Level><Task>36</Task><Opcode>35</Opcode><Keywords>0x8000000000002404</Keywords><TimeCreated SystemTime='2026-10-06T16:40:52.9519209Z'/><EventRecordID>6236</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='8468'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data Name='DriverNameLength'>20</Data><Data Name='DriverName'>\\Driver\\rtu53cx22x64</Data><Data Name='InstanceNameLength'>31</Data><Data Name='InstanceName'>USB\\VID_0BDA&amp;PID_8153\\111000001</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:40:52.9588359Z",
+      "TimeCentral": "2026-10-06T11:40:52.9588359",
+      "RecordId": 6237,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 42,
+      "Level": 4,
+      "Message": "The system is entering sleep.\r\n\r\nSleep Reason: Application API",
+      "Data": {
+        "TargetState": "4",
+        "EffectiveState": "4",
+        "Reason": "4",
+        "Flags": "0",
+        "TransitionsToOn": "2"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>42</EventID><Version>3</Version><Level>4</Level><Task>64</Task><Opcode>0</Opcode><Keywords>0x8000000000000404</Keywords><TimeCreated SystemTime='2026-10-06T16:40:52.9588359Z'/><EventRecordID>6237</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='568'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data Name='TargetState'>4</Data><Data Name='EffectiveState'>4</Data><Data Name='Reason'>4</Data><Data Name='Flags'>0</Data><Data Name='TransitionsToOn'>2</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:40:53.6839740Z",
+      "TimeCentral": "2026-10-06T11:40:53.6839740",
+      "RecordId": 6239,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 107,
+      "Level": 4,
+      "Message": "The system has resumed from sleep.",
+      "Data": {
+        "TargetState": "4",
+        "EffectiveState": "4",
+        "WakeFromState": "4",
+        "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+        "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+        "WakeRequesterTypeAc": "0",
+        "WakeRequesterTypeDc": "0"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>107</EventID><Version>1</Version><Level>4</Level><Task>102</Task><Opcode>0</Opcode><Keywords>0x8000000000000444</Keywords><TimeCreated SystemTime='2026-10-06T16:40:53.6839740Z'/><EventRecordID>6239</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='568'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data Name='TargetState'>4</Data><Data Name='EffectiveState'>4</Data><Data Name='WakeFromState'>4</Data><Data Name='ProgrammedWakeTimeAc'>1601-01-01T00:00:00.0000000Z</Data><Data Name='ProgrammedWakeTimeDc'>1601-01-01T00:00:00.0000000Z</Data><Data Name='WakeRequesterTypeAc'>0</Data><Data Name='WakeRequesterTypeDc'>0</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T17:01:16.5006290Z",
+      "TimeCentral": "2026-10-06T12:01:16.5006290",
+      "RecordId": 6241,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 131,
+      "Level": 4,
+      "Message": "Firmware S3 times. ResumeCount: 2, FullResume: 2613246, AverageResume: 2054094",
+      "Data": {
+        "ResumeCount": "2",
+        "FullResume": "2613246",
+        "AverageResume": "2054094"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>131</EventID><Version>0</Version><Level>4</Level><Task>33</Task><Opcode>0</Opcode><Keywords>0x8000000000000404</Keywords><TimeCreated SystemTime='2026-10-06T17:01:16.5006290Z'/><EventRecordID>6241</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='568'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data Name='ResumeCount'>2</Data><Data Name='FullResume'>2613246</Data><Data Name='AverageResume'>2054094</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T17:01:16.5006308Z",
+      "TimeCentral": "2026-10-06T12:01:16.5006308",
+      "RecordId": 6242,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 130,
+      "Level": 4,
+      "Message": "Firmware S3 times. SuspendStart: 0, SuspendEnd: 0",
+      "Data": {
+        "SuspendStart": "0",
+        "SuspendEnd": "0"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>130</EventID><Version>0</Version><Level>4</Level><Task>33</Task><Opcode>0</Opcode><Keywords>0x8000000000000404</Keywords><TimeCreated SystemTime='2026-10-06T17:01:16.5006308Z'/><EventRecordID>6242</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='568'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data Name='SuspendStart'>0</Data><Data Name='SuspendEnd'>0</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T17:01:17.5229502Z",
+      "TimeCentral": "2026-10-06T12:01:17.5229502",
+      "RecordId": 6244,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 566,
+      "Level": 4,
+      "Message": "The system session has transitioned from 5 to 6.\r\n\r\nReason SxTransition \r\n\r\nBootId: 32",
+      "Data": {
+        "BootId": "32",
+        "Reason": "20",
+        "PreviousSessionId": "5",
+        "PreviousSessionType": "3",
+        "PreviousSessionDurationInUs": "1225070546",
+        "PreviousEnergyCapacityAtStart": "39409",
+        "PreviousFullEnergyCapacityAtStart": "39409",
+        "PreviousEnergyCapacityAtEnd": "39409",
+        "PreviousFullEnergyCapacityAtEnd": "39409",
+        "NextSessionId": "6",
+        "NextSessionType": "1",
+        "PowerStateAc": "true",
+        "MonitorReason": "20"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>566</EventID><Version>0</Version><Level>4</Level><Task>268</Task><Opcode>0</Opcode><Keywords>0x8000000000000604</Keywords><TimeCreated SystemTime='2026-10-06T17:01:17.5229502Z'/><EventRecordID>6244</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='100'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data Name='BootId'>32</Data><Data Name='Reason'>20</Data><Data Name='PreviousSessionId'>5</Data><Data Name='PreviousSessionType'>3</Data><Data Name='PreviousSessionDurationInUs'>1225070546</Data><Data Name='PreviousEnergyCapacityAtStart'>39409</Data><Data Name='PreviousFullEnergyCapacityAtStart'>39409</Data><Data Name='PreviousEnergyCapacityAtEnd'>39409</Data><Data Name='PreviousFullEnergyCapacityAtEnd'>39409</Data><Data Name='NextSessionId'>6</Data><Data Name='NextSessionType'>1</Data><Data Name='PowerStateAc'>true</Data><Data Name='MonitorReason'>20</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T17:01:18.5108678Z",
+      "TimeCentral": "2026-10-06T12:01:18.5108678",
+      "RecordId": 6245,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 566,
+      "Level": 4,
+      "Message": "The system session has transitioned from 6 to 8.\r\n\r\nReason Unknown \r\n\r\nBootId: 32",
+      "Data": {
+        "BootId": "32",
+        "Reason": "1",
+        "PreviousSessionId": "6",
+        "PreviousSessionType": "1",
+        "PreviousSessionDurationInUs": "987731",
+        "PreviousEnergyCapacityAtStart": "39409",
+        "PreviousFullEnergyCapacityAtStart": "39409",
+        "PreviousEnergyCapacityAtEnd": "39409",
+        "PreviousFullEnergyCapacityAtEnd": "39409",
+        "NextSessionId": "8",
+        "NextSessionType": "0",
+        "PowerStateAc": "true",
+        "MonitorReason": "1"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>566</EventID><Version>0</Version><Level>4</Level><Task>268</Task><Opcode>0</Opcode><Keywords>0x8000000000000604</Keywords><TimeCreated SystemTime='2026-10-06T17:01:18.5108678Z'/><EventRecordID>6245</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='100'/><Channel>System</Channel><Computer>[computer]</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='BootId'>32</Data><Data Name='Reason'>1</Data><Data Name='PreviousSessionId'>6</Data><Data Name='PreviousSessionType'>1</Data><Data Name='PreviousSessionDurationInUs'>987731</Data><Data Name='PreviousEnergyCapacityAtStart'>39409</Data><Data Name='PreviousFullEnergyCapacityAtStart'>39409</Data><Data Name='PreviousEnergyCapacityAtEnd'>39409</Data><Data Name='PreviousFullEnergyCapacityAtEnd'>39409</Data><Data Name='NextSessionId'>8</Data><Data Name='NextSessionType'>0</Data><Data Name='PowerStateAc'>true</Data><Data Name='MonitorReason'>1</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T17:01:18.6332466Z",
+      "TimeCentral": "2026-10-06T12:01:18.6332466",
+      "RecordId": 6246,
+      "Provider": "Microsoft-Windows-Power-Troubleshooter",
+      "Id": 1,
+      "Level": 4,
+      "Message": "The system has returned from a low power state.\r\n\r\nSleep Time: \u200e2026\u200e-\u200e10\u200e-\u200e06T16:40:52.448985800Z\r\nWake Time: \u200e2026\u200e-\u200e10\u200e-\u200e06T17:01:17.601381400Z\r\n\r\nWake Source: Power Button",
+      "Data": {
+        "SleepTime": "2026-10-06T16:40:52.4489858Z",
+        "WakeTime": "2026-10-06T17:01:17.6013814Z",
+        "SleepDuration": "513",
+        "WakeDuration": "1100",
+        "DriverInitDuration": "1021",
+        "BiosInitDuration": "2613246",
+        "HiberWriteDuration": "0",
+        "HiberReadDuration": "0",
+        "HiberPagesWritten": "0",
+        "Attributes": "1912621324",
+        "TargetState": "4",
+        "EffectiveState": "4",
+        "WakeSourceType": "1",
+        "WakeSourceTextLength": "0",
+        "WakeSourceText": "",
+        "WakeTimerOwnerLength": "0",
+        "WakeTimerContextLength": "0",
+        "NoMultiStageResumeReason": "0",
+        "WakeTimerOwner": "",
+        "WakeTimerContext": "",
+        "CheckpointDuration": "27"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Power-Troubleshooter' Guid='{cdc05e28-c449-49c6-b9d2-88cf761644df}'/><EventID>1</EventID><Version>3</Version><Level>4</Level><Task>0</Task><Opcode>0</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='2026-10-06T17:01:18.6332466Z'/><EventRecordID>6246</EventRecordID><Correlation ActivityID='{537fedad-a0b8-44c5-bfdb-7c8513acfc5f}'/><Execution ProcessID='4360' ThreadID='4884'/><Channel>System</Channel><Computer>[computer]</Computer><Security UserID='S-1-5-19'/></System><EventData><Data Name='SleepTime'>2026-10-06T16:40:52.4489858Z</Data><Data Name='WakeTime'>2026-10-06T17:01:17.6013814Z</Data><Data Name='SleepDuration'>513</Data><Data Name='WakeDuration'>1100</Data><Data Name='DriverInitDuration'>1021</Data><Data Name='BiosInitDuration'>2613246</Data><Data Name='HiberWriteDuration'>0</Data><Data Name='HiberReadDuration'>0</Data><Data Name='HiberPagesWritten'>0</Data><Data Name='Attributes'>1912621324</Data><Data Name='TargetState'>4</Data><Data Name='EffectiveState'>4</Data><Data Name='WakeSourceType'>1</Data><Data Name='WakeSourceTextLength'>0</Data><Data Name='WakeSourceText'></Data><Data Name='WakeTimerOwnerLength'>0</Data><Data Name='WakeTimerContextLength'>0</Data><Data Name='NoMultiStageResumeReason'>0</Data><Data Name='WakeTimerOwner'></Data><Data Name='WakeTimerContext'></Data><Data Name='CheckpointDuration'>27</Data></EventData></Event>"
+    }
+  ],
+  "CyclePowerEvents": [
+    {
+      "TimeUtc": "2026-10-06T16:40:52.4517068Z",
+      "TimeCentral": "2026-10-06T11:40:52.4517068",
+      "RecordId": 6234,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 187,
+      "Level": 4,
+      "Message": "User-mode process attempted to change the system state by calling SetSuspendState or SetSystemPowerState APIs.",
+      "Data": {
+        "ApiCallerNameLength": "126",
+        "ApiCallerName": "\\Device\\HarddiskVolume4\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe",
+        "SystemAction": "2",
+        "LightestSystemState": "2"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>187</EventID><Version>0</Version><Level>4</Level><Task>243</Task><Opcode>0</Opcode><Keywords>0x8000400000000404</Keywords><TimeCreated SystemTime='2026-10-06T16:40:52.4517068Z'/><EventRecordID>6234</EventRecordID><Correlation/><Execution ProcessID='7252' ThreadID='11432'/><Channel>System</Channel><Computer>[computer]</Computer><Security UserID='[user-sid]'/></System><EventData><Data Name='ApiCallerNameLength'>126</Data><Data Name='ApiCallerName'>\\Device\\HarddiskVolume4\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe</Data><Data Name='SystemAction'>2</Data><Data Name='LightestSystemState'>2</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:40:52.4531408Z",
+      "TimeCentral": "2026-10-06T11:40:52.4531408",
+      "RecordId": 6235,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 566,
+      "Level": 4,
+      "Message": "The system session has transitioned from 4 to 5.\r\n\r\nReason Unknown \r\n\r\nBootId: 32",
+      "Data": {
+        "BootId": "32",
+        "Reason": "1",
+        "PreviousSessionId": "4",
+        "PreviousSessionType": "0",
+        "PreviousSessionDurationInUs": "674845420",
+        "PreviousEnergyCapacityAtStart": "39409",
+        "PreviousFullEnergyCapacityAtStart": "39409",
+        "PreviousEnergyCapacityAtEnd": "39409",
+        "PreviousFullEnergyCapacityAtEnd": "39409",
+        "NextSessionId": "5",
+        "NextSessionType": "3",
+        "PowerStateAc": "true",
+        "MonitorReason": "1"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>566</EventID><Version>0</Version><Level>4</Level><Task>268</Task><Opcode>0</Opcode><Keywords>0x8000000000000604</Keywords><TimeCreated SystemTime='2026-10-06T16:40:52.4531408Z'/><EventRecordID>6235</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='6328'/><Channel>System</Channel><Computer>[computer]</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='BootId'>32</Data><Data Name='Reason'>1</Data><Data Name='PreviousSessionId'>4</Data><Data Name='PreviousSessionType'>0</Data><Data Name='PreviousSessionDurationInUs'>674845420</Data><Data Name='PreviousEnergyCapacityAtStart'>39409</Data><Data Name='PreviousFullEnergyCapacityAtStart'>39409</Data><Data Name='PreviousEnergyCapacityAtEnd'>39409</Data><Data Name='PreviousFullEnergyCapacityAtEnd'>39409</Data><Data Name='NextSessionId'>5</Data><Data Name='NextSessionType'>3</Data><Data Name='PowerStateAc'>true</Data><Data Name='MonitorReason'>1</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:40:52.9519209Z",
+      "TimeCentral": "2026-10-06T11:40:52.9519209",
+      "RecordId": 6236,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 40,
+      "Level": 4,
+      "Message": "The driver \\Driver\\rtu53cx22x64 for device USB\\VID_0BDA&PID_8153\\111000001 stopped the power transition.",
+      "Data": {
+        "DriverNameLength": "20",
+        "DriverName": "\\Driver\\rtu53cx22x64",
+        "InstanceNameLength": "31",
+        "InstanceName": "USB\\VID_0BDA&PID_8153\\111000001"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>40</EventID><Version>0</Version><Level>4</Level><Task>36</Task><Opcode>35</Opcode><Keywords>0x8000000000002404</Keywords><TimeCreated SystemTime='2026-10-06T16:40:52.9519209Z'/><EventRecordID>6236</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='8468'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data Name='DriverNameLength'>20</Data><Data Name='DriverName'>\\Driver\\rtu53cx22x64</Data><Data Name='InstanceNameLength'>31</Data><Data Name='InstanceName'>USB\\VID_0BDA&amp;PID_8153\\111000001</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:40:52.9588359Z",
+      "TimeCentral": "2026-10-06T11:40:52.9588359",
+      "RecordId": 6237,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 42,
+      "Level": 4,
+      "Message": "The system is entering sleep.\r\n\r\nSleep Reason: Application API",
+      "Data": {
+        "TargetState": "4",
+        "EffectiveState": "4",
+        "Reason": "4",
+        "Flags": "0",
+        "TransitionsToOn": "2"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>42</EventID><Version>3</Version><Level>4</Level><Task>64</Task><Opcode>0</Opcode><Keywords>0x8000000000000404</Keywords><TimeCreated SystemTime='2026-10-06T16:40:52.9588359Z'/><EventRecordID>6237</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='568'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data Name='TargetState'>4</Data><Data Name='EffectiveState'>4</Data><Data Name='Reason'>4</Data><Data Name='Flags'>0</Data><Data Name='TransitionsToOn'>2</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T16:40:53.6839740Z",
+      "TimeCentral": "2026-10-06T11:40:53.6839740",
+      "RecordId": 6239,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 107,
+      "Level": 4,
+      "Message": "The system has resumed from sleep.",
+      "Data": {
+        "TargetState": "4",
+        "EffectiveState": "4",
+        "WakeFromState": "4",
+        "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+        "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+        "WakeRequesterTypeAc": "0",
+        "WakeRequesterTypeDc": "0"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>107</EventID><Version>1</Version><Level>4</Level><Task>102</Task><Opcode>0</Opcode><Keywords>0x8000000000000444</Keywords><TimeCreated SystemTime='2026-10-06T16:40:53.6839740Z'/><EventRecordID>6239</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='568'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data Name='TargetState'>4</Data><Data Name='EffectiveState'>4</Data><Data Name='WakeFromState'>4</Data><Data Name='ProgrammedWakeTimeAc'>1601-01-01T00:00:00.0000000Z</Data><Data Name='ProgrammedWakeTimeDc'>1601-01-01T00:00:00.0000000Z</Data><Data Name='WakeRequesterTypeAc'>0</Data><Data Name='WakeRequesterTypeDc'>0</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T17:01:16.5006290Z",
+      "TimeCentral": "2026-10-06T12:01:16.5006290",
+      "RecordId": 6241,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 131,
+      "Level": 4,
+      "Message": "Firmware S3 times. ResumeCount: 2, FullResume: 2613246, AverageResume: 2054094",
+      "Data": {
+        "ResumeCount": "2",
+        "FullResume": "2613246",
+        "AverageResume": "2054094"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>131</EventID><Version>0</Version><Level>4</Level><Task>33</Task><Opcode>0</Opcode><Keywords>0x8000000000000404</Keywords><TimeCreated SystemTime='2026-10-06T17:01:16.5006290Z'/><EventRecordID>6241</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='568'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data Name='ResumeCount'>2</Data><Data Name='FullResume'>2613246</Data><Data Name='AverageResume'>2054094</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T17:01:16.5006308Z",
+      "TimeCentral": "2026-10-06T12:01:16.5006308",
+      "RecordId": 6242,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 130,
+      "Level": 4,
+      "Message": "Firmware S3 times. SuspendStart: 0, SuspendEnd: 0",
+      "Data": {
+        "SuspendStart": "0",
+        "SuspendEnd": "0"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>130</EventID><Version>0</Version><Level>4</Level><Task>33</Task><Opcode>0</Opcode><Keywords>0x8000000000000404</Keywords><TimeCreated SystemTime='2026-10-06T17:01:16.5006308Z'/><EventRecordID>6242</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='568'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data Name='SuspendStart'>0</Data><Data Name='SuspendEnd'>0</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T17:01:17.5229502Z",
+      "TimeCentral": "2026-10-06T12:01:17.5229502",
+      "RecordId": 6244,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 566,
+      "Level": 4,
+      "Message": "The system session has transitioned from 5 to 6.\r\n\r\nReason SxTransition \r\n\r\nBootId: 32",
+      "Data": {
+        "BootId": "32",
+        "Reason": "20",
+        "PreviousSessionId": "5",
+        "PreviousSessionType": "3",
+        "PreviousSessionDurationInUs": "1225070546",
+        "PreviousEnergyCapacityAtStart": "39409",
+        "PreviousFullEnergyCapacityAtStart": "39409",
+        "PreviousEnergyCapacityAtEnd": "39409",
+        "PreviousFullEnergyCapacityAtEnd": "39409",
+        "NextSessionId": "6",
+        "NextSessionType": "1",
+        "PowerStateAc": "true",
+        "MonitorReason": "20"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>566</EventID><Version>0</Version><Level>4</Level><Task>268</Task><Opcode>0</Opcode><Keywords>0x8000000000000604</Keywords><TimeCreated SystemTime='2026-10-06T17:01:17.5229502Z'/><EventRecordID>6244</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='100'/><Channel>System</Channel><Computer>[computer]</Computer><Security/></System><EventData><Data Name='BootId'>32</Data><Data Name='Reason'>20</Data><Data Name='PreviousSessionId'>5</Data><Data Name='PreviousSessionType'>3</Data><Data Name='PreviousSessionDurationInUs'>1225070546</Data><Data Name='PreviousEnergyCapacityAtStart'>39409</Data><Data Name='PreviousFullEnergyCapacityAtStart'>39409</Data><Data Name='PreviousEnergyCapacityAtEnd'>39409</Data><Data Name='PreviousFullEnergyCapacityAtEnd'>39409</Data><Data Name='NextSessionId'>6</Data><Data Name='NextSessionType'>1</Data><Data Name='PowerStateAc'>true</Data><Data Name='MonitorReason'>20</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T17:01:18.5108678Z",
+      "TimeCentral": "2026-10-06T12:01:18.5108678",
+      "RecordId": 6245,
+      "Provider": "Microsoft-Windows-Kernel-Power",
+      "Id": 566,
+      "Level": 4,
+      "Message": "The system session has transitioned from 6 to 8.\r\n\r\nReason Unknown \r\n\r\nBootId: 32",
+      "Data": {
+        "BootId": "32",
+        "Reason": "1",
+        "PreviousSessionId": "6",
+        "PreviousSessionType": "1",
+        "PreviousSessionDurationInUs": "987731",
+        "PreviousEnergyCapacityAtStart": "39409",
+        "PreviousFullEnergyCapacityAtStart": "39409",
+        "PreviousEnergyCapacityAtEnd": "39409",
+        "PreviousFullEnergyCapacityAtEnd": "39409",
+        "NextSessionId": "8",
+        "NextSessionType": "0",
+        "PowerStateAc": "true",
+        "MonitorReason": "1"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-Power' Guid='{331c3b3a-2005-44c2-ac5e-77220c37d6b4}'/><EventID>566</EventID><Version>0</Version><Level>4</Level><Task>268</Task><Opcode>0</Opcode><Keywords>0x8000000000000604</Keywords><TimeCreated SystemTime='2026-10-06T17:01:18.5108678Z'/><EventRecordID>6245</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='100'/><Channel>System</Channel><Computer>[computer]</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='BootId'>32</Data><Data Name='Reason'>1</Data><Data Name='PreviousSessionId'>6</Data><Data Name='PreviousSessionType'>1</Data><Data Name='PreviousSessionDurationInUs'>987731</Data><Data Name='PreviousEnergyCapacityAtStart'>39409</Data><Data Name='PreviousFullEnergyCapacityAtStart'>39409</Data><Data Name='PreviousEnergyCapacityAtEnd'>39409</Data><Data Name='PreviousFullEnergyCapacityAtEnd'>39409</Data><Data Name='NextSessionId'>8</Data><Data Name='NextSessionType'>0</Data><Data Name='PowerStateAc'>true</Data><Data Name='MonitorReason'>1</Data></EventData></Event>"
+    },
+    {
+      "TimeUtc": "2026-10-06T17:01:18.6332466Z",
+      "TimeCentral": "2026-10-06T12:01:18.6332466",
+      "RecordId": 6246,
+      "Provider": "Microsoft-Windows-Power-Troubleshooter",
+      "Id": 1,
+      "Level": 4,
+      "Message": "The system has returned from a low power state.\r\n\r\nSleep Time: \u200e2026\u200e-\u200e10\u200e-\u200e06T16:40:52.448985800Z\r\nWake Time: \u200e2026\u200e-\u200e10\u200e-\u200e06T17:01:17.601381400Z\r\n\r\nWake Source: Power Button",
+      "Data": {
+        "SleepTime": "2026-10-06T16:40:52.4489858Z",
+        "WakeTime": "2026-10-06T17:01:17.6013814Z",
+        "SleepDuration": "513",
+        "WakeDuration": "1100",
+        "DriverInitDuration": "1021",
+        "BiosInitDuration": "2613246",
+        "HiberWriteDuration": "0",
+        "HiberReadDuration": "0",
+        "HiberPagesWritten": "0",
+        "Attributes": "1912621324",
+        "TargetState": "4",
+        "EffectiveState": "4",
+        "WakeSourceType": "1",
+        "WakeSourceTextLength": "0",
+        "WakeSourceText": "",
+        "WakeTimerOwnerLength": "0",
+        "WakeTimerContextLength": "0",
+        "NoMultiStageResumeReason": "0",
+        "WakeTimerOwner": "",
+        "WakeTimerContext": "",
+        "CheckpointDuration": "27"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Power-Troubleshooter' Guid='{cdc05e28-c449-49c6-b9d2-88cf761644df}'/><EventID>1</EventID><Version>3</Version><Level>4</Level><Task>0</Task><Opcode>0</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='2026-10-06T17:01:18.6332466Z'/><EventRecordID>6246</EventRecordID><Correlation ActivityID='{537fedad-a0b8-44c5-bfdb-7c8513acfc5f}'/><Execution ProcessID='4360' ThreadID='4884'/><Channel>System</Channel><Computer>[computer]</Computer><Security UserID='S-1-5-19'/></System><EventData><Data Name='SleepTime'>2026-10-06T16:40:52.4489858Z</Data><Data Name='WakeTime'>2026-10-06T17:01:17.6013814Z</Data><Data Name='SleepDuration'>513</Data><Data Name='WakeDuration'>1100</Data><Data Name='DriverInitDuration'>1021</Data><Data Name='BiosInitDuration'>2613246</Data><Data Name='HiberWriteDuration'>0</Data><Data Name='HiberReadDuration'>0</Data><Data Name='HiberPagesWritten'>0</Data><Data Name='Attributes'>1912621324</Data><Data Name='TargetState'>4</Data><Data Name='EffectiveState'>4</Data><Data Name='WakeSourceType'>1</Data><Data Name='WakeSourceTextLength'>0</Data><Data Name='WakeSourceText'></Data><Data Name='WakeTimerOwnerLength'>0</Data><Data Name='WakeTimerContextLength'>0</Data><Data Name='NoMultiStageResumeReason'>0</Data><Data Name='WakeTimerOwner'></Data><Data Name='WakeTimerContext'></Data><Data Name='CheckpointDuration'>27</Data></EventData></Event>"
+    }
+  ],
+  "GraphicsAndKernelPnpWarningsAndErrors": [
+    {
+      "TimeUtc": "2026-10-06T16:13:56.1007565Z",
+      "TimeCentral": "2026-10-06T11:13:56.1007565",
+      "RecordId": 6149,
+      "Provider": "Microsoft-Windows-Kernel-PnP",
+      "Id": 219,
+      "Level": 3,
+      "Message": "The driver \\Driver\\WUDFRd failed to load.\r\nDevice: ACPI\\VLV0100\\5&15d725f4&0\r\nStatus: 0xC0000365",
+      "Data": {
+        "DriverNameLength": "25",
+        "DriverName": "ACPI\\VLV0100\\5&15d725f4&0",
+        "Status": "3221226341",
+        "FailureNameLength": "14",
+        "FailureName": "\\Driver\\WUDFRd",
+        "Version": "0"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-Kernel-PnP' Guid='{9c205a39-1250-487d-abd7-e831c6290539}'/><EventID>219</EventID><Version>0</Version><Level>3</Level><Task>212</Task><Opcode>0</Opcode><Keywords>0x8000000000002000</Keywords><TimeCreated SystemTime='2026-10-06T16:13:56.1007565Z'/><EventRecordID>6149</EventRecordID><Correlation/><Execution ProcessID='4' ThreadID='304'/><Channel>System</Channel><Computer>[computer]</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='DriverNameLength'>25</Data><Data Name='DriverName'>ACPI\\VLV0100\\5&amp;15d725f4&amp;0</Data><Data Name='Status'>3221226341</Data><Data Name='FailureNameLength'>14</Data><Data Name='FailureName'>\\Driver\\WUDFRd</Data><Data Name='Version'>0</Data></EventData></Event>"
+    }
+  ],
+  "SystemWarningsAndErrorsDuringCycle": [],
+  "CodeIntegrityWarningsAndErrors": [
+    {
+      "TimeUtc": "2026-10-06T16:14:27.0717671Z",
+      "TimeCentral": "2026-10-06T11:14:27.0717671",
+      "RecordId": 3462,
+      "Provider": "Microsoft-Windows-CodeIntegrity",
+      "Id": 3004,
+      "Level": 2,
+      "Message": "Windows is unable to verify the image integrity of the file \\Device\\HarddiskVolume4\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26080.4-0\\DefenderSessionHelper.exe because file hash could not be found on the system. A recent hardware or software change might have installed a file that is signed incorrectly or damaged, or that might be malicious software from an unknown source.",
+      "Data": {
+        "FileNameLength": "112",
+        "FileNameBuffer": "\\Device\\HarddiskVolume4\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26080.4-0\\DefenderSessionHelper.exe",
+        "SecureRequired": "0x80000018",
+        "RequestedSigningLevel": "7",
+        "ProcessNameLength": "98",
+        "ProcessNameBuffer": "\\Device\\HarddiskVolume4\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26080.4-0\\MsMpEng.exe"
+      },
+      "Xml": "<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='Microsoft-Windows-CodeIntegrity' Guid='{4ee76bd8-3cf4-44a0-a0ac-3937643e37a3}'/><EventID>3004</EventID><Version>1</Version><Level>2</Level><Task>1</Task><Opcode>104</Opcode><Keywords>0x8000000000000000</Keywords><TimeCreated SystemTime='2026-10-06T16:14:27.0717671Z'/><EventRecordID>3462</EventRecordID><Correlation ActivityID='{ae93363e-55ad-0005-0573-93aead55dd01}'/><Execution ProcessID='4508' ThreadID='11620'/><Channel>Microsoft-Windows-CodeIntegrity/Operational</Channel><Computer>[computer]</Computer><Security UserID='S-1-5-18'/></System><EventData><Data Name='FileNameLength'>112</Data><Data Name='FileNameBuffer'>\\Device\\HarddiskVolume4\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26080.4-0\\DefenderSessionHelper.exe</Data><Data Name='SecureRequired'>0x80000018</Data><Data Name='RequestedSigningLevel'>7</Data><Data Name='ProcessNameLength'>98</Data><Data Name='ProcessNameBuffer'>\\Device\\HarddiskVolume4\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26080.4-0\\MsMpEng.exe</Data></EventData></Event>"
+    }
+  ],
+  "CodeIntegrityWarningsAndErrorsDuringCycle": [],
+  "AmdCodeIntegrityWarningsAndErrors": []
+}

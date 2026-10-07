@@ -1,0 +1,75 @@
+{
+  "Status": "OriginalKernelCatalogTrustVerified",
+  "StartedAt": "2026-10-05T15:07:08.563556-05:00",
+  "GpuBefore": {
+    "InstanceId": "PCI\\VEN_1002&DEV_163F&SUBSYS_01231002&REV_AE\\[device-instance]",
+    "ProblemCode": 0,
+    "Version": "32.0.21043.21001",
+    "Inf": "oem50.inf"
+  },
+  "CatalogsAdded": [
+    {
+      "OriginalPath": "amdafd/amdafd.cat",
+      "ImportName": "DeckLCD-Original-1cc956390b28c1a00460b38d.cat",
+      "SHA256": "1cc956390b28c1a00460b38df808d9ceda3df64390790dbb6557425968a70dbe",
+      "SystemAssignedName": "\\WINDOWS\\system32\\CatRoot\\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\\1.CAT"
+    },
+    {
+      "OriginalPath": "amdfendr/amdfendr.cat",
+      "ImportName": "DeckLCD-Original-fddebfbdf9d767268888dfed.cat",
+      "SHA256": "fddebfbdf9d767268888dfed1bd87be8a572cde23bf3b536faa653a20c2430b8",
+      "SystemAssignedName": "\\WINDOWS\\system32\\CatRoot\\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\\2.CAT"
+    },
+    {
+      "OriginalPath": "amduw23e.cat",
+      "ImportName": "DeckLCD-Original-90a7218c9a88f9a2338eeae3.cat",
+      "SHA256": "90a7218c9a88f9a2338eeae3b9deb0b7c3dd34c20f6d6a6059cba47763a2650d",
+      "SystemAssignedName": "\\WINDOWS\\system32\\CatRoot\\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\\3.CAT"
+    },
+    {
+      "OriginalPath": "amdwin/amdwin-u0202038.cat",
+      "ImportName": "DeckLCD-Original-d7fc433c56233c48ee6e8dfe.cat",
+      "SHA256": "d7fc433c56233c48ee6e8dfe2e5b31652664c8ea62efed3978f0e5dff054311b",
+      "SystemAssignedName": "\\WINDOWS\\system32\\CatRoot\\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\\4.CAT"
+    },
+    {
+      "OriginalPath": "u0202038.cat",
+      "ImportName": "DeckLCD-Original-231ccda9bbf70e42efbeb7ca.cat",
+      "SHA256": "231ccda9bbf70e42efbeb7caa640d0d95725d435d33a62b1eba5fd6b36277773",
+      "SystemAssignedName": "\\WINDOWS\\system32\\CatRoot\\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\\5.CAT"
+    },
+    {
+      "OriginalPath": "UWPPair/uwppair.cat",
+      "ImportName": "DeckLCD-Original-b25076f7d83cee38229b81b2.cat",
+      "SHA256": "b25076f7d83cee38229b81b2b04135b2a2fdb3904ab2680cf09794ebf4fd0f2f",
+      "SystemAssignedName": "\\WINDOWS\\system32\\CatRoot\\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\\6.CAT"
+    }
+  ],
+  "NormalBootVerified": false,
+  "DriverBindingChanged": false,
+  "BootSettingsChanged": false,
+  "CertificateStoresChanged": false,
+  "AutomaticVerificationBeforePassed": false,
+  "AutomaticVerificationBefore": [
+    "File: [workspace]\\outputs\\steamdeck-driver-lab\\private-config-package\\WT6A_INF\\B026204\\amdkmdag.sys",
+    "Index  Algorithm  Timestamp    ",
+    "========================================",
+    "",
+    "Number of errors: 1",
+    "",
+    "SignTool Error: Signing Cert does not chain to a Microsoft Root Cert."
+  ],
+  "AutomaticVerificationAfterPassed": true,
+  "AutomaticVerificationAfter": [
+    "0      sha256     RFC3161      ",
+    "Successfully verified: [workspace]\\outputs\\steamdeck-driver-lab\\private-config-package\\WT6A_INF\\B026204\\amdkmdag.sys",
+    ""
+  ],
+  "GpuAfter": {
+    "InstanceId": "PCI\\VEN_1002&DEV_163F&SUBSYS_01231002&REV_AE\\[device-instance]",
+    "ProblemCode": 0,
+    "Version": "32.0.21043.21001",
+    "Inf": "oem50.inf"
+  },
+  "CompletedAt": "2026-10-05T15:07:12.4133437-05:00"
+}

@@ -1,0 +1,24 @@
+{
+  "Nonce": "1ae76c89-214b-4728-ba2c-cc6ee53a8cb8",
+  "Target": "Candidate",
+  "Selection": {
+    "InfPath": "C:\\WINDOWS\\INF\\oem56.inf",
+    "DriverStoreInfPath": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\decklcd-config.inf_amd64_bdc26e0731decc8b\\decklcd-config.inf",
+    "Description": "AMD Radeon(TM) Graphics",
+    "Provider": "Advanced Micro Devices, Inc.",
+    "DriverVersion": 9007200633836041,
+    "CompatibleCount": 1,
+    "FinalFlags": 25362704,
+    "InstallationRequested": true,
+    "RestartRequired": true,
+    "FileCopySuppressed": true
+  },
+  "StagedFiles": {
+    "PublishedInf": "oem56.inf",
+    "DriverStoreInf": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\decklcd-config.inf_amd64_bdc26e0731decc8b\\decklcd-config.inf",
+    "VerifiedFiles": 132,
+    "VerifiedUtc": "2026-10-06T16:02:17.6489489Z"
+  },
+  "SharedSystemFiles": 56,
+  "CompletedUtc": "2026-10-06T16:02:18.4830298Z"
+}

@@ -1,0 +1,38 @@
+{
+  "Nonce": "1ae76c89-214b-4728-ba2c-cc6ee53a8cb8",
+  "TaskName": "SteamDeckDriverLab-NormalBootRecovery",
+  "TimeoutSeconds": 180,
+  "PreparedUtc": "2026-10-06T16:02:07.4823479Z",
+  "BootBeforeUtc": "2026-10-05T22:25:01Z",
+  "Before": {
+    "CapturedUtc": "2026-10-06T16:01:55.7417110Z",
+    "BootUtc": "2026-10-05T22:25:01Z",
+    "Gpu": {
+      "InstanceId": "PCI\\VEN_1002&DEV_163F&SUBSYS_01231002&REV_AE\\[device-instance]",
+      "ProblemCode": 0,
+      "Inf": "oem50.inf",
+      "Version": "32.0.21043.21001",
+      "Service": "amduw23g-202038-1ed56446"
+    },
+    "CodeIntegrity": {
+      "Options": 2621955,
+      "TestSigningActive": true
+    },
+    "SelectedFiles": {
+      "KernelPath": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\u0202038.inf_amd64_bcbc9b7de0ca5d7e\\B026204\\amdkmdag.sys",
+      "KernelSHA256": "E1B4DBFB807A59971BFC90E8139E35F96B4ADEDFD773695DBDCA5568B83D1ADF",
+      "ConfigurationPath": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\u0202038.inf_amd64_bcbc9b7de0ca5d7e\\B026204\\amdgcf.dat",
+      "ConfigurationSHA256": "71AA9220ADB150BE58EBAF8AE71513FEF218FFC2338FA2263A23DF844AECDC09",
+      "RegisteredInf": "oem50.inf"
+    }
+  },
+  "WorkerSHA256": "262338866679E177E676FA98F0E1C679BF4687F4E002DD38DD306C4D76561113",
+  "NativeSHA256": "8C02D4067D32F1661C3D7FD4E452609DA301D9106E0A185513487DDAD6ED2C0B",
+  "CandidateManifestSHA256": "4E0672845790D6F5258EA8EE20B0534DC3E0DC261D7D2B4C16D3260470DD1E60",
+  "PrototypeManifestSHA256": "70499513D7E1ED3895B08DAF78F5B8AC7043F421469689AEB50B1F18ADC7762E",
+  "CandidateInf": "oem56.inf",
+  "PrototypeInf": "oem50.inf",
+  "CandidateKernelSHA256": "AE975BBB56282BE1471B9A91407F0155C087B619F99D2731D4E7989720522152",
+  "CandidateConfigurationSHA256": "7EE54354831BBF267C590636FFFFD95FCA91FF5455578151FA657BD5F9162717",
+  "PrototypeKernelSHA256": "E1B4DBFB807A59971BFC90E8139E35F96B4ADEDFD773695DBDCA5568B83D1ADF"
+}

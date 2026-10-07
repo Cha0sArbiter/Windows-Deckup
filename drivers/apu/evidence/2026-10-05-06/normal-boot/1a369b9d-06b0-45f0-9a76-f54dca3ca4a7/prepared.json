@@ -1,0 +1,37 @@
+{
+  "Nonce": "1a369b9d-06b0-45f0-9a76-f54dca3ca4a7",
+  "Status": "ReadyForNormalModeRestart",
+  "SelectedUtc": "2026-10-06T16:10:05.5686067Z",
+  "Selection": {
+    "InfPath": "C:\\WINDOWS\\INF\\oem56.inf",
+    "DriverStoreInfPath": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\decklcd-config.inf_amd64_bdc26e0731decc8b\\decklcd-config.inf",
+    "Description": "AMD Radeon(TM) Graphics",
+    "Provider": "Advanced Micro Devices, Inc.",
+    "DriverVersion": 9007200633836041,
+    "CompatibleCount": 1,
+    "FinalFlags": 25362704,
+    "InstallationRequested": true,
+    "RestartRequired": true,
+    "FileCopySuppressed": true
+  },
+  "Gpu": {
+    "InstanceId": "PCI\\VEN_1002&DEV_163F&SUBSYS_01231002&REV_AE\\[device-instance]",
+    "ProblemCode": 0,
+    "Inf": "oem56.inf",
+    "Version": "32.0.21043.21001",
+    "Service": "amduw23g-202038-1ed56446"
+  },
+  "SelectedFiles": {
+    "KernelPath": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\decklcd-config.inf_amd64_bdc26e0731decc8b\\B026204\\amdkmdag.sys",
+    "KernelSHA256": "AE975BBB56282BE1471B9A91407F0155C087B619F99D2731D4E7989720522152",
+    "ConfigurationPath": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\decklcd-config.inf_amd64_bdc26e0731decc8b\\B026204\\amdgcf.dat",
+    "ConfigurationSHA256": "7EE54354831BBF267C590636FFFFD95FCA91FF5455578151FA657BD5F9162717",
+    "RegisteredInf": "oem56.inf"
+  },
+  "BcdTestSigning": "No",
+  "RunningCodeIntegrity": {
+    "Options": 2621955,
+    "TestSigningActive": true
+  },
+  "RebootInitiated": false
+}

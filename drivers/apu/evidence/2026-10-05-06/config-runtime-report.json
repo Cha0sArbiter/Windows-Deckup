@@ -1,0 +1,124 @@
+{
+  "CapturedAt": "2026-10-05T16:19:03.9870721-05:00",
+  "Driver": {
+    "InstanceId": "PCI\\VEN_1002&DEV_163F&SUBSYS_01231002&REV_AE\\[device-instance]",
+    "Name": "AMD Radeon(TM) Graphics",
+    "ProblemCode": 0,
+    "Version": "32.0.21043.21001",
+    "Inf": "oem56.inf",
+    "Service": "amduw23g-202038-1ed56446"
+  },
+  "Boot": "2026-10-05T15:33:38.5-05:00",
+  "CodeIntegrity": {
+    "Options": 2621955,
+    "TestSigningActive": true
+  },
+  "SelectedFiles": {
+    "KernelPath": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\decklcd-config.inf_amd64_bdc26e0731decc8b\\B026204\\amdkmdag.sys",
+    "KernelSHA256": "AE975BBB56282BE1471B9A91407F0155C087B619F99D2731D4E7989720522152",
+    "ConfigurationPath": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\decklcd-config.inf_amd64_bdc26e0731decc8b\\B026204\\amdgcf.dat",
+    "ConfigurationSHA256": "7EE54354831BBF267C590636FFFFD95FCA91FF5455578151FA657BD5F9162717"
+  },
+  "KernelCatalogPolicyVerified": true,
+  "UserReportedDisplayWorking": true,
+  "D3D11": {
+    "passed": true,
+    "driver_type": "HARDWARE",
+    "software_fallback": false,
+    "feature_level": "11_1",
+    "texture_size": [
+      32,
+      32
+    ],
+    "cases": [
+      {
+        "color": "red",
+        "pixels_verified": 1024,
+        "passed": true
+      },
+      {
+        "color": "green",
+        "pixels_verified": 1024,
+        "passed": true
+      },
+      {
+        "color": "blue",
+        "pixels_verified": 1024,
+        "passed": true
+      }
+    ],
+    "limitation": "Covers basic GPU clear/copy/readback only; this probe does not assess game stability, video, or sleep/wake.",
+    "captured_at": "2026-10-05T15:48:54.608122-05:00"
+  },
+  "SleepWakeVerified": false,
+  "NormalBootVerified": false,
+  "Limitations": "Startup and basic rendering passed, but display resume failed by user observation; normal-mode boot is untested.",
+  "ResumeFailure": {
+    "CapturedAt": "2026-10-05T16:26:32.6443205-05:00",
+    "UserReportedBlackScreenAfterResume": true,
+    "WindowsResponsive": true,
+    "SleepResumeEvents": [
+      {
+        "TimeCreated": "2026-10-05T16:19:03.6061739-05:00",
+        "ProviderName": "Microsoft-Windows-Power-Troubleshooter",
+        "Id": 1,
+        "Message": "The system has returned from a low power state.\r\n\r\nSleep Time: \u200e2026\u200e-\u200e10\u200e-\u200e05T20:50:10.578955200Z\r\nWake Time: \u200e2026\u200e-\u200e10\u200e-\u200e05T21:19:02.284848900Z\r\n\r\nWake Source: Power Button"
+      },
+      {
+        "TimeCreated": "2026-10-05T15:50:11.9369166-05:00",
+        "ProviderName": "Microsoft-Windows-Kernel-Power",
+        "Id": 107,
+        "Message": "The system has resumed from sleep."
+      },
+      {
+        "TimeCreated": "2026-10-05T15:50:10.9644227-05:00",
+        "ProviderName": "Microsoft-Windows-Kernel-Power",
+        "Id": 42,
+        "Message": "The system is entering sleep.\r\n\r\nSleep Reason: Application API"
+      }
+    ],
+    "GpuProperties": [
+      {
+        "KeyName": "DEVPKEY_Device_ProblemCode",
+        "Data": 0
+      },
+      {
+        "KeyName": "DEVPKEY_Device_DriverInfPath",
+        "Data": "oem56.inf"
+      }
+    ],
+    "GraphicsErrors": [],
+    "PostResumeD3D11": {
+      "passed": true,
+      "driver_type": "HARDWARE",
+      "software_fallback": false,
+      "feature_level": "11_1",
+      "texture_size": [
+        32,
+        32
+      ],
+      "cases": [
+        {
+          "color": "red",
+          "pixels_verified": 1024,
+          "passed": true
+        },
+        {
+          "color": "green",
+          "pixels_verified": 1024,
+          "passed": true
+        },
+        {
+          "color": "blue",
+          "pixels_verified": 1024,
+          "passed": true
+        }
+      ],
+      "limitation": "Covers basic GPU clear/copy/readback only; this probe does not assess game stability, video, or sleep/wake.",
+      "captured_at": "2026-10-05T16:20:20.658313-05:00"
+    },
+    "Diagnosis": "Display resume failed by user observation despite Code 0 and a successful offscreen GPU test; cause not established.",
+    "GraphicsResetShortcutRecoveredDisplay": false,
+    "UserReportedRestartRestoredDisplay": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "InstalledKernelAutomaticVerificationExit": 0,
+  "RecentGraphicsEvents": [
+    {
+      "TimeCreated": "2026-10-05T15:23:07.693587-05:00",
+      "ProviderName": "amduw23g-202038-1ed56446",
+      "Id": 3085,
+      "LevelDisplayName": null,
+      "Message": null
+    },
+    {
+      "TimeCreated": "2026-10-05T15:23:07.693587-05:00",
+      "ProviderName": "amduw23g-202038-1ed56446",
+      "Id": 1035,
+      "LevelDisplayName": null,
+      "Message": null
+    },
+    {
+      "TimeCreated": "2026-10-05T15:23:06.6224618-05:00",
+      "ProviderName": "amduw23g-202038-1ed56446",
+      "Id": 1035,
+      "LevelDisplayName": null,
+      "Message": null
+    }
+  ]
+}

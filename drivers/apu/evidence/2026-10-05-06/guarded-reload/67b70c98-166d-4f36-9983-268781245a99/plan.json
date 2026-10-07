@@ -1,0 +1,25 @@
+{
+  "Nonce": "67b70c98-166d-4f36-9983-268781245a99",
+  "TaskName": "SteamDeckDriverLab-GuardedReload",
+  "TimeoutSeconds": 180,
+  "PreparedUtc": "2026-10-05T22:16:45.2729308Z",
+  "ApplyScriptSHA256": "E54128B8E13CF808C0C56212AE1C260AEC1C24A6957E53966B5E29DD9E84C555",
+  "WatchdogScriptSHA256": "05749D6B1BC0287CEFCC54E9A8D0D256A872389D42C74FF95B6F257C4DEF4B38",
+  "CandidateInf": "oem56.inf",
+  "PrototypeInf": "oem50.inf",
+  "CandidateKernelSHA256": "AE975BBB56282BE1471B9A91407F0155C087B619F99D2731D4E7989720522152",
+  "CandidateConfigurationSHA256": "7EE54354831BBF267C590636FFFFD95FCA91FF5455578151FA657BD5F9162717",
+  "PrototypeKernelSHA256": "E1B4DBFB807A59971BFC90E8139E35F96B4ADEDFD773695DBDCA5568B83D1ADF",
+  "CurrentGpu": {
+    "InstanceId": "PCI\\VEN_1002&DEV_163F&SUBSYS_01231002&REV_AE\\[device-instance]",
+    "ProblemCode": 0,
+    "Inf": "oem50.inf",
+    "Version": "32.0.21043.21001",
+    "Service": "amduw23g-202038-1ed56446"
+  },
+  "CodeIntegrity": {
+    "Options": 2621955,
+    "TestSigningActive": true
+  },
+  "AutoRecoveryRequestsRestart": true
+}

@@ -1,0 +1,403 @@
+{
+  "files_in_prototype": 151,
+  "files_in_candidate": 151,
+  "identical_files": 141,
+  "changed_files": [
+    {
+      "path": "B026204/amdgcf.dat",
+      "prototype_sha256": "71aa9220adb150be58ebaf8ae71513fef218ffc2338fa2263a23df844aecdc09",
+      "candidate_sha256": "7ee54354831bbf267c590636ffffd95fca91ff5455578151fa657bd5f9162717",
+      "prototype_size": 15,
+      "candidate_size": 15
+    },
+    {
+      "path": "B026204/amdkmdag.sys",
+      "prototype_sha256": "e1b4dbfb807a59971bfc90e8139e35f96b4adedfd773695dbdca5568b83d1adf",
+      "candidate_sha256": "ae975bbb56282be1471b9a91407f0155c087b619f99d2731d4e7989720522152",
+      "prototype_size": 102184256,
+      "candidate_size": 102213648
+    },
+    {
+      "path": "UWPPair/uwppair.cat",
+      "prototype_sha256": "2ae0e4729ab549ad5ca56294d6ca73302c04cff6baff9b55ae94548609c4f4d7",
+      "candidate_sha256": "b25076f7d83cee38229b81b2b04135b2a2fdb3904ab2680cf09794ebf4fd0f2f",
+      "prototype_size": 24409,
+      "candidate_size": 10971
+    },
+    {
+      "path": "amdafd/amdafd.cat",
+      "prototype_sha256": "21f3cc8d62adc87a6007b1132cb8375230df264818e1e8fb99dc765e5c4d069f",
+      "candidate_sha256": "1cc956390b28c1a00460b38df808d9ceda3df64390790dbb6557425968a70dbe",
+      "prototype_size": 24404,
+      "candidate_size": 10992
+    },
+    {
+      "path": "amdfendr/amdfendr.cat",
+      "prototype_sha256": "33f7307900934d55091048f60fd627351aafa321a0033bffd5d984003ab4326a",
+      "candidate_sha256": "fddebfbdf9d767268888dfed1bd87be8a572cde23bf3b536faa653a20c2430b8",
+      "prototype_size": 25729,
+      "candidate_size": 12284
+    },
+    {
+      "path": "amduw23e.cat",
+      "prototype_sha256": "23210555dfbbe5dd9b222679f84b15d7f4388c700151bd1d4081b07930c0c849",
+      "candidate_sha256": "19f54c976a0f2a287e4ce598665c391c31d349c87182f519d2d1f77dabe897c2",
+      "prototype_size": 24413,
+      "candidate_size": 24489
+    },
+    {
+      "path": "amduw23e.inf",
+      "prototype_sha256": "f7e13545432dde6189ba5e7a316533e909859a07ae35fa1aa45323a2c46dfce8",
+      "candidate_sha256": "51efe70c2cac4d81a7ae0e6ad2269df924c1d5b4f333480bd579a1c255c24dce",
+      "prototype_size": 4154,
+      "candidate_size": 4170,
+      "identical_after_catalog_name_normalization": true
+    },
+    {
+      "path": "amdwin/amdwin-u0202038.cat",
+      "prototype_sha256": "156de214c5747204a21ce8a667e9683647031595a6a0cc8875014de11613e788",
+      "candidate_sha256": "d7fc433c56233c48ee6e8dfe2e5b31652664c8ea62efed3978f0e5dff054311b",
+      "prototype_size": 27121,
+      "candidate_size": 35426
+    },
+    {
+      "path": "u0202038.cat",
+      "prototype_sha256": "f94b4b4fd3f6a4fef9b092fa2a7eaadaa576e88a863c9d5a97ac222b06e1f178",
+      "candidate_sha256": "85d7d9fb613bf4e5c6f673c5c54dfd6f3de51ffdba09ce9862faa4665c9cefe1",
+      "prototype_size": 2848904,
+      "candidate_size": 2848940
+    },
+    {
+      "path": "u0202038.inf",
+      "prototype_sha256": "6ab8292afa815fe0e1a5653a8e12d13c3ab01db8bc3a318f7765d511849abdf9",
+      "candidate_sha256": "05c87a519061b73393b85835f068d0510017d5d13733c38386361d1cf632b8cc",
+      "prototype_size": 121028,
+      "candidate_size": 121034,
+      "identical_after_catalog_name_normalization": true
+    }
+  ],
+  "kernel_sections": [
+    {
+      "name": ".text",
+      "executable": true,
+      "differing_bytes": 1,
+      "changes": [
+        {
+          "rva": "0x56fb1",
+          "prototype": "0xeb",
+          "candidate": "0x74"
+        }
+      ]
+    },
+    {
+      "name": ".rdata",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": ".data",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": ".pdata",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "KMDDKFQT",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGE_COM",
+      "executable": true,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGE",
+      "executable": true,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGEPPLC",
+      "executable": true,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGE_DRM",
+      "executable": true,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGE_HDC",
+      "executable": true,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGE_OPM",
+      "executable": true,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGE_WSC",
+      "executable": true,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGE_PRE",
+      "executable": true,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGESIPC",
+      "executable": true,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGEDMCC",
+      "executable": true,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGEKMDC",
+      "executable": true,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGECALC",
+      "executable": true,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGED3PC",
+      "executable": true,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGEDSIC",
+      "executable": true,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGEDCIC",
+      "executable": true,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGED3IC",
+      "executable": true,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGEKMDD",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGEINAV",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGEINV3",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGEINV4",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGEIAT",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGEICMN",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGE_DRM",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGE_HDC",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGE_OPM",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGE_WSR",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGE_WSD",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGE_PRE",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGESIPD",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGEDMCD",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGE",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGECALD",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGEDSIR",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGED3PR",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGED3PD",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGED3IR",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGEDSID",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGEDCIR",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGED3ID",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "PAGEDCID",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": "INIT",
+      "executable": true,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": ".rsrc",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    },
+    {
+      "name": ".reloc",
+      "executable": false,
+      "differing_bytes": 0,
+      "changes": []
+    }
+  ],
+  "executable_byte_changes": [
+    {
+      "rva": "0x56fb1",
+      "prototype": "0xeb",
+      "candidate": "0x74"
+    }
+  ],
+  "prototype_config": "010000007ba5870fde8ec6144b16af",
+  "candidate_config": "01000000b55ba498aabfd8674b16ae",
+  "release_version": "25.10.43.21-260623a-202038C-Asus",
+  "actual_code_emulation": [
+    {
+      "case": "Prototype patched code with AF config on AE Deck",
+      "result": "0x0",
+      "expected": "0x0"
+    },
+    {
+      "case": "Candidate original code with AE config on AE Deck",
+      "result": "0x0",
+      "expected": "0x0"
+    },
+    {
+      "case": "Original code with AF config on AE Deck",
+      "result": "0xc0000001",
+      "expected": "0xc0000001"
+    }
+  ],
+  "limitation": "Equivalent acceptance status does not establish equivalent hardware behavior, runtime registry values, resident image identity, or sleep/resume reliability."
+}
