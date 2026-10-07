@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "repository": "Cha0sArbiter/Windows-Deckup",
+  "build_commit": "fc72172e65e47b5e5fc9c988cbd8555f5ce4281d",
+  "workflow_run": 37553577698,
+  "workflow_url": "https://github.com/Cha0sArbiter/Windows-Deckup/actions/runs/37553577698",
+  "artifact_id": 11454186608,
+  "artifact_url": "https://github.com/Cha0sArbiter/Windows-Deckup/actions/runs/37553577698/artifacts/11454186608",
+  "artifact_sha256": "d38a5181da2e09897b61f619cc6dfe2553d6b119475bfdbc65f6bc96ad13f15a",
+  "artifact_bytes": 446507133,
+  "artifact_files": 212,
+  "manifest_driver_files_verified": 151,
+  "original_catalogs_verified": 6,
+  "private_signing_keys_present": false,
+  "zip_crc_verified": true,
+  "unchanged_kernel_sha256": "ae975bbb56282be1471b9a91407f0155c087b619f99d2731d4e7989720522152",
+  "configuration_sha256": "7ee54354831bbf267c590636ffffd95fca91ff5455578151fa657bd5f9162717",
+  "automatic_kernel_policy_on_runner_verified": true,
+  "emulator_checks_passed": 7,
+  "extension_copy_inf_adapted": true,
+  "target_hardware_installation_verified": false,
+  "artifact_retention_days": 90
+}
