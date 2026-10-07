@@ -1,0 +1,103 @@
+{
+  "Status": "Completed",
+  "StartedUtc": "2026-10-07T00:55:46.0484528Z",
+  "HostedSourceCommit": "6b54fe6fb69b8d0b676d3ec3f6eebc520aa2e262",
+  "BuildRun": 37553577698,
+  "ArtifactId": 11454186608,
+  "ArtifactSHA256": "d38a5181da2e09897b61f619cc6dfe2553d6b119475bfdbc65f6bc96ad13f15a",
+  "RecoveryFilesVerified": 432,
+  "BytesRemoved": 8553718924,
+  "FilesRemoved": 1364,
+  "CompletedUtc": "2026-10-07T00:55:47.9079173Z",
+  "ProtectedPaths": [
+    "Windows-Deckup/.git",
+    "Windows-Deckup/drivers",
+    "Windows-Deckup/tools",
+    "Windows-Deckup/docs",
+    "Windows-Deckup/.github",
+    "outputs/steamdeck-driver-lab/private-driver",
+    "outputs/steamdeck-driver-lab/private-config-install",
+    "outputs/steamdeck-driver-lab/backups",
+    "outputs/steamdeck-driver-lab/normal-boot",
+    "outputs/steamdeck-driver-lab/guarded-reload",
+    "outputs/steamdeck-driver-lab/src",
+    "outputs/steamdeck-driver-lab/private-config-package/original-catalogs",
+    "outputs/steamdeck-driver-lab/private-config-package/catalog-import",
+    "work/driver-audit/test-certificate",
+    "work/driver-audit/tools/sdk-buildtools"
+  ],
+  "Removed": [
+    {
+      "Path": "Windows-Deckup/build",
+      "Bytes": 4997514693,
+      "Files": 749
+    },
+    {
+      "Path": "work/driver-audit/asus-extracted",
+      "Bytes": 1561948720,
+      "Files": 243
+    },
+    {
+      "Path": "work/driver-audit/AMD_Graphic_DriverOnly_ROG_AMD_B_V32.0.21043.21001_50567.exe",
+      "Bytes": 640796080,
+      "Files": 1
+    },
+    {
+      "Path": "work/driver-audit/tools/sdk-buildtools.zip",
+      "Bytes": 22680539,
+      "Files": 1
+    },
+    {
+      "Path": "work/driver-audit/tools/wdk.zip",
+      "Bytes": 113683738,
+      "Files": 1
+    },
+    {
+      "Path": "work/driver-audit/tools/7zip-extra.7z",
+      "Bytes": 1764178,
+      "Files": 1
+    },
+    {
+      "Path": "work/driver-audit/tools/7zr.exe",
+      "Bytes": 602624,
+      "Files": 1
+    },
+    {
+      "Path": "work/driver-audit/tools/7zip",
+      "Bytes": 6667460,
+      "Files": 23
+    },
+    {
+      "Path": "work/driver-audit/tools/wdk-x86",
+      "Bytes": 3563420,
+      "Files": 7
+    },
+    {
+      "Path": "work/driver-audit/python-libs",
+      "Bytes": 69844504,
+      "Files": 184
+    },
+    {
+      "Path": "outputs/steamdeck-driver-lab/private-config-trial",
+      "Bytes": 1578,
+      "Files": 2
+    },
+    {
+      "Path": "outputs/steamdeck-driver-lab/private-config-package/WT6A_INF",
+      "Bytes": 1134651390,
+      "Files": 151
+    }
+  ],
+  "GiBRemoved": 7.966,
+  "DriverVerificationAfterCleanup": {
+    "Passed": true,
+    "Inf": "oem56.inf",
+    "Version": "32.0.21043.21001",
+    "ProblemCode": 0,
+    "TestModeActive": false,
+    "CodeIntegrityEnabled": true,
+    "UnchangedKernelHashVerified": true,
+    "KernelSignaturePolicyVerified": true,
+    "HardwareRenderingPassed": true
+  }
+}
