@@ -41,3 +41,4 @@ jobs:
           & drivers/apu/lab/tests/test_normal_boot.ps1
           & drivers/apu/lab/tests/test_guarded_reload.ps1
           & drivers/apu/tests/test_staging.ps1
+          & drivers/apu/tests/test_activation.ps1

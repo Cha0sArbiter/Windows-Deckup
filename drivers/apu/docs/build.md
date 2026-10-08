@@ -1,12 +1,14 @@
 # Build the graphics package
 
-This guide is for people who want to generate a package, rather than install one. Building does not change the Deck's active graphics driver. For downloading and preparing an existing package, use the [installation guide](installation.md).
+This guide is for people who want to generate a package, rather than install one. Building does not change the Deck's active graphics driver. For downloading and installing an existing package, use the [installation guide](installation.md).
 
 ## Build with GitHub Actions
 
 1. If you maintain this repository, open **Actions → Build LCD APU package → Run workflow** and choose `main`.
 2. If you do not have permission to run it here, fork the repository into your GitHub account, enable Actions in your fork, and run the same workflow there.
 3. Wait for a successful run. Download **`deckup-apu-32.0.21043.21001-config`** from its **Artifacts** section and extract the entire ZIP.
+
+The current artifact uses installer schema 2: `Stage.cmd` prepares and selects the package for a manual restart. `-StageOnly` retains the preparation-only option. No recovery guard or boot-setting change is included.
 
 The workflow also runs when the relevant APU build, installer, lab-source, manifest, or shared-tool paths change on `main`. Documentation-only edits do not trigger it. Artifacts remain available for 90 days.
 
@@ -35,7 +37,7 @@ It regenerates and locally signs only the two changed installation catalogs. It 
 
 The bundle also corrects the main INF's `CopyINF` reference from `amduw23e.inf` to the renamed `decklcd-config-extension.inf`. The older hardware-tested package could find the original extension already on the test Deck. This fix makes the new bundle self-contained; it and the new staging helper have build checks but have not yet been activated on that Deck.
 
-Source validation checks publication rules, Python safety tests, and Windows PowerShell protocol tests without changing hardware. The APU build adds seven donor-emulator cases. Passing these checks does not prove installation, boot, physical display output, or sleep on another machine.
+Source validation checks publication rules, Python safety tests, and Windows PowerShell protocol tests without changing hardware. The activation tests compile the native helper and check its x64 ABI, instance validation, restart flags, staged-file integrity, published-INF discovery, and child-process success/failure/timeout handling. They do not call device-installation APIs. The APU build adds seven donor-emulator cases. Passing these checks does not prove installation, boot, physical display output, or sleep on another machine.
 
 ## Advanced build options
 

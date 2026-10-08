@@ -6,7 +6,7 @@ The current candidate is **32.0.21043.21001**. Its executable files are unchange
 
 ## Start here
 
-- [Download and prepare the package](docs/installation.md): the user guide, including recovery limits.
+- [Install and restart](docs/installation.md): the user guide, including recovery limits.
 - [Results and known issues](docs/results.md): what worked, what failed, and what still needs testing.
 - [Build your own package](docs/build.md): GitHub Actions and local developer builds.
 - [Common terms](../../docs/glossary.md): explanations of staging, Test Mode, signing, and other Windows terminology.
@@ -19,7 +19,7 @@ The configuration ran on our test Deck with Test Mode off, and two sleep-and-wak
 
 The downloadable bundle has build and signing checks. Its newest packaging fix and staging helper have not yet been used to activate it on the test Deck. A successful GitHub build is not a hardware installation test.
 
-`Stage.cmd` prepares the downloaded package; it does **not** switch your active driver. A general recovery-protected activation helper is still future work.
+`Stage.cmd` prepares the downloaded package and selects it for the next manual Windows restart. It leaves Test Mode unchanged and installs no recovery task. This portable restart installer has software tests; hardware installation testing is still pending. Older artifacts contain the staging-only helper, so follow the current guide's version check.
 
 ## Research and evidence
 

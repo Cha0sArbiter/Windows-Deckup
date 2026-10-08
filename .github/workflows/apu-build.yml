@@ -51,6 +51,7 @@ jobs:
           & drivers/apu/lab/tests/test_normal_boot.ps1
           & drivers/apu/lab/tests/test_guarded_reload.ps1
           & drivers/apu/tests/test_staging.ps1
+          & drivers/apu/tests/test_activation.ps1
       - name: Download, adapt and validate exact donor
         shell: powershell
         run: |
@@ -78,6 +79,7 @@ jobs:
           Kernel and all executables are unchanged. Seven checksum/revision emulator cases passed.
           [Download artifact]($env:ARTIFACT_URL) (retained 90 days).
           Artifact SHA-256: $env:ARTIFACT_DIGEST
-          Stage.cmd stages only; it does not activate/reload a GPU or change boot settings.
+          Stage.cmd prepares the package and selects it for your next manual Windows restart.
+          No automatic recovery guard is included. Boot settings are unchanged.
           This runner validated the build, not installation/boot/sleep on another Deck.
           "@ | Add-Content $env:GITHUB_STEP_SUMMARY

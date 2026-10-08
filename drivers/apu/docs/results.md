@@ -44,3 +44,9 @@ Do not read the two successful sleep tests as a fix for all black-screen cases.
 Two successful cycles on one Deck do not establish all power scenarios. Battery sleep, idle display restoration, longer/repeated cycles, game stability, performance, video acceleration, Secure Boot/Memory Integrity variants and anti-cheat compatibility remain untested. The older black-screen resume is unexplained; normal-mode success does not isolate Test Mode as its cause. Historical offscreen probes did not identify the actual DXGI adapter; the later normal-mode probes do.
 
 The altered package is locally signed for installation, not Microsoft-certified as a Steam Deck package. The executable kernel's original Microsoft signature coverage is separate from the changed setup catalogs. Build manifests with `NormalBootVerified=false` are immutable pre-boot snapshots; observed runtime results are in the current evidence state, not rewritten into frozen build records.
+
+## Portable restart installer
+
+Installer schema 2 adds portable selection after staging: it discovers the exact GPU instance and published INF, resolves and checks the stored main package, then requests a deferred installation with normal file copying enabled. It leaves Test Mode unchanged and adds no recovery task. `Stage.cmd` reports `ReadyForRestart`; the user restarts Windows manually.
+
+Software tests cover native ABI/flags, device-ID rejection, staged-file tampering, ambiguous or missing published INFs, and bounded child-process handling. This helper and its fresh-install file-copy path have not been hardware-tested. The earlier successful machine-specific no-copy trial remains the hardware evidence; it does not establish that the new installer succeeds on a fresh Deck.

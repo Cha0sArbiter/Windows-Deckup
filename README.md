@@ -8,7 +8,7 @@ It is an independent community project. Some parts work on our test Deck; others
 
 | What you want | Where to go | What is available today |
 | --- | --- | --- |
-| Newer AMD graphics drivers | [APU installation guide](drivers/apu/docs/installation.md) | A downloadable experimental package and a helper that prepares it for installation. General activation instructions are still being developed. |
+| Newer AMD graphics drivers | [APU installation guide](drivers/apu/docs/installation.md) | An experimental package with preparation and next-restart selection. The new installer is software-tested; hardware installation testing is pending. |
 | Fan and battery features | [Embedded controller project](drivers/ec/README.md) | Prototype results and developer documentation. No public driver download or source yet. |
 | Automatic screen brightness | [Light sensor project](drivers/light-sensor/README.md) | Planned; no driver yet. |
 | Controller support in Windows | [Controller project](drivers/controller/README.md) | Planned; no driver yet. |
@@ -25,11 +25,11 @@ The embedded controller prototype read twelve hardware values and briefly raised
 
 ## Downloading or building
 
-For graphics, start with the [installation guide](drivers/apu/docs/installation.md). It explains how to download a GitHub Actions artifact, what the included helpers do, and where the current installation process stops.
+For graphics, start with the [installation guide](drivers/apu/docs/installation.md). It explains how to download the current artifact, run `Stage.cmd` as administrator, restart Windows, and verify the driver.
 
 Want to build the package yourself? Use the [APU build guide](drivers/apu/docs/build.md). Artifacts expire after **90 days**, but the source and pinned download records let you build another copy.
 
-Building a package does not install a driver. Preparing a package does not activate it. Windows has given us several steps here; the guides explain each one.
+`Stage.cmd` prepares and selects the package for your next manual Windows restart. It does not change Test Mode or install an automatic recovery guard. Older artifacts only stage files; check the installer version in the guide.
 
 ## For contributors
 

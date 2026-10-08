@@ -1,73 +1,80 @@
-# Download and prepare the graphics package
+# Install the graphics package
 
-**This is an experimental LCD Steam Deck package. The current helper prepares it but does not activate it.** A general installer with recovery protection is still being developed. If you want a complete install-and-reboot process, this release is not ready for that yet.
+The installer prepares the package and selects it for your **next Windows restart**. You choose when to restart. It does not deliberately reload the running graphics driver, change Test Mode, or install an automatic recovery guard.
 
-The configuration has worked on our test Deck with Test Mode off. The downloadable bundle includes a newer packaging fix and staging helper that have not yet been used for hardware activation. [Read the test results](results.md) before deciding to experiment.
+This is an experimental package for the **LCD Steam Deck**. The configuration has worked on our test Deck with Test Mode off. The new portable installer has software checks but has **not yet been tested by installing it on hardware**. Live driver replacement has failed in earlier experiments, and the docked black-screen issue is still being investigated. [Read the results](results.md).
 
-## 1. Download the built package
+## 1. Download the current package
 
 1. Sign in to GitHub and open [Build LCD APU package](https://github.com/Cha0sArbiter/Windows-Deckup/actions/workflows/apu-build.yml).
-2. Open a **successful** build. Scroll to its **Artifacts** section.
+2. Open a **successful build containing the new restart installer**. Scroll to its **Artifacts** section.
 3. Download **`deckup-apu-32.0.21043.21001-config`**.
-4. Extract the entire ZIP to a folder you can keep. Do not run the helpers from inside the ZIP or move them away from the other files.
+4. Extract the entire ZIP to a folder you can keep. Do not run helpers from inside the ZIP or move them away from the other files.
+5. Open `manifest.json` in Notepad and confirm that it contains **`"InstallerSchema": 2`** and **`"SelectionPolicy": "DeferredRestart"`**. Older artifacts only stage the package; restarting after those does not complete installation.
 
-The extracted folder should contain `Stage.cmd`, `Verify.cmd`, `manifest.json`, `certificate.cer`, `WT6A_INF`, and `original-catalogs`. Downloading the repository's source ZIP does not provide this built driver package.
+The extracted folder includes `Stage.cmd`, `Verify.cmd`, `NextBootDriver.cs`, `manifest.json`, `certificate.cer`, `WT6A_INF`, and `original-catalogs`. The repository's source ZIP does not include the built driver. Do not mix files from different builds.
 
-Artifacts expire after 90 days. If no downloadable build remains, a repository maintainer can run the workflow again. To build your own copy in a fork, see the [build guide](build.md).
+Artifacts expire after 90 days. If no current download remains, a maintainer can run the workflow again, or you can use the [build guide](build.md) to build a copy in your own fork.
 
-## 2. Understand what preparation changes
+## 2. Before you run it
 
-Right-clicking **`Stage.cmd` → Run as administrator** will:
+Save your work and keep the original Valve driver available offline. The helper exports your currently selected driver, but a backup is not automatic recovery. If this experiment fails, restoring a driver may require an external display or Windows recovery tools.
 
-- Check that your GPU matches the supported LCD Deck and that the package files match their recorded hashes.
-- Export your currently selected graphics driver as an offline recovery copy.
-- Verify and register the original vendor catalogs, which Windows uses to check the unchanged driver files.
-- Trust this build's public setup certificate in Windows's local-machine Root and Trusted Publisher stores.
-- Add the adapted packages to Windows's Driver Store, ready for later selection.
+Use a working display and an administrator account. The helper may download a pinned Microsoft SDK tool, so it needs internet access and disk space for its cache.
 
-This makes persistent certificate and catalog changes. It leaves your currently selected graphics driver in place. It does not restart the GPU, reboot Windows, change Test Mode, or create a recovery timer.
+The installer checks the exact supported LCD GPU, verifies the package hashes, and exports your current graphics package. It registers the original vendor signing catalogs and trusts this build's public setup certificate in the local-machine Root and Trusted Publisher stores. These are persistent Windows changes. It then stages the packages and selects the graphics driver with a restart required.
 
-The helper may download a pinned Microsoft SDK tool, so allow internet access and space for its cache. Keep a working display and your original driver available throughout any future activation test.
-
-## 3. Run the preparation helper
+## 3. Prepare and select the driver
 
 1. In the extracted artifact folder, right-click **`Stage.cmd`** and choose **Run as administrator**.
 2. Allow the Windows administrator prompt for the helper you chose to run.
-3. Let it finish and read the result before closing the window.
-4. Keep the new **`local-recovery`** folder. It contains your exported driver and a dated record of the preparation steps.
+3. Wait for **“Ready for restart.”** Read the result before closing the window.
+4. Keep the **`local-recovery`** folder beside the package. It contains your exported driver and a dated record of the installation steps.
 
-Success is recorded as **`StagedNotSelected`** in `staging-state.json` under that recovery folder. That means preparation succeeded and your previous driver is still selected.
+Success is recorded as **`ReadyForRestart`** in `staging-state.json` inside that recovery folder. The new package is selected for the next boot; do not count it as a working running driver yet.
 
-If it stops with an error, save the message and the recovery log. Some earlier steps may already have completed; the helper does not automatically undo every certificate or catalog change. Do not disable security settings or delete Windows driver files to push past the error.
+If the helper reports an error, save the message and logs. Certificate, catalog, file, or selection changes may already have completed. A status of **`SelectionFailedNeedsInspection`** means selection may be partial. Do not restart as though installation succeeded or disable security settings to push past an error. There is no automatic rollback.
 
-## 4. Activation is a separate step
+## 4. Restart Windows
 
-**There is no general activation helper in this release.** Stop after staging unless you have a device-specific test and recovery plan.
+After the helper reports **Ready for restart**, choose **Start → Power → Restart**. Use Restart rather than shutting down and turning the Deck on again, so Windows performs a full restart instead of a possible Fast Startup boot.
 
-Our successful installation used a carefully checked, restart-based procedure on the original test Deck. Live replacement of the running graphics driver had hung or failed with Code 43. The archived procedure depends on that machine's driver names, files, and fallback package; it is not a set of commands to copy onto another Deck.
+Windows should start the selected driver on that boot. There is no confirmation deadline, recovery timer, or scheduled watchdog. You do not need to run another activation command.
 
-Developer details are in the [lab archive](../lab/README.md) and `NORMAL-MODE-BOOT.txt` inside it. The no-copy options used in that trial were valid only after checking that all required files were already present and correct.
+The helper leaves Test Mode as it found it. If Test Mode was already off, it remains off. If it was on, restarting does not turn it off. Do not assume this installer establishes compatibility with every Windows security configuration.
 
-## Checking an activated driver
+## 5. Verify after restarting
 
-After a separately planned activation, double-click **`Verify.cmd`**. It checks the selected driver version, GPU status, exact kernel/configuration hashes, and whether Test Mode is off. It saves **`verification.json`** beside the helper without changing the driver or boot settings.
+Double-click **`Verify.cmd`** in the same extracted folder. It checks the selected version, GPU problem status, expected kernel/configuration hashes, and whether Test Mode is off. It writes **`verification.json`** beside the helper without changing drivers or boot settings.
 
-If you run it immediately after staging while your previous driver is still selected, a candidate-verification failure is expected. It does not mean staging failed.
+A passing report confirms those checks. It does not prove that the physical screen, games, or sleep work. Check the display yourself and report any failures with the verification result. If Test Mode remains enabled, the normal-mode verification fails even if the driver otherwise works; its report shows that setting separately.
 
-A passing report does not confirm that the physical screen works or that sleep is reliable. Those need separate observation. The optional developer rendering probe is:
+Do not run verification before restarting and interpret it as proof of a successful new-driver boot. Windows may already report the new selection while the old driver is still running.
+
+## If something goes wrong
+
+The exported package is under `local-recovery/<trial>/original-driver`; the helper prints the exact location. Retain it and the logs. This release provides no automated recovery installer. Device Manager's **Roll Back Driver** may be available, but it is not guaranteed; recovery can require manually selecting or reinstalling your saved driver.
+
+The older patched prototype requires Test Mode and its local certificate. Do not select that fallback for a boot with Test Mode off. Keep vendor catalog registrations needed by the unchanged kernel.
+
+**Code 43** means the GPU failed to start. A black built-in screen can also occur while Windows reports a healthy GPU; those are different observations. See [known issues and results](results.md), including the dock-related investigation.
+
+Secure Boot, Memory Integrity, and online games' anti-cheat compatibility have not been established. A locally trusted setup certificate is not Microsoft certification of this adapted package.
+
+## Advanced: prepare without selecting
+
+For developers who want the earlier staging-only behavior, run this from the extracted artifact folder in an administrator PowerShell window:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\Stage-Package.ps1 -StageOnly
+```
+
+Its success status is **`StagedNotSelected`**. Restarting alone does not select that staged package. To use the normal install flow afterward, run `Stage.cmd`.
+
+The optional developer rendering check, after a restart or wake, is:
 
 ```powershell
 python lab/src/verify_d3d11_hardware.py --output rendering.json
 ```
 
-Run it from the extracted artifact folder with Python installed. It requests Direct3D feature levels 11_1 and 11_0; it does not measure the GPU's maximum supported feature level.
-
-## Recovery and known problems
-
-Keep the exported original driver offline. An export is a backup, not an automatic recovery service, and this helper does not install a watchdog. A future activation test needs a separate recovery plan before changing the active driver.
-
-The historical patched fallback requires Test Mode and its local certificate. Do not select that fallback for a boot with Test Mode off. Keep the vendor catalog registrations needed by the unchanged kernel.
-
-If Windows reports **Code 43**, the GPU failed to start. A black built-in screen can also occur while Windows reports the GPU as healthy; those are different observations. See [results and known issues](results.md), including the dock-related display investigation.
-
-Operation with Secure Boot, Memory Integrity, or online games' anti-cheat systems has not been established. A locally trusted setup certificate is not Microsoft certification of this adapted package.
+It needs Python and requests Direct3D feature levels 11_1 and 11_0, rather than measuring the maximum supported feature level. The [original lab archive](../lab/README.md) remains a historical record, not this installer's instructions.
