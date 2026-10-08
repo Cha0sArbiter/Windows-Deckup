@@ -1,7 +1,9 @@
-# Native Windows controller
+# Controller support in Windows
 
-Status: **planned; no driver implemented**.
+**Planned. No driver or installation package is available yet.**
 
-Investigate the Deck input device/report format and design native Windows controller integration.
+The goal is to make the Deck's built-in controls usable as a Windows controller without relying on Steam for input translation. We first need to understand the Deck's input reports and decide how to expose them to Windows games and applications.
 
-Future source, manifests, documentation, tests and hardware evidence belong in this project directory. Shared build infrastructure belongs in `tools/`. Follow [repository conventions](../../docs/architecture.md).
+Supported games, input APIs, and LCD/OLED compatibility have not been established. This folder is reserved for that research, future source, and test results.
+
+Want to help? See the [contribution and project structure guide](../../docs/architecture.md). For the work available today, return to the [project overview](../../README.md).

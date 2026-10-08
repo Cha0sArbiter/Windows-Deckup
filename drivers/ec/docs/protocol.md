@@ -1,4 +1,8 @@
-# Application protocol
+# EC application protocol reference
+
+For developers writing a client for the local prototype. This describes binary messages exchanged with the driver, not end-user commands. The driver and client source have not yet been imported. See the [EC overview](../README.md) and [design](design.md) first.
+
+An IOCTL is a request sent to a Windows device driver. A handle is the client's open connection to that device. “Arming” explicitly permits a control on that connection; it does not change hardware by itself.
 
 Device interface GUID: `7de31c3c-bbc9-478f-86ed-3659f7e28e01`.
 The client enumerates this interface using SetupAPI and refuses paths that do
@@ -55,6 +59,6 @@ of a successful command. Control buffer lengths must match exactly.
 
 The fan health timer checks FANC, target ownership/readback and nonzero RPM
 after a two-second startup interval. It runs only while an override/recovery
-is tracked, is not restarted by lease renewals, and stops acting in D0 exit.
+is tracked, is not restarted by lease renewals, and stops acting in exit from D0 (leaving the working power state).
 All callbacks use one passive WDF wait lock. A timer cannot bypass an ongoing
 ACPI call, so recovery timing remains best effort.

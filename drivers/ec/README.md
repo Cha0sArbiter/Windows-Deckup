@@ -1,17 +1,26 @@
-# Embedded controller
+# Fan and battery hardware: the embedded controller
 
-Status: **0.2.0 development prototype built and partially tested on hardware**.
-Documentation updated 2026-10-06; hardware results are from 2026-10-05.
+The embedded controller (EC) is the Deck's small hardware controller for features such as fan speed and battery settings. This project is developing a Windows driver to read those values and carefully test selected controls.
 
-An independent Windows UMDF 2 driver has been developed locally for the LCD
-Steam Deck's `ACPI\VLV0100` interface. It reads twelve EC fields and implements
-restricted, experimental fan, charge-LED and charging controls. A brief fan
-boost demonstrated physical response and successful explicit automatic recovery.
-It is not a fully validated production driver or a Valve-supported driver.
+**This folder contains documentation and redacted test records. The driver source, clients, installer, and GitHub build workflow have not been uploaded yet. There is no public EC driver package to install from this repository.**
 
-This update publishes documentation, pinned build-input records and redacted
-hardware evidence. The driver source, clients, installation helpers and a
-dedicated EC build workflow have **not yet been imported into this repository**.
+## What works so far
+
+The local **0.2.0 prototype** read twelve hardware values on one LCD Deck. A brief fan test raised measured speed from **4607 to 6023 RPM**, then returned control to the firmware; later speed fell to **4578 RPM**.
+
+That is a useful first result, but it does not establish reliable fan recovery after crashes, sleep, or longer use. Charging and LED controls have not been physically tested. The prototype's own fully-validated feature flags remain clear until those remaining checks pass.
+
+The control prototype was tested with Test Mode already enabled. It has not been shown to work with Test Mode off. A separate earlier read-only prototype did pass with it off; that result does not transfer to version 0.2.0.
+
+## Choose a page
+
+- [Feature status](docs/features.md): what exists and what is still planned.
+- [Hardware results](docs/results.md): measurements from the actual Deck tests.
+- [Design](docs/design.md), [firmware methods](docs/firmware.md), and [application protocol](docs/protocol.md): developer references.
+- [Build record](docs/build.md), [software tests](docs/validation.md), and [hardware test plan](docs/hardware-test.md): how the local prototype was built and checked. Commands refer to files not yet hosted here.
+- [Research sources and licenses](docs/provenance.md).
+
+The detailed record follows. If you are looking for a ready-to-install driver, there is no further installation step here yet.
 
 ## Hardware and firmware scope
 
@@ -29,76 +38,20 @@ OLED support and other firmware combinations have not been established.
 [The prototype manifest](manifests/prototype-0.2.0.json) identifies the tested
 binary, implemented limits and validation scope.
 
-## What has been made
+## Experimental controls and limits
 
-- Twelve-field telemetry with individual success/error status: EC firmware,
-  board ID, actual fan RPM, requested fan RPM, raw fan health, battery
-  temperature, raw charge limit, raw PD connection state, reported PD voltage,
-  reported PD current, raw charge-rate configuration and raw panel ID.
-- A versioned capability query and backward-compatible ten-field snapshot.
-- Experimental manual fan targets of 2500–7300 RPM with 1–5 second leases,
-  ownership per client handle, health checks and automatic-mode recovery
-  attempts.
-- Experimental charge-LED brightness of 0–100.
-- Experimental charge-rate configuration of raw 250–2500 with baseline
-  validation and register readback; physical units and behavior are unverified.
-- Experimental maximum charge level of 50–100 on board 0A.
-  **Charge-level writes are disabled on this Deck's board 06.**
-- Administrator/SYSTEM access control, explicit control arming, fixed typed
-  commands and C#/PowerShell clients.
-- Build/signing helpers, pinned toolchain inputs, policy/decoder/parser tests,
-  and an active fan test with a local recovery journal.
+The prototype implements manual fan requests of **2500–7300 RPM**, with a short **1–5 second lease** that the requesting application must renew. It attempts to restore automatic control when that request ends. Crash and power-transition recovery still need hardware tests; this is not an independent hardware watchdog.
 
-Capability validation bits remain zero. The successful brief test does not
-complete the feature's remaining recovery and power-lifecycle criteria.
+LED brightness and charge-rate controls exist in the local code but have not been physically validated. Charge-rate values are raw firmware units, not established milliamps or watts. Maximum-charge-level control is restricted to board 0A and is **disabled on the tested board 06**.
 
-## What worked on hardware
+Panel commands and display power cycling are not exposed. Some firmware helpers can wait indefinitely, which could interfere with other operations, including fan recovery.
 
-All twelve fields returned successful readings. A brief request for 6000 RPM
-raised measured fan speed from **4607 to 6023 RPM**. Explicit automatic recovery
-returned the requested target to zero; later speed fell to **4578 RPM**.
-Firmware fan health stayed at 1, and no new problem devices appeared.
+Battery temperature is not processor temperature. Reported USB power-delivery voltage/current describe a negotiated power contract, not actual power consumption.
 
-The 0.2.0 test ran with Test Mode already enabled. Monitored boot/security
-state was unchanged by the test. This result does not establish normal-boot,
-Secure Boot or Memory Integrity compatibility for 0.2.0. The earlier read-only
-0.1.1 result is recorded separately.
+## What comes next
 
-See [results and chronology](docs/results.md), [software validation](docs/validation.md)
-and [redacted evidence](evidence/2026-10-05/index.json).
+Import the source and build tools, then complete longer read-only sampling, fan lease-expiry and client-exit checks, recovery-failure tests, and Windows sleep/restart tests. Charging and LED features need separate physical validation. Board 0A, other firmware versions, and OLED support need their own evidence.
 
-## Coverage and remaining work
+The [feature table](docs/features.md) tracks these limits. The [hardware report](docs/results.md) and [redacted evidence](evidence/2026-10-05/index.json) preserve the actual measurements.
 
-[The capability map](docs/features.md) separates implemented controls, actual
-hardware tests, deferred panel commands and functions outside this interface.
-[The firmware contract](docs/firmware.md) records the inspected method behavior.
-Panel setters, display power cycling, `SCBP` and raw transaction helpers are
-not exposed. Several panel helpers have no firmware-loop timeout; method
-names alone do not establish safe arguments, restoration or Windows ownership.
-
-Remaining hardware work includes longer telemetry stability, lease expiry,
-client cleanup/termination, recovery failures, multiple clients, sleep/resume,
-reboot, disable/enable and operation under load. Charging and LED controls
-have not been physically validated. A Windows ACPI-notification bridge is
-also future work.
-
-The ambient-light devices, AMD APU/TDP interface, GPU/display driver and game
-controls are separate projects. EC battery temperature is not APU temperature,
-and PD voltage/current describe a contract rather than measured APU power.
-
-## Documentation
-
-- [Design and ownership](docs/design.md)
-- [Capabilities](docs/features.md)
-- [Firmware methods](docs/firmware.md)
-- [Application protocol](docs/protocol.md)
-- [Build and signing record](docs/build.md)
-- [Software validation](docs/validation.md)
-- [Hardware results](docs/results.md)
-- [Staged hardware testing and rollback](docs/hardware-test.md)
-- [Provenance and licensing](docs/provenance.md)
-
-Original prototype code and documentation are MIT licensed. Linux driver work
-informed method research but was not copied into this implementation.
-Valve firmware, raw ACPI tables, Microsoft/LLVM dependencies, signed binaries,
-private signing material and complete machine logs are not included here.
+Original project work uses the MIT license. Vendor firmware, external dependencies, private signing material, and complete machine logs are not published here. See [sources and licensing](docs/provenance.md).

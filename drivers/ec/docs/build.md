@@ -1,4 +1,6 @@
-# Building and signing record
+# EC build and signing record
+
+Developer record, not a build you can run from this checkout. The commands below refer to the local prototype's files, which have not been uploaded. They document the process for the future source import. For current availability, see the [EC overview](../README.md).
 
 These instructions describe the existing local 0.2.0 prototype layout.
 Its source and scripts have not yet been imported into this repository, so

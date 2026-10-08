@@ -1,4 +1,8 @@
-# Observed results
+# Graphics driver results and known issues
+
+The configuration-only driver booted normally and passed two sleep-and-wake tests on one LCD Deck. Live driver replacement has failed, and an internal-screen problem is still being investigated. These are separate observations; neither a successful build nor a healthy GPU status proves that the screen is working.
+
+For user steps, see the [installation guide](installation.md). The details below preserve the test history, including failures.
 
 Device: Valve Jupiter LCD Steam Deck, `PCI\VEN_1002&DEV_163F&SUBSYS_01231002&REV_AE`, Windows 11 build 26200. Times below are America/Chicago (CDT).
 
@@ -22,6 +26,18 @@ Donor: ROG Xbox Ally RC73YA 32.0.21043.21001, ASUS release 2026-07-20, INF date 
 No new System warnings/errors or Code Integrity errors were found during the two normal-mode sleep cycles. An information-level Realtek USB Ethernet power-transition message appeared before both; sleep nevertheless completed. Separate ACPI/WUDFRd and Defender startup events are preserved in evidence and were not attributed to the GPU.
 
 The successful normal-mode kernel SHA-256 is `AE975BBB56282BE1471B9A91407F0155C087B619F99D2731D4E7989720522152`; the AE configuration SHA-256 is `7EE54354831BBF267C590636FFFFD95FCA91FF5455578151FA657BD5F9162717`. Live Code Integrity options were `1`; selected INF was `oem56.inf` (a machine-local name).
+
+## Internal screen and dock investigation — October 8
+
+The user reported a black built-in screen after starting with a **Dell WD19 dock** attached. A restart showed the boot logo on the external monitor, while the built-in screen stayed black. Windows reported both display paths as active and the GPU as healthy (Code 0). Unplugging the dock after the failure did not immediately restore the internal screen.
+
+A later sequence worked: boot with the dock disconnected, enter the firmware menu, continue into Windows, then connect the dock. Both screens worked. This establishes that the driver can run both displays; it does not yet prove which part of that sequence restored the panel. The user was unsure whether the backlight was lit during failure.
+
+The failed and working Windows states had the same selected kernel/configuration hashes and active display-path settings. A startup ACPI/WUDFRd warning appeared in both, so that warning alone does not explain the difference. Windows also recorded a failed Fast Startup attempt before the working full boot; its role is unknown.
+
+Black-screen wake behavior was reported before the driver change. Panel initialization or restoration is therefore being investigated separately from the live-reload Code 43 failure. Dock attachment, retained panel state, firmware-menu initialization, and boot type still need controlled comparisons. Plain undocked boot without entering the firmware menu has not yet been confirmed as a workaround.
+
+Do not read the two successful sleep tests as a fix for all black-screen cases.
 
 ## What remains unknown
 

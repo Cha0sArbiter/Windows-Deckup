@@ -1,4 +1,6 @@
-# EC hardware results and chronology
+# EC hardware results: what happened on the test Deck
+
+Installation, twelve readings, a brief fan boost, and explicit return to automatic fan control passed. Recovery after crashes or power transitions and longer operation still need testing. There is no public EC package available here yet; see the [project overview](../README.md).
 
 **PASS for installation, short telemetry inspection, brief fan boost and
 explicit automatic recovery on one device.** This is partial validation,
@@ -112,5 +114,6 @@ published INF numbers, local profile/DriverStore paths, full inventories,
 raw transcripts, certificates/keys and ACPI table dumps are not imported.
 The public summary is not a byte-for-byte replacement for local originals.
 
-This documentation update performs no new hardware test and does not transfer
-the APU project's later normal-boot or sleep results to the EC driver.
+No new hardware tests were performed for this documentation refresh. The APU
+project's normal-boot and sleep results do not establish those properties for
+the EC driver.

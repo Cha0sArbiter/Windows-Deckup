@@ -1,4 +1,6 @@
-# Software validation: 0.2.0, 2026-10-05
+# EC software test results: October 5, 2026
+
+These checks were run on the local prototype. They have not been rerun by hosted EC CI, and its implementation is not yet uploaded. The tests check code behavior using simulated inputs; physical hardware results are recorded [separately](results.md).
 
 | Check | Result |
 | --- | --- |
@@ -42,4 +44,4 @@ by explicit automatic recovery. See [the hardware report](results.md).
 At the end of the recorded test, 0.2.0 remained installed with the read-only predecessor retained.
 Hardware capability bits remain zero until the full feature criteria pass.
 
-This documentation update did not rebuild a driver or rerun these tests. The results above are historical prototype validation, not hosted EC CI results.
+The documentation refresh did not rebuild the driver or rerun these tests. The results above are historical prototype validation, not hosted EC CI results.

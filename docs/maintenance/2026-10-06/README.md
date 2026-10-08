@@ -1,4 +1,6 @@
-# Publication and cleanup record — 2026-10-06
+# What we published and cleaned up on October 6, 2026
+
+This is a record of our original workspace cleanup. It is not a cleanup procedure for your Deck. For practical advice about backups and removable downloads, read [what to keep when cleaning up](../../local-data.md).
 
 This directory archives the one-off workspace publication and cleanup code for transparency. It is historical task code, **not a portable installer or a general cleanup command**. Do not run it from a repository checkout. The original script required exact local proof files, an explicit workspace allowlist and an exact verified commit; those machine-local inputs are intentionally not published.
 

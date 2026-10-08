@@ -1,9 +1,11 @@
-# Firmware contract: LCD Jupiter, BIOS F7A0133
+# Firmware method reference: LCD Deck, BIOS F7A0133
+
+Developer reference for the firmware interface inspected on our test Deck. The table records observed commands, their limits, and whether the prototype exposes them. It is not a list of commands for users to run. Other firmware versions need their own investigation. See the [EC overview](../README.md) for what is available.
 
 Evidence: read-only extraction and offline disassembly of the local DSDT.
 The firmware table itself is not redistributed. Device path:
 `\_SB.PCI0.LPC0.EC0.VFCD`, hardware ID `VLV0100`.
-The driver checks PDFW `0xB030` and BOID `0x06` or `0x0A` on every D0 entry.
+The driver checks PDFW `0xB030` and BOID `0x06` or `0x0A` on every entry into D0 (the device's working power state).
 Board 06 has twelve-field telemetry and brief fan-test evidence; board 0A remains untested.
 This describes the known VLV0100 interface; undocumented firmware functions may exist.
 

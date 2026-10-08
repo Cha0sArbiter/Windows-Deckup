@@ -1,4 +1,6 @@
-# Staged hardware validation
+# EC hardware test plan and recovery checks
+
+This is an engineering test plan for the local prototype, not a public installation guide. Its scripts and packages are not included in this repository. The installation and rollback commands require the exact locally verified packages and recorded driver names. Do not substitute guessed names. See the [EC overview](../README.md) for availability.
 
 **Initial installation, twelve-field telemetry, brief fan boost and explicit
 automatic recovery passed on 2026-10-05.** At the end of that run, 0.2.0 remained installed;
@@ -39,7 +41,7 @@ They cannot substitute for the independent measurements needed in later tests.
 Before a public binary release, include per-driver UMDF Verifier testing and
 Windows device/power lifecycle checks. Microsoft documents the appropriate
 UMDF verification workflow:
-https://learn.microsoft.com/en-us/windows-hardware/drivers/wdf/using-umdf-verifier
+[Microsoft UMDF Verifier guide](https://learn.microsoft.com/en-us/windows-hardware/drivers/wdf/using-umdf-verifier)
 Do host-debugging/fault-injection work in automatic fan mode first. An abrupt
 UMDF-host failure can bypass this project's software recovery mechanisms;
 client termination and driver-host termination are different test cases.

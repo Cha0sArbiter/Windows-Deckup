@@ -1,4 +1,6 @@
-# Feature status
+# EC features: what exists and what works
+
+The implementation described here exists in the local prototype, not as downloadable source or an installer in this repository. “Implemented” means the code exists; “hardware-tested” means we observed it on a real Deck. Those are different milestones. Start with the [EC overview](../README.md).
 
 | Feature | 0.2.0 source | Hardware validation / limits |
 | --- | --- | --- |

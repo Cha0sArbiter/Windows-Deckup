@@ -1,4 +1,8 @@
-# Prototype design and ownership
+# How the EC prototype is designed
+
+Developer reference. The prototype runs through Microsoft's user-mode driver framework and uses a fixed set of firmware commands. Its source is still local; this page explains the design, rather than providing an installer. Start with the [EC overview](../README.md) for its current status.
+
+“Ownership” means remembering which client requested a manual fan setting. A “lease” limits how long that request may remain active without renewal. Recovery means attempting to return the fan to firmware-controlled automatic mode.
 
 The local 0.2.0 prototype is a UMDF 2.33 x64 function driver for
 `ACPI\VLV0100`. It uses Microsoft's inbox WUDFRd and evaluates a fixed
@@ -16,8 +20,7 @@ kernel-mode `.sys`, raw-memory driver or application-supplied register addresses
 | PowerShell tools | Inspection, explicit experimental controls, parser tests and journaled fan test |
 | Build/release tools | Pinned inputs, compilation, INF checks, local signing, hashing and publication separation |
 
-These components exist in the local prototype. This documentation update
-does not import their implementation or add a hosted EC build workflow.
+These components exist in the local prototype. Their implementation and a hosted EC build workflow are not yet available here.
 
 ## Access and serialization
 
@@ -28,7 +31,7 @@ and unsupported board/firmware combinations are rejected.
 
 A sequential, power-managed WDF queue and one passive wait lock serialize
 IOCTLs, file cleanup, timer and power callbacks. The firmware identity guard
-checks B030 and board 06/0A on D0 entry. Normal startup/open/read paths issue
+checks B030 and board 06/0A on entry into D0 (the device's working power state). Normal startup/open/read paths issue
 no setters. Previously tracked recovery can be retried on re-entry.
 
 ACPI transport uses a 750 ms timeout with best-effort cancellation. This
@@ -50,7 +53,7 @@ health-check starvation.
 
 Automatic-mode recovery is attempted on explicit release, lease expiry,
 owner-handle cleanup, failed health/readback, target interference, zero RPM
-after the startup allowance and D0 exit. Failed recovery remains tracked
+after the startup allowance and exit from D0 (leaving the working power state). Failed recovery remains tracked
 and is retried while the device is available.
 
 These mechanisms are best effort. Firmware stalls, abrupt UMDF-host failure

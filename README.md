@@ -1,37 +1,42 @@
 # Windows Deckup
 
-Windows driver work for the **LCD Steam Deck (Valve Jupiter)**. This repository keeps each driver project separate, with shared build tooling and a record of what actually worked on hardware.
+This project is working on better Windows support for the **LCD Steam Deck**: newer graphics drivers, access to its fan and battery hardware, automatic brightness, and controller support.
 
-| Project | Status | Scope |
+It is an independent community project. Some parts work on our test Deck; others are still research. This is not a finished driver pack or a Valve-supported installer.
+
+## Where to start
+
+| What you want | Where to go | What is available today |
 | --- | --- | --- |
-| [APU](drivers/apu/README.md) | Configuration-only ASUS adaptation verified on one Deck | Modern AMD graphics, normal Windows boot, sleep/resume |
-| [Embedded controller](drivers/ec/README.md) | 0.2.0 prototype; telemetry and brief fan test passed | Twelve-field EC telemetry and experimental controls; documentation and redacted evidence |
-| [Ambient light sensor](drivers/light-sensor/README.md) | Planned | Identify the sensor/ACPI interface and expose Windows sensor functionality |
-| [Native controller](drivers/controller/README.md) | Planned | Research a native Windows controller driver and input integration |
+| Newer AMD graphics drivers | [APU installation guide](drivers/apu/docs/installation.md) | A downloadable experimental package and a helper that prepares it for installation. General activation instructions are still being developed. |
+| Fan and battery features | [Embedded controller project](drivers/ec/README.md) | Prototype results and developer documentation. No public driver download or source yet. |
+| Automatic screen brightness | [Light sensor project](drivers/light-sensor/README.md) | Planned; no driver yet. |
+| Controller support in Windows | [Controller project](drivers/controller/README.md) | Planned; no driver yet. |
 
-## APU result
+These projects target the LCD model. OLED support has not been established.
 
-ASUS **32.0.21043.21001** (ROG Xbox Ally RC73YA, released 2026-07-20) runs on LCD GPU `PCI\VEN_1002&DEV_163F&SUBSYS_01231002&REV_AE` with its **original executable files unchanged**. Two hardware-list INFs and the `amdgcf.dat` revision/checksum record are adapted; only the two affected installation catalogs are regenerated and locally signed.
+## What works so far
 
-On the tested Windows 11 build 26200 installation, a fresh boot with **Test Mode OFF and Code Integrity enabled** produced GPU Code 0 and working hardware rendering. Two S3 cycles passed on AC: **42 seconds** and **20 minutes 25 seconds**, each followed by another successful hardware rendering check. Earlier live driver reloads failed and an earlier Test Mode resume produced a black display. Those failures remain documented; these results do not prove the cause or universal compatibility. See [results and chronology](drivers/apu/docs/results.md).
+The graphics project adapts ASUS driver **32.0.21043.21001**, released July 20, 2026, for the LCD Deck. It changes the supported-device information and one configuration file while keeping ASUS's executable driver files unchanged.
 
-## Build an APU artifact
+On one Windows 11 Deck, that configuration ran with **Test Mode off**, rendered through the AMD GPU, and passed two sleep-and-wake tests. Live driver replacement has also failed, and a separate black-screen issue is being investigated. Successful tests are useful evidence, not a promise that every Deck will behave the same way. [Read the results and known issues](drivers/apu/docs/results.md).
 
-Open **Actions → Build LCD APU package → Run workflow**. The workflow also runs when APU/build tooling changes on `main`. It downloads the exact ASUS donor from ASUS, verifies its SHA-256 and publisher, emulates the original checksum/revision routines, generates the AE configuration, regenerates/signs the two adapted catalogs, and uploads **`deckup-apu-32.0.21043.21001-config`**. No driver is installed on the runner or your Deck by a build.
+The embedded controller prototype read twelve hardware values and briefly raised the fan speed, then returned it to automatic control. Longer tests and recovery checks are still needed. Its implementation has not been uploaded here.
 
-Download and extract the artifact to obtain the driver package, original vendor catalogs, public setup certificate, hashes, staging/verification helpers, and the historical lab suite. **`Stage.cmd` stages only; it does not activate or reload the GPU.** Read [installation and recovery](drivers/apu/docs/installation.md) before using the helpers. The original guarded lab installer is retained with its original machine assumptions; it is not a general installer for every Deck.
+## Downloading or building
 
-Artifacts are retained for **90 days**. Source, manifests, documentation and redacted evidence are permanent Git history; rebuild an artifact when needed. An artifact's fresh local setup certificate is not a Microsoft production signature for the adapted package. The ASUS executable signatures remain original. Secure Boot/Memory Integrity variants and anti-cheat compatibility are not established by this experiment.
+For graphics, start with the [installation guide](drivers/apu/docs/installation.md). It explains how to download a GitHub Actions artifact, what the included helpers do, and where the current installation process stops.
 
-## Repository layout
+Want to build the package yourself? Use the [APU build guide](drivers/apu/docs/build.md). Artifacts expire after **90 days**, but the source and pinned download records let you build another copy.
 
-- `drivers/<project>/`: implementation, manifests, installation tools, docs and evidence for that device family.
-- `tools/`: shared pinned-download/build infrastructure and publication checks.
-- `docs/`: architecture, research conventions and local data retention.
-- `.github/workflows/`: separate workflows per driver project and source validation.
+Building a package does not install a driver. Preparing a package does not activate it. Windows has given us several steps here; the guides explain each one.
 
-[Architecture and contribution conventions](docs/architecture.md) describe how new driver work fits into the repository. The EC project's locally built prototype and partial hardware validation are documented under `drivers/ec/`; its implementation and build workflow have not yet been imported. Sensor and controller projects remain planned.
+## For contributors
 
-## Licensing
+Each device project has its own folder under `drivers/`. Shared tools live in `tools/`, and GitHub workflows live in `.github/workflows/`. See [how the repository is organized](docs/architecture.md), [common terms](docs/glossary.md), and [what to keep when cleaning up](docs/local-data.md).
 
-Original project tools are [MIT licensed](LICENSE). AMD/ASUS/Valve/Microsoft binaries and third-party build tools retain their own licenses. Donor binaries are fetched during builds, not committed as open-source code. Generated artifacts contain vendor-derived files; MIT does not grant rights to those files. See [third-party materials](docs/third-party.md).
+The original test scripts are preserved as a [lab archive](drivers/apu/lab/README.md). They contain settings specific to our test machine and are not general installation instructions.
+
+## License
+
+Our original tools and documentation use the [MIT license](LICENSE). Vendor driver files and external build tools keep their own licenses. This repository does not turn the ASUS driver into open-source code; it publishes the tools and research used to adapt it. See [third-party materials](docs/third-party.md).

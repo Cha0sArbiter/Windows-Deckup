@@ -1,23 +1,73 @@
-# Installation and recovery
+# Download and prepare the graphics package
 
-The hosted APU artifact contains `WT6A_INF/`, `original-catalogs/`, `certificate.cer`, `manifest.json`, `Stage.cmd`, `Verify.cmd`, source helpers and the historical lab suite.
+**This is an experimental LCD Steam Deck package. The current helper prepares it but does not activate it.** A general installer with recovery protection is still being developed. If you want a complete install-and-reboot process, this release is not ready for that yet.
 
-## Staging
+The configuration has worked on our test Deck with Test Mode off. The downloadable bundle includes a newer packaging fix and staging helper that have not yet been used for hardware activation. [Read the test results](results.md) before deciding to experiment.
 
-Extract the whole artifact, then right-click `Stage.cmd` and choose **Run as administrator**. The helper verifies the exact LCD hardware and all package hashes, exports the currently selected display package for offline recovery, verifies/registers the unchanged Microsoft vendor catalogs, trusts the artifact's public setup certificate and stages the adapted INFs using `pnputil /add-driver` without `/install`. It records every operation in `local-recovery/`. It does not bind, reload, reboot, toggle Test Mode or create a recovery timer.
+## 1. Download the built package
 
-This staging helper is new portable tooling. Its code/package checks are automated; it has not been used to replace the working driver on the original Deck. Staging is not activation. The artifact must not advertise successful hardware installation merely because a CI build passes.
+1. Sign in to GitHub and open [Build LCD APU package](https://github.com/Cha0sArbiter/Windows-Deckup/actions/workflows/apu-build.yml).
+2. Open a **successful** build. Scroll to its **Artifacts** section.
+3. Download **`deckup-apu-32.0.21043.21001-config`**.
+4. Extract the entire ZIP to a folder you can keep. Do not run the helpers from inside the ZIP or move them away from the other files.
 
-## Activation and validation
+The extracted folder should contain `Stage.cmd`, `Verify.cmd`, `manifest.json`, `certificate.cer`, `WT6A_INF`, and `original-catalogs`. Downloading the repository's source ZIP does not provide this built driver package.
 
-The **tested activation path** is the original deferred-selection lab protocol in `lab/NORMAL-MODE-BOOT.txt`, including its known working patched fallback and one-time SYSTEM guard. That original suite assumes the recorded package paths, OEM INF numbers and GPU instance from the experiment. A fresh Deck needs its own detected device/INF values, verified staged/shared files and recovery plan; do not run the historical mutation scripts unmodified.
+Artifacts expire after 90 days. If no downloadable build remains, a repository maintainer can run the workflow again. To build your own copy in a fork, see the [build guide](build.md).
 
-The lab showed that live display replacement could hang/produce Code 43. Its corrected helper selected a cached DriverStore INF for a restart, after verifying 132 staged files and 56 shared system files, using `DI_NOFILECOPY`, `DI_DONOTCALLCONFIGMG` and `DI_NEEDREBOOT`. Suppressing copies is valid only when those files already match; it is not a safe shortcut for an arbitrary fresh installation. A general fresh-machine guarded activation helper is future work.
+## 2. Understand what preparation changes
 
-`Verify.cmd` is read-only. It checks the GPU, live Code Integrity and exact selected kernel/configuration hashes. For actual rendering, run `python lab/src/verify_d3d11_hardware.py --output rendering.json` after a boot or wake. The Python probe requests D3D feature levels 11_1/11_0; it does not report the adapter's maximum capability.
+Right-clicking **`Stage.cmd` → Run as administrator** will:
 
-## Recovery
+- Check that your GPU matches the supported LCD Deck and that the package files match their recorded hashes.
+- Export your currently selected graphics driver as an offline recovery copy.
+- Verify and register the original vendor catalogs, which Windows uses to check the unchanged driver files.
+- Trust this build's public setup certificate in Windows's local-machine Root and Trusted Publisher stores.
+- Add the adapted packages to Windows's Driver Store, ready for later selection.
 
-Keep the exported original display package offline. Keep the original Deck's private candidate/fallback packages, public certificates, stock backup and frozen trial files where their recorded paths expect them. The patched prototype requires Test Mode and its local certificate; do not select it for a Test Mode OFF boot. Catalog database entries used by the unchanged normal-mode kernel must remain registered.
+This makes persistent certificate and catalog changes. It leaves your currently selected graphics driver in place. It does not restart the GPU, reboot Windows, change Test Mode, or create a recovery timer.
 
-The old SYSTEM watchdog is retired after the successful boot. No recurring monitor runs. A future guarded trial needs a new explicit preparation; the guard's 180-second window starts when its startup process runs and can begin before login. It cannot recover a complete kernel hang. No installation helper here claims anti-cheat compatibility or a Microsoft production signature for the adapted INFs/configuration.
+The helper may download a pinned Microsoft SDK tool, so allow internet access and space for its cache. Keep a working display and your original driver available throughout any future activation test.
+
+## 3. Run the preparation helper
+
+1. In the extracted artifact folder, right-click **`Stage.cmd`** and choose **Run as administrator**.
+2. Allow the Windows administrator prompt for the helper you chose to run.
+3. Let it finish and read the result before closing the window.
+4. Keep the new **`local-recovery`** folder. It contains your exported driver and a dated record of the preparation steps.
+
+Success is recorded as **`StagedNotSelected`** in `staging-state.json` under that recovery folder. That means preparation succeeded and your previous driver is still selected.
+
+If it stops with an error, save the message and the recovery log. Some earlier steps may already have completed; the helper does not automatically undo every certificate or catalog change. Do not disable security settings or delete Windows driver files to push past the error.
+
+## 4. Activation is a separate step
+
+**There is no general activation helper in this release.** Stop after staging unless you have a device-specific test and recovery plan.
+
+Our successful installation used a carefully checked, restart-based procedure on the original test Deck. Live replacement of the running graphics driver had hung or failed with Code 43. The archived procedure depends on that machine's driver names, files, and fallback package; it is not a set of commands to copy onto another Deck.
+
+Developer details are in the [lab archive](../lab/README.md) and `NORMAL-MODE-BOOT.txt` inside it. The no-copy options used in that trial were valid only after checking that all required files were already present and correct.
+
+## Checking an activated driver
+
+After a separately planned activation, double-click **`Verify.cmd`**. It checks the selected driver version, GPU status, exact kernel/configuration hashes, and whether Test Mode is off. It saves **`verification.json`** beside the helper without changing the driver or boot settings.
+
+If you run it immediately after staging while your previous driver is still selected, a candidate-verification failure is expected. It does not mean staging failed.
+
+A passing report does not confirm that the physical screen works or that sleep is reliable. Those need separate observation. The optional developer rendering probe is:
+
+```powershell
+python lab/src/verify_d3d11_hardware.py --output rendering.json
+```
+
+Run it from the extracted artifact folder with Python installed. It requests Direct3D feature levels 11_1 and 11_0; it does not measure the GPU's maximum supported feature level.
+
+## Recovery and known problems
+
+Keep the exported original driver offline. An export is a backup, not an automatic recovery service, and this helper does not install a watchdog. A future activation test needs a separate recovery plan before changing the active driver.
+
+The historical patched fallback requires Test Mode and its local certificate. Do not select that fallback for a boot with Test Mode off. Keep the vendor catalog registrations needed by the unchanged kernel.
+
+If Windows reports **Code 43**, the GPU failed to start. A black built-in screen can also occur while Windows reports the GPU as healthy; those are different observations. See [results and known issues](results.md), including the dock-related display investigation.
+
+Operation with Secure Boot, Memory Integrity, or online games' anti-cheat systems has not been established. A locally trusted setup certificate is not Microsoft certification of this adapted package.

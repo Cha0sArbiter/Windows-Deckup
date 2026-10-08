@@ -1,7 +1,9 @@
-# Ambient light sensor
+# Ambient light sensor and automatic brightness
 
-Status: **planned; no driver implemented**.
+**Planned. No driver or installation package is available yet.**
 
-Identify the actual sensor/ACPI interface and investigate integration with the Windows sensor stack.
+The goal is to let Windows use the Deck's light sensor, including investigating automatic screen brightness. We first need to identify the sensor interface and work out how it should connect to Windows's sensor system.
 
-Future source, manifests, documentation, tests and hardware evidence belong in this project directory. Shared build infrastructure belongs in `tools/`. Follow [repository conventions](../../docs/architecture.md).
+This is separate from the graphics driver and EC fan/battery work. Support for particular firmware versions or the OLED Deck has not been established.
+
+Future research, source, and test results belong here. See the [contribution guide](../../docs/architecture.md), or return to the [project overview](../../README.md).
